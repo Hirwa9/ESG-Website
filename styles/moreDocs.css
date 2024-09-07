@@ -1,0 +1,185 @@
+@import "../all.css?v=1.1159";
+
+/**
+* More_docs
+*/
+
+.Liturgy-Books * {
+	transition: background .3s;
+}
+.Liturgy-Books > ul > div a {
+	transform: perspective(5rem) rotateX(20deg);
+}
+.Liturgy-Books picture:hover > span {
+	background-color: var(--myBlue) !important;
+	color: white;
+}
+.BookElement {
+	position: relative;
+	height: clamp(350px, 400px, 600px);
+	overflow: hidden;
+	border-left: 1px solid var(--black4);
+	border-bottom: 1px solid var(--black4);
+	background-color: var(--black4);
+	transition: var(--trans);
+}
+.BookElement .book-title {
+	display: grid;
+	align-items: center;
+	height: 30%;
+	color: var(--black1);
+	font-size: small;
+	font-weight: bold;
+}
+.BookElement .book-holder {
+	position: relative;
+	height: 70%;
+	overflow: hidden;
+}
+/* .BookElement .book-holder > img {
+	border-radius: 0 0 1rem 1rem;
+} */
+.BookElement .book-holder img {
+	width: 100%;
+	display: block;
+}
+.BookElement .book-tools {
+	display: none;
+	inset: 0;
+	background-color: var(--black2_cons);
+	animation: fadeIN .3s 1;
+	-webkit-backdrop-filter: saturate(0%);
+	backdrop-filter: saturate(0%);
+}
+.BookElement .book-tools.selected {
+	animation: none;
+}
+
+.BookElement:hover, .BookElement.getBook {
+	translate: 0 -.5rem;
+}
+
+.BookElement.getBook .book-tools {
+	display: block;
+}
+.BookElement .book-tools > * {
+	color: var(--appColor_cons) !important;
+}
+.BookElement .book-tools button, .BookElement .book-tools a {
+	color: var(--appColor_cons);
+	background-color: transparent;
+	overflow: hidden;
+	font-size: clamp(1em, 1.2em, 1.4em);
+	transition: scale .2s;
+	animation: flyInBottomSM .5s 1;
+}
+.BookElement .book-tools button:hover, .BookElement .book-tools a:hover {
+	background-color: var(--white3);
+	scale: 1.2;
+}
+.BookElement .book-tools button:active, .BookElement .book-tools a:active {
+	color: black;
+}
+.BookElement .book-tools small {
+	user-select: none;
+}
+
+#styleStopper {
+	display: none;
+	transition: border-radius .3s;
+	animation: flyInBottom 1s 1;
+	box-shadow: 0 0 10px 2px var(--black2);
+	border: 1px solid var(--white2);
+	background-color: var(--black2_cons);
+}
+#styleStopper .sty_playing_name {
+	font-style: italic;
+}
+#styleStopper .sty_stop_icn {
+	transition: var(--trans);
+	background-color: var(--black3);
+}
+#styleStopper:hover {
+	border-start-start-radius: 10px;
+	border-start-end-radius: 10px;
+}
+#styleStopper .sty_stop_icn:hover {
+	background-color: black;
+}
+.style-ttl {
+	font-weight: 400;
+	font-size: 2em;
+	font-family: sans-serif, 'Roboto';
+	padding-block: 1rem;
+	background-image: linear-gradient(var(--myBlue2), transparent 90%, var(--myBlue3) 10%);
+	/* background-clip: content-box; */
+	color: var(--myBlue_var);
+}
+.style_CAT {
+	display: grid;
+	grid-template-columns: 50% 50%;
+}
+@media screen and (max-width: 992px) {
+	.style_CAT {
+		grid-template-columns: 100%;
+	}
+}
+.style_CAT > li {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap:wrap; 
+	flex-wrap: wrap;
+	margin-inline: .25rem;
+	border: 1px solid var(--black3);
+	margin-bottom: .5rem;
+	overflow: hidden;
+	transition: var(--trans);
+}
+.style_CAT > li:not(:last-child) {
+	border-bottom: none;
+}
+.style_CAT > li > * {
+	padding-block: 1rem;
+	transition: var(--trans);
+}
+.style_CAT > li > a {
+	color: brown;
+	background-color: var(--black4);
+}
+.style_CAT > li > a:is(:hover, :active) {
+	transition: background-color .2s;
+	background-color: var(--black3);
+}
+.style_CAT > li > .sty_tll span:is(:hover, :active) {
+	transition: background-color .2s;
+	background-color: var(--black4);
+}
+.style_CAT audio::-webkit-media-controls-panel {
+	background-color: white;
+}
+.THIS_AUD {
+	visibility: hidden;
+}
+.corresMediaPlaying {
+	border-radius: .5em;
+	/* border: 1px solid var(--white2) !important; */
+	border: 1px solid var(--black3) !important;
+	overflow: hidden;
+	background-image: linear-gradient(-110deg, var(--appColor) 5%, var(--myBlue4) 60%, transparent, var(--appColor), var(--myBlue3), var(--myBlue3), var(--myBlue3));
+	background-position: 50% 50%;
+	background-size: 200% 200%;
+	animation: media_playing 10s infinite;
+	transition: var(--trans);
+}
+.corresMediaPlaying > div:first-child {
+	padding-block: 1.5rem;
+}
+@keyframes media_playing {
+	0% {
+		background-position: 50% 50%;
+	}
+	50% {
+		background-position: 40% 50%;
+		color: brown;
+	}
+}

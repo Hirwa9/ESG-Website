@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="aboutESG" data-ng-controller="aboutCTLR">
+<head>
+	<title>ESG songs</title>
+
+	<link rel="icon" type="image/x-icon" href="../../Pics/ESG_favicon1.ico">
+	<link rel="stylesheet" type="text/css" href="../../styles/esgSongs.css?v=1.1198">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width= device-width, initial-scale=1.0">
+	<meta name="author" content="Hirwa Willy">
+	<meta name="keywords" content="HTML, CSS">
+    
+    <!-- online -->
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-sanitize.js"></script>
+    <script src="aboutModule.js?v=1.1106"></script>
+    <script src="controllers/aboutControllers.js?v=1.1154"></script>
+    
+    <!-- offline -->
+
+    <!-- <link rel="stylesheet" href="../../bootstrap5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../fontawesome6-2-0/css/all.css">
+    <script src="../../bootstrap5/js/bootstrap.min.js"></script>
+    <script src="../../bootstrap5/js/bootstrap.bundle.min.js"></script>
+    <script src="../../bootstrap5/js/bootstrap.bundle.min.js.map"></script>
+    <script src="../../jq/jquery-3.7.1.js"></script> -->
+    
+    <!-- fonts -->
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-bodi" style="padding-top: 3rem;">
+	<div class="fix-holder fix-holder-appColor2 p-2">
+		<div class="nav container-xs Sbar-none" id="mySidenav">
+			<div class="position-absolute inx--1"></div>
+			<div>
+				<li class="nav-item"><a href="../../index" class="nav-link"><span class="fa fa-home text-white" style="font-size: 45px"></span></a></li>
+				<li class="nav-item"><a href="../about" class="nav-link">About</a></li>
+				<li class="nav-item Here"><a href="#" class="nav-link">Songs</a></li>
+				<li class="nav-item"><a href="../services" class="nav-link">Services</a></li>
+				<li class="nav-item"><a href="ESG_FAQs" class="nav-link">FAQs</a></li>
+				<li class="nav-item" data-bs-toggle="collapse"	data-bs-target=".MRNV"><a href="#" class="nav-link MoreMenu">More</a></li>
+			</div>
+			<div class="ps-3 mt-3 collapse MRNV">
+				<li class="nav-item"><a href="ESG_Calendar" class="nav-link"> Calendar</a></li>
+				<li class="nav-item"><a href="../events" class="nav-link">ESG events</a></li>
+				<li class="nav-item"><a href="../Events/ESG_Gallery" class="nav-link">ESG gallery</a></li>
+				<li class="nav-item"><a href="../Services/CHM_Songs" class="nav-link">Holy Mass Songs</a></li>
+				<li class="nav-item"><a href="../solfeggio" class="nav-link">Learn Solfeggio</a></li>
+				<hr>
+				<li class="nav-item" id="settingsMenu"><a href="#" class="nav-link">Settings <span class="fa fa-gear"></span></a></li>
+			</div>
+            <div class="position-absolute r-middle-m theme-changer">
+                <div class="position-absolute t-middle p-1 auto_theme choice">Auto</div>
+                <div class="position-absolute b-middle-m rad-30 themerICN">
+                    <span class="fa fa-moon position-absolute b-middle w-100 ratio-1-1 flex-center rad-50"></span>
+                </div>
+            </div>
+		</div>
+	</div>
+
+	<!-- Contact us-->
+	<div class="position-fixed inx-15 collapse win-hide col-sm-7 col-md-6 col-lg-4 blur-bg-5px shadow item-myBlue contact-us">
+		<button class="fa fa-close contact-us_closer" data-bs-toggle="collapse" data-bs-target=".contact-us"></button>
+		<div class="d-flex w-100 mb-2 navigator-tabs">
+			<button class="fa fa-phone flex-center w-50 active clickDown"></button>
+			<button class="fa fa-envelope flex-center w-50 clickDown"></button>
+		</div>
+		<div class="clmn_wrapper navigator-space">
+			<div class="p-3">
+				<p class="fw-bold">
+					Questions? Need assistance? Just want to chat? Reach us easily via phone. Choose from our dedicated lines.
+				</p>
+				<div class="mb-2 contact-item">
+					<div class="w-50 h4 m-0 ps-2 contact-item_owner">President</div>
+					<div class="w-50 contact-item_tools">
+						<span class="small flex-center">(+250) 783967092</span>
+						<a class="flex-center bounceClick" href="tel:+250783967092">Call</a>
+					</div>
+				</div>
+				<div class="mb-2 contact-item">
+					<div class="w-50 h4 m-0 ps-2 contact-item_owner">VC President</div>
+					<div class="w-50 contact-item_tools">
+						<span class="small flex-center">(+250) 780789222</span>
+						<a class="flex-center bounceClick" href="tel:+250780789222">Call</a>
+					</div>
+				</div>
+				<div class="mb-2 contact-item">
+					<div class="w-50 h4 m-0 ps-2 contact-item_owner">Web issues</div>
+					<div class="w-50 contact-item_tools">
+						<span class="small flex-center">(+250) 785459848</span>
+						<a class="flex-center bounceClick" href="tel:+250785459848">Call</a>
+					</div>
+				</div>
+			</div>
+			<div class="p-3">
+				<p class="fw-bold">
+					Got questions? Require assistance? Or simply want to connect? Drop us an email.
+				</p>
+				<div class="mb-2 contact-item">
+					<div class="w-50 h4 m-0 ps-2 contact-item_owner">ESG</div>
+					<div class="w-50 contact-item_tools">
+						<span class="small flex-center" style="font-size: 65%;">easternsingersg@gmail.com</span>
+						<a class="flex-center bounceClick" href="mailto:easternsingersg@gmail.com">Mail</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    
+	<!-- Web settings -->
+    <div class="bg-myBlue show-touch-sm isolate-y px-1 fix-draggable webSettings">
+		<button class="fa fa-close d-block w-2_5rem ratio-1-1 flex-center border-1 rounded-pill bg-transparent text-appColor-cons ms-auto ms-sm-0 me-sm-auto" onclick="hide_web_settings()"></button>
+		<div class="touch-anim"></div>
+		<h5 class="text-center fix-dragger fs-3">Web settings</h5>
+		<div class="clmn_wrapper dim-100 webSetPG">
+			<div class="webSetPG1">
+				<div class="w-100 h-50 d-grid webSetGrid">
+					<div class="d-flex flex-column">
+						<div class="p-1 text-center fs-5">Contact us</div>
+						<div class="position-relative flex-grow-1 mb-1 overflow-visible web-contactor contactor">
+							<span class="fa fa-phone rad-50 w-40 ratio-1-1 flex-center top-left"></span>
+							<span class="fa fa-envelope rad-50 w-20 ratio-1-1 flex-center b-middle-m"></span>
+							<span class="fab fa-whatsapp rad-50 w-50 ratio-1-1 display-4 flex-center bottom-right"></span>
+						</div>
+					</div>
+					<div class="d-flex flex-column">
+						<div class="p-1 text-center theme-name">Light</div>
+						<div class="position-relative mb-1 ms-auto me-auto h-80 theme-changer LG-Def">
+							<div class="position-absolute t-middle p-1 h-20 w-100 flex-center auto_theme LG-Def choice" tabindex="0">Auto</div>
+							<div class="position-absolute b-middle-m rad-30 h-75 w-100 themerICN LG-Def">
+								<span class="fa fa-moon position-absolute b-middle w-100 ratio-1-1 flex-center rad-50" tabindex="0"></span>
+							</div>
+						</div>
+					</div>
+					<div class="d-flex flex-column">
+						<div class="p-1 text-center">Guide</div>
+						<div class="position-relative flex-grow-1 d-grid guider">
+							<span class="fa fa-moon w-100 grid-center ptr" title="Theme"></span>
+							<span class="fa fa-mobile w-100 grid-center ptr" title="Animations"></span>
+							<span class="fa fa-lightbulb w-100 grid-center ptr" title="Tips"></span>
+							<span class="w-100 grid-center ptr" tabindex="0" onclick="show_guide()">All</span>
+						</div>
+					</div>
+					<div class="d-flex flex-column">
+						<div class="p-1 text-center fs-6">Terms and privacy</div>
+						<div class="position-relative my-auto pb-2">
+							<span class="fa fa-shield-alt w-100 h-100 grid-center display-5 ptr" onclick="show_terms()"></span>
+						</div>
+					</div>
+					<div class="d-flex flex-column">
+						<div class="p-1 text-center">Update</div>
+						<div class="position-relative my-auto pb-2" tabindex="0" onclick="window.location.reload()">
+							<span class="fa fa-flag w-100 h-100 grid-center small ptr"></span>
+						</div>
+					</div>
+					<div class="d-flex flex-column">
+						<div class="p-1 text-center">Reset</div>
+						<div class="position-relative my-auto pb-2" tabindex="0" onclick="reset_web()">
+							<span class="fa fa-refresh w-100 h-100 grid-center small ptr"></span>
+						</div>
+					</div>
+					<div>
+						<div class="dim-100 position-relative d-grid timeShow">
+							<span class="dim-100 h-100 grid-center ptr"></span>
+						</div>
+					</div>
+					<div>
+						<div class="h-100 position-relative sharePage">
+							<button class="btn dim-100 sharePage-button" title="Share this page">
+								Share <span class="fa fa-share ms-2"></span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="w-100 h-50 mySbar-sm pt-3 webSwitches">
+					<ul class="list-style-circle">
+						<li>
+							<div class="d-flex align-items-center justify-content-between pe-4 animation-control">
+								<span>Animations</span>
+								<div class="switch switch-x">
+									<div></div>
+								</div>
+							</div>
+							<small class="my-2">
+								If turned off, all animations and transitions are disabled for most items.
+							</small>
+						</li>
+						<li>
+							<div class="d-flex align-items-center justify-content-between pe-4 tips-control">
+								<span>Guide always</span>
+								<div class="switch switch-x OFF">
+									<div></div>
+								</div>
+							</div>
+							<small class="my-2">
+								If turned on, website guide and tips will pop-up every time the page loads.
+							</small>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="rad-5 webSetPG2">
+				<button class="fa fa-arrow-left l-middle-m ratio-1-1 bordered text-white-var rad-50 grid-center inx-high partGuideCloser"></button>
+			</div>
+		</div>
+    </div>
+    
+    <div class="fix-holder fix-holder-blue fade-to-back blur-bg-5px">
+        <div class="col-sm-8 col-md-6 col-lg-5 col-xl-4 mx-auto h-100 my-item item-warning mySbar-sm webTerms">
+            <div class="my-item-header">
+                <h4 class="my-item-header__title">Terms and privacy</h4>
+                <div class="rad-3 my-item-header__icons">
+                    <button class="fa fa-close hide-par-fix item-closer"></button>
+                </div>
+            </div>
+            <div class="my-item-body">
+                <p class="my-3">
+                    This is <b>Eastern Singers Group website</b>, dedicated to help users in different ways of praying, with music being the priority. You can <a href="about" class="text-goldR">learn more</a> about ESG.
+                </p>
+                <p class="p-1">
+                    Our platform has its foundation on the following terms:
+                    <ul class="list-style-square">
+                        <li>This is a non-profit religious platform <i>(website).</i></li>
+                        <li>No personal data are collected alongway using this website, unless they are asked for.</li>
+                        <li>
+                            We provide services which do not in anyway violate personal privacy or security of individuals/users.
+                        </li>
+                        <li>All rights are reserved.</li>
+                    </ul>
+                </p>
+                <p class="p-1">
+                    This platform provides downloadable documents that are related to music and prayers, and also has a space for users to upload their documents or share out those available on the website.<br>
+                    However, activities that are against the purpose of use for those actions are prohibited;
+                    <ul class="list-style-square">
+                        <li>Do not share our documents or someone's document(s) for business purpose unless permitted.</li>
+                        <li>It is prohibited to upload or share out a copy of someone's document calling it yours.</li>
+                        <li>
+                            It is prohibited to upload violence documents where possible on this platform, inluding contents about sexual matter, racial abuse, hatred content or any other type of violence.
+                        </li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="fix-holder fade-to-scaleY g-items-holder webGuide-fix">
+        <div class="webGuide g-items Sbar-none">
+            <div class="p-3 text-light grid-item mySbar-sm home view">
+                <h6 class="display-4">Guide</h6>
+                <p class="p-2">
+                    <span class="display-7 text-goldR">
+                        This guide is provided to help users enjoy smooth browsing experience on this platform
+                    </span><br><br>
+                    <b>Check about:</b>
+                    <ul class="mt-5">
+                        <li>Theme</li>
+                        <li>Animations</li>
+                        <li>Keybord shortcuts <kbd>alt</kbd> <kbd>s</kbd>.</li>
+                    </ul>
+                </p>
+            </div>
+            <div class="p-3 text-light grid-item mySbar-sm">
+                <h6 class="display-5">Theme</h6>
+                <p class="p-2">
+                    <span class="display-7 text-goldR">
+                        You can easily change how the website looks by switching to dark or light theme
+                    </span>
+                    <ul class="mt-5">
+                        <li>Go through web settings <span class="fa fa-gear"></span> and switch the themes, or</li>
+                        <li>Presh keybord shortcut <kbd>alt</kbd> <kbd>t</kbd>.</li>
+                    </ul>
+                </p>
+                <p class="p-2 mt-5">
+                    When <b><u>auto</u></b> setting is chosen, the default website schedule will be activated. i.e Dark theme will activate from 19:00 until morning 06:00.<br>
+                    However, any theme can be prefered by manual switch as mentioned above.
+                </p>
+            </div>
+            <div class="p-3 text-light grid-item mySbar-sm">
+                <h6 class="display-5" style="animation: slideInRight 7s infinite">Animations</h6>
+                <p class="p-2">
+                    <span class="display-7 text-goldR">
+                        If you dont feel confortable with web animations, you can switch them off
+                    </span>
+                    <ul class="mt-5">
+                        <li>
+                            Go through web settings <span class="fa fa-gear"></span> and switch off the animation enabler.
+                        </li>
+                    </ul>
+                </p>
+                <p class="p-2 mt-5">
+                    The default website behavior is set to animating. Turning off animations will reduce both item animations and transitions.<br>
+                    📌 <span style="color: cyan;">Some items may suddlenly appear or others may transition really fast.</span>
+                </p>
+            </div>
+            <div class="p-3 text-light grid-item mySbar-sm">
+                <h6 class="display-5">Tips</h6>
+                <p class="p-2 display-7 text-goldR">
+                    Navigate quickly through the pages and web items
+                </p>
+                <section class="p-2">
+                    <table class="w-100 px-3 mb-3">
+                        <caption class="display-7">Keyboard shortcuts</caption>
+                        <tr>
+                            <th>Keys</th>
+                            <th>Action</th>
+                        </tr>
+                        <tr>
+                            <td><kbd>alt</kbd> <kbd>s</kbd></td>
+                            <td>Show web settings</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>alt</kbd> <kbd>t</kbd></td>
+                            <td>Change theme</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>alt</kbd> <kbd>t</kbd> <kbd>a</kbd></td>
+                            <td>Set auto-theme</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>alt</kbd> <kbd>g</kbd></td>
+                            <td>Show this guide</td>
+                        </tr>
+                    </table>
+                    <p class="p-2">
+                        All shortcuts provided above works everywhere across this website and <mark>different pages may also have additional shortcuts</mark>.
+                        Check it where necessary to add more speed and experience.<br>
+                        📌 <span style="color: cyan;">If any of the shortcuts fail, check your keyboard setting.</span>
+                    </p>
+                    <span class="p-2">More Tips</span>
+                    <ul>
+                        <li>
+                            <u>Refresh pages for updates</u>. There's always new things to ease browsing.
+                        </li>
+                        <li>
+                            Visit different pages and find out what can be more interesting.
+                        </li>
+                        <li>
+                            Avoid forcing processes, by allowing them to finish smoothly. <i>(Especially when finding documents to download)</i>.
+                        </li>
+                    </ul>   
+                </section>
+            </div>
+            <div class="item-swichers">
+                <button class="fa fa-close top-right w-3rem ratio-1-1 g-itemsCloser"></button>
+                <button class="fa fa-arrow-left item-swicher left"></button>
+                <button class="fa fa-arrow-right item-swicher right"></button>
+                <div class="b-middle-m w-25 h-30px d-flex align-items-center justify-content-around item-pager">
+                    <button class="rad-50 view"></button>
+                    <button class="rad-50"></button>
+                    <button class="rad-50"></button>
+                    <button class="rad-50"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+	<div class="position-fixed bottom-right-m h-50px w-50px inx-high bg-navi1 rad-7 flex-center ToTop">
+		<span class="fa fa-angle-double-up"></span>
+	</div>
+    
+	<!-- ************************** End of navigations ************************** -->
+
+    <!-- Float playing audio -->
+    <div class="position-fixed p-2 item-info floating-item floating-audio shadow" style="--_rad: .8rem;">
+        <div class="d-flex floating-item_icons">
+            <div class="floating-item_icon-symbol" onclick="max_floating_audio()">
+                <button class="fa fa-headphones flex-center" title="Toggle"></button>
+            </div>
+            <div class="ms-auto collapsible-grid-x floating-item_icon-tools">
+                <div class="collapsing-content">
+                    <button class="fa fa-play flex-center bounceClick media-play-pause-icon" title="play/pause" onclick="toggle_floated_audio_play_state()"></button>
+                    <button class="fa fa-stop flex-center bounceClick media-stop-icon" title="stop" onclick="stop_hide_floated_audio()"></button>
+                    <button class="fa fa-angle-down flex-center bounceClick ms-3" onclick="min_floating_audio()"></button>
+                </div>
+            </div>
+        </div>
+        <div class="collapse floating-item_details">
+            <div class="text-truncate floating-item_details-name"></div>
+        </div>
+    </div>
+
+    <!-- Navigation bar -->
+    <nav class="position-fixed fixed-top d-flex h-3rem" id="esg-songs_nav">
+        <button class="nav-link fa fa-bars w-3rem h-100 flex-center border-0 my-navigator"></button>
+        <div class="position-relative col-10 col-sm-6 col-md-4 search-box-right-icon page-search-box" data-tocollapse=".page-content-search-result">
+            <input type="text" class="search-box__input" placeholder="Search a song" id="pageSearcher">
+            <button class="fa fa-search flex-center"></button>
+        </div>
+        <ul class="nav navbar-nav navbar-end d-none d-sm-flex h-100 ms-auto">
+            <button class="nav-link fa fa-gear w-3rem h-100 flex-center border-0 bg-transparent" id="settings"></button>
+            <a href="../../index" class="ms-5 h-100 flex-center navbar-brand"><img id="brandImage" src="../../Pics/ESG_favicon1.png"></a>
+        </ul>
+    </nav>
+    <div class="d-lg-flex p-3 esg-videos">
+        <div class="col-lg-7 mb-5 Sbar-none current-video">
+
+            <div class="current-video__video">
+                <div class="embed-responsive embed-responsive-16by9 ratio-16-9 overflow-hidden rad-inherit bg-myBlue1">
+                    <iframe class="embed-responsive-item" width="100%" height="100%" ng-src="{{ latestCompositionVideoEmbedLink }}" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="mt-3 current-video__info">
+                <h3 class="mb-3 text-myBlue-cons videoTitle" style="font-variant: small-caps;"><span data-ng-bind-html="latestCompositionVideoName"></span> </h3>
+                <div class="text-black1 small videoCaption">
+                    <div class="d-flex justify-content-around align-items-center gap-3 mb-3">
+                        <img src="../../Pics/ESG_favicon1.png" alt="" class="w-3rem bordered border-black3 border-0 p-2 rounded-circle">
+                        <span id="songAbout" data-ng-bind-html="latestCompositionAboutText"></span>
+                    </div>
+                    <div class="videoActions">
+                        <button class="btn pill border border-secondary mx-auto w-fit" title="Open file" data-bs-toggle="collapse" data-bs-target=".videoFile">File</button>
+                        <button class="btn pill btn-secondary mx-auto w-fit" onclick="notify_link_copied()" id="videoLinkCopy">Copy link</button>
+                        <a class="btn pill mx-auto w-fit" youtube href="{{ latestCompositionVideoLink }}" target="_blank" title="Watch on YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="p-2 videoFile esg-song__file collapse">
+                    <div class="position-relative p-2">
+                        <ul class="ps-3 ps-sm-4 list-style-circle">
+                            <li id="fileSize">Size: <span data-ng-bind-html="latestCompositionFileSize"></span></li>
+                            <li id="fileKey">Key: <span data-ng-bind-html="latestCompositionKey"></span></li>
+                            <li id="fileTempo">Tempo: <span data-ng-bind-html="latestCompositionTempo"></span></li>
+                            <li id="fileDate">Date: <span data-ng-bind-html="latestCompositionDateFormated"></span></li>
+                        </ul>
+                    </div>
+                    <a href="{{ latestCompositionFileDownloadLink }}" target="_blank" download="Ndaje Dawe unyakire - Ermeste Nzabahimana _Arr_ Erasme Hoziyana" class="btn btn-myBlue mt-3 w-100" id="fileLink">
+                        Download PDF <span class="fa fa-download ms-2"></span>
+                    </a>
+                    <button class="w-100 bordered-bottom bg-none py-3 mt-2 toggle-par">
+                        <i class="fa fa-angle-up"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Other videos -->
+        <div class="col-lg-5 mt-3 py-sm-3 py-lg-0 mt-lg-0 pe-xl-3 d-flex flex-wrap align-content-start Sbar-none other-videos">
+            <div data-ng-repeat="x in videoCompositions" class="h-fit d-lg-flex col-6 col-sm-4 col-md-3 col-lg-12 mb-3 mb-lg-2 other-videos-container" data-ng-class="{'active': x.isLatest}">
+                <div class="col-lg-5 ratio-16-9 clickDown flex-center ptr fancy-borders-all other-videos__video" tabindex="0" style="--_value: .6rem">
+                    <span class="fab fa-youtube display-5 youtube-icon"></span>
+                </div>
+                <div class="col-lg-7 p-3 other-videos__info">
+                    <h6 data-ng-bind-html="x.compositionVideoDetails.videoName"></h6>
+                    <div class="videoActions">
+                        <a href="#" class="text-secondary me-2" onclick="notify_link_copied()" id="videoLinkCopy">Copy link</a>
+                        <a class="" youtube href="{{ x.compositionVideoDetails.videoLink }}" target="_blank" title="Watch on YouTube">Watch</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    
+    <!-- Solfeggio songs-->
+    <div class="d-sm-flex mb-4 esg-more-songs">
+        <div class="col-sm-6 col-md-7 col-lg-9">
+            <div class="p-5 text-justify bg-myBlue text-light">
+                <h2>More songs</h2>
+                <hr>
+                <p>
+                    Below are additional music files for the songs we've composed. These files feature liturgical compositions, and our group's talented composers have put significant effort into crafting them. The aim is to assist Christians in prayers during liturgical moments.
+                </p>
+            </div>
+            <div class="d-flex flex-wrap p-2 p-md-4 pe-lg-2 esgFiles">
+                <!-- Non-videos compositions  -->
+                <div data-ng-repeat="x in retrievedListOfCompositions track by $index" data-ng-if="x.compositionVideoDetails == null" class="col-12 col-lg-6 col-xl-4 mb-5 esg-song__file">
+                    <h4 class="px-3 py-1" data-ng-bind-html="x.compositionName"></h4>
+                    <div class="p-2 mt-3">
+                        <div class="px-3 py-4 rounded">
+                            <div class="h6">Composer: <u data-ng-bind-html="x.compositionAbout.composer"></u></div>
+                            <ul class="ps-3 ps-sm-4 list-style-circle">
+                                <li id="fileSize">Size: <span data-ng-bind-html="x.compositionFileDetails.fileSize"></span></li>
+                                <li id="fileKey">Key: <span data-ng-bind-html="x.compositionFileDetails.compositionKey"></span></li>
+                                <li id="fileTempo">Tempo: <span data-ng-bind-html="x.compositionFileDetails.compositionTempo"></span></li>
+                                <li id="fileDate">Date: <span data-ng-bind-html="x.compositionFormattedDate"></span></li>
+                            </ul>
+                            <div class="position-absolute bg-myBlue1 d-flex justify-content-center align-items-center col-auto p-1 text-light small fileType">
+                                PDF
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center w-100">
+                            <a href="{{ x.compositionFileDownloadLink}}" target="_blank" class="btn text-myBlue-var my-3 w-100">
+                                Download File <span class="fa fa-download ms-2"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bg-myBlue flex-center p-1 m-0 file-footer">
+                        <span>&#119137;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Left selector -->
+        <div class="col-sm-6 col-md-5 col-lg-3 my-item my-item-dynamic our-songs__media-player">
+            <div class="my-item-header">
+                <h4 class="h-3rem my-item-header__title">Overview</h4>
+            </div>
+            <div class="px-3 mySbar-sm my-item-body">
+                <div class="rad-10 overflow-hidden current-music-player">
+                    <div class="d-flex align-items-center p-3 h-80 pb-1">
+                        <div class="col-4 h-100 position-relative rad-10 current-music-player__player-disk"></div>
+                        <div class="col-8 align-items-center h-fit p-2 overflow-hidden current-music-player__music-info">
+                            <div class="small mb-2 text-truncate music-name" data-ng-bind-html="latestCompositionName"></div>
+                            <div class="flex-center align-items-center justify-content-around px-2 music-controlls">
+                                <button class="fa fa-step-backward grid-center bg-none border-0 ratio-1-1 rounded-circle music-controlls__navigator" onclick="play_another_song('previous')"></button>
+                                <button class="fa fa-play flex-center border-0 w-2_5rem h-2_5rem rounded-circle music-controlls__player" onclick="trigger_esg_audio()"></button>
+                                <button class="fa fa-step-forward grid-center bg-none border-0 ratio-1-1 rounded-circle music-controlls__navigator" onclick="play_another_song('next')"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <audio data-ng-src="{{ latestCompositionAudioLink }}" controls controlsList="nodownload noplaybackrate" class="w-100 h-20" id="pageAudioPlayer"></audio>
+                </div>
+                <div class="p-3 pt-3 pb-4 mt-3 rad-10 esg-songs-list">
+                    <div class="h5 esg-songs-list__header">All songs (<span data-ng-bind-html="totalCompositions"></span>)</div>
+                    <hr class="my-2">
+                    <div class="esg-songs-list__body">
+                        <div data-ng-repeat="x in retrievedListOfCompositions | orderBy: 'compositionName' track by $index"  title="{$songName} - {$songComposer}" class="list-item">
+                            <div class="list-item_text">
+                                <span data-ng-bind-html="x.compositionName"></span> - <span data-ng-bind-html="x.compositionAbout.composer"></span>
+                            </div>
+                            <div class="list-item_side-tools">
+                                <a data-ng-if="x.compositionAudioLink != ''" href="#" class="p-1" title="Play"><span class="fa fa-play"></span></a>
+                                <a href="#" class="p-1" data-link-share="{{ x.compositionFileDownloadLink }}" title="Share song">
+                                    <span class="fa fa-share-alt"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page searcher -->
+    <div class="my-item item-dark Sbar-none collapse win-hide page-content-search-result page-content-search-result_esg-songs">
+        <div class="my-item-body">
+            <!-- A list of available compositions -->
+            <ul class="py-2">
+                <li data-ng-repeat="x in retrievedListOfCompositions track by $index" data-bs-toggle="collapse" data-bs-target=".page-content-search-result_esg-songs">{{ x.compositionName }} _ {{ x.compositionAbout.composer }}</li>
+            </ul>
+        </div>
+        <button class="py-3 grid-center toggle-par">
+            <i class="fa fa-angle-up"></i>
+        </button>
+    </div>
+    
+    <!-- ************************** Page Ending ************************** -->
+
+	<footer class="py-3 Info">
+		<li class="small">
+			Check out <u><a href="ESG_FAQs">Frequently Asked Questions</a></u>
+		</li><br>
+		<div class="row m-0">
+			<div class="col-6 col-md-3">
+				<h4>Quick links</h4>
+				<ul class="list-unstyled p-2">
+					<li class="p-2">
+						<span class="fa fa-place-of-worship grid-center me-3"></span><a href="../Services/CHM_Songs">Mass songs</a>
+					</li>
+					<li class="p-2">
+						<span class="fa fa-handshake grid-center me-3"></span><a href="../services">Services</a>
+					</li>
+					<li class="p-2">
+						<span class="grid-center me-3">&#119071;</span><a href="../solfeggio">Solfeggio docs</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-6 col-md-3">
+				<h4>Follow us</h4>
+				<ul class="list-unstyled p-2">
+					<li class="p-2">
+						<span class="fab fa-instagram grid-center me-3"></span><a href="https://www.instagram.com/easternsingers/" target="_blank">Instagram</a>
+					</li>
+					<li class="p-2">
+						<span class="fab fa-facebook-f grid-center me-3"></span><a href="https://web.facebook.com/groups/221686289873729/" target="_blank">Facebook</a>
+					</li>
+					<li class="p-2">
+						<span class="fab fa-youtube grid-center me-3"></span><a href="https://www.youtube.com/channel/UC88VxWbKsZMbEjaL0kzLZIQ/" target="_blank">YouTube</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-6 col-md-3">
+				<h4>Contact</h4>
+				<ul class="list-unstyled p-2">
+					<li class="p-2">
+						<span class="fa fa-phone grid-center me-3"></span><a class="small" href="tel:+250783967092">(+250) 783967092</a>
+					</li>
+					<li class="p-2">
+						<span class="fa fa-phone grid-center me-3"></span><a class="small" href="tel:+250785459848">(+250) 785459848</a>
+					</li>
+					<li class="p-2">
+						<span class="fa fa-envelope grid-center me-3"></span><a href="../contact">E-mail</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<hr>
+		<div class="text-center text-bold">
+			<small>
+				<small>
+					<strong>Copyright <span class="fa fa-copyright"></span> <span class="copyright-year">2022</span> Eastern Singers Group. All Rights Reserved.</strong><br>
+					<span class="fa fa-code me-1"></span> Powered by <a href="https://hirwa9.github.io" target="_blank" class=" text-muted"><strong>Hirwa</strong></a>
+				</small>
+			</small>
+			<div class="position-fixed fixed-bottom inx-high offset-sm-2 col-sm-8 offset-md-3 col-md-6 p-2 blur-bg-5px collapse win-hide designer">
+				<div class="ps-3 d-flex align-items-center justify-content-between">
+					<span>Developer <span class="fa fa-paint-brush ms-2"></span></span>
+					<button class="w-2rem bounceClick closerX" data-bs-toggle="collapse" data-bs-target=".designer"></button>
+				</div>
+				<hr>
+				<ul class="list-style-square small">
+					<li class="text-start">
+						E-mail: <a href="mailto:hirwawilly9@gmail.com">hirwawilly9@gmail.com <span class="fa fa-envelope ms-2"></span></a>
+					</li>
+					<li class="text-start">
+						Phone: <a href="tel:+250785459848" class="me-2">+250 785 459 848 <span class="fa fa-phone ms-2"></span></a>
+					</li>
+					<li class="text-start">
+						<a href="https://www.linkedin.com/in/hirwa-cyuzuzo-willy-94159427b" class="w-30px ratio-1-1 rad-50 grid-center border bounceClick" target="_blank">
+							<span class="fab fa-linkedin"></span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+    <script src="../../MyScripts.js?v=1.1150"></script>
+	<script src="esgSongsData.js?v=1.1150"></script>
+</body>
+</html>

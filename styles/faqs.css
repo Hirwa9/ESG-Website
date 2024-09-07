@@ -1,0 +1,48 @@
+@import "../all.css?v=1.1159";
+
+/**
+* ESG_FAQs
+*/
+
+#FAQs > div.Questions.col-md-11.clearfix > div > div.panel-body >small {
+	color: var(--MTcolor);
+}
+.FAQs h1 {
+	background-image: linear-gradient(transparent, var(--white1)), url(../Pics/Question.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 30%;
+}
+.FAQs h2 {
+	color: var(--navi_var);
+}
+
+.Questions {
+	height: 70%;
+	z-index: 1;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+.Questions .card {
+	border-radius: 0;
+	background-color: var(--white1);
+}
+.Questions .card-header {
+	color: var(--myBlue_cons);
+	background-color: var(--black4);
+}
+.Questions .card-header:first-child {
+	border-radius: inherit;
+}
+.Questions .card-header img {
+	width: 1.5rem;
+	display: inline;
+}
+.Questions .card-body small {
+	font-size: 1rem;
+}
+@media screen and (max-width: 576px) {	
+	.Questions .card-body small {
+		font-size: 80%;
+	}
+}

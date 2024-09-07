@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ESG Solfeggio</title>
+	
+	<link rel="icon" type="image/x-icon" href="../Pics/ESG_favicon1.ico">
+	<link rel="stylesheet" type="text/css" href="../styles/solfeggio.css?v=1.1158">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width= device-width, initial-scale=1.0">
+	<meta name="author" content="Hirwa Willy">
+	<meta name="keywords" content="HTML, CSS">
+    
+    <!-- online -->
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+    <!-- offline -->
+
+    <!-- <link rel="stylesheet" href="../bootstrap5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../fontawesome6-2-0/css/all.css">
+    <script src="../bootstrap5/js/bootstrap.min.js"></script> -->
+    <!-- <script src="../bootstrap5/js/bootstrap.bundle.min.js"></script>
+    <script src="../bootstrap5/js/bootstrap.bundle.min.js.map"></script> -->
+    <!-- <script src="../jq/jquery-3.7.1.js"></script> -->
+     
+    <!-- fonts -->
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-bodi" data-bs-spy="scroll" data-bs-target="#scrollSpy" data-bs-offset="200" tabindex="0">
+	<!-- sm navbar -->
+	<div class="d-sm-none fix-holder inx-25 p-2">
+		<div class="nav container-xs Sbar-none" id="mySidenav">
+			<div class="position-absolute inx--1"></div>
+			<div>
+				<li class="nav-item"><a href="../index" class="nav-link"><span class="fa fa-home text-white" style="font-size: 45px"></span></a></li>
+				<li class="nav-item"><a href="about" class="nav-link">About</a></li>
+				<li class="nav-item"><a href="About/ESG_Songs" class="nav-link">Songs</a></li>
+				<li class="nav-item"><a href="services" class="nav-link">Services</a></li>
+				<li class="nav-item"><a href="About/ESG_FAQs" class="nav-link">FAQs</a></li>
+				<li class="nav-item" data-bs-toggle="collapse"	data-bs-target=".MRNV"><a href="#" class="nav-link MoreMenu">More</a></li>
+			</div>
+			<div class="ps-3 mt-3 collapse MRNV">
+				<li class="nav-item"><a href="About/ESG_Calendar" class="nav-link"> Calendar</a></li>
+				<li class="nav-item"><a href="events" class="nav-link">ESG events</a></li>
+				<li class="nav-item"><a href="Events/ESG_Gallery" class="nav-link">ESG gallery</a></li>
+				<li class="nav-item"><a href="Services/CHM_Songs" class="nav-link">Holy Mass Songs</a></li>
+				<li class="nav-item Here"><a href="#" class="nav-link">Learn Solfeggio</a></li>
+				<hr>
+				<li class="nav-item" id="settingsMenu"><a href="#" class="nav-link">Settings <span class="fa fa-gear"></span></a></li>
+			</div>
+            <div class="position-absolute r-middle-m theme-changer">
+                <div class="position-absolute t-middle p-1 auto_theme choice">Auto</div>
+                <div class="position-absolute b-middle-m rad-30 themerICN">
+                    <span class="fa fa-moon position-absolute b-middle w-100 ratio-1-1 flex-center rad-50"></span>
+                </div>
+            </div>
+		</div>
+	</div>
+    <!-- lg navbar -->
+    <nav class="navbar navbar-expand-sm fixed-top" id="Main_nav" role="navigation">
+        <a href="../index" class="navbar-brand me-auto ms-0">
+            <img id="brandImage" src="../Pics/ESG_favicon1.png">
+        </a>
+		<div class="navbar-header navbar-toggle d-flex d-sm-none justify-content-between me-0">
+			<div class="navIcon border-0" id="menuToggler">
+				<div class="menu-bar"></div>
+				<div class="menu-bar"></div>
+				<div class="menu-bar"></div>
+			</div>
+		</div>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="nav navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="About/ESG_Songs">Songs</a></li>
+                <li class="nav-item"><a class="nav-link" href="services">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="About/ESG_Calendar">Calendar</a></li>
+                <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">More</a>
+                    <div class="dropdown-menu">
+                        <a href="events" class="dropdown-item">ESG events</a>
+                        <a href="Events/ESG_Gallery" class="dropdown-item">ESG gallery</a>
+                        <a href="#" class="dropdown-item Here">Learn Solfeggio</a>
+                    </div>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-end ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" id="settings"><span class="fa fa-gear"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="About/ESG_FAQs">FAQs</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+	<!-- Contact us-->
+	<div class="position-fixed inx-15 collapse win-hide col-sm-7 col-md-6 col-lg-4 blur-bg-5px shadow item-myBlue contact-us">
+		<button class="fa fa-close contact-us_closer" data-bs-toggle="collapse" data-bs-target=".contact-us"></button>
+		<div class="d-flex w-100 mb-2 navigator-tabs">
+			<button class="fa fa-phone flex-center w-50 active clickDown"></button>
+			<button class="fa fa-envelope flex-center w-50 clickDown"></button>
+		</div>
+		<div class="clmn_wrapper navigator-space">
+			<div class="p-3">
+				<p class="fw-bold">
+					Questions? Need assistance? Just want to chat? Reach us easily via phone. Choose from our dedicated lines.
+				</p>
+				<div class="mb-2 contact-item">
+					<div class="w-50 h4 m-0 ps-2 contact-item_owner">President</div>
+					<div class="w-50 contact-item_tools">
+						<span class="small flex-center">(+250) 783967092</span>
+						<a class="flex-center bounceClick" href="tel:+250783967092">Call</a>
+					</div>
+				</div>
+				<div class="mb-2 contact-item">
+					<div class="w-50 h4 m-0 ps-2 contact-item_owner">VC President</div>
+					<div class="w-50 contact-item_tools">
+						<span class="small flex-center">(+250) 780789222</span>
+						<a class="flex-center bounceClick" href="tel:+250780789222">Call</a>
+					</div>
+				</div>
+				<div class="mb-2 contact-item">
+					<div class="w-50 h4 m-0 ps-2 contact-item_owner">Web issues</div>
+					<div class="w-50 contact-item_tools">
+						<span class="small flex-center">(+250) 785459848</span>
+						<a class="flex-center bounceClick" href="tel:+250785459848">Call</a>
+					</div>
+				</div>
+			</div>
+			<div class="p-3">
+				<p class="fw-bold">
+					Got questions? Require assistance? Or simply want to connect? Drop us an email.
+				</p>
+				<div class="mb-2 contact-item">
+					<div class="w-50 h4 m-0 ps-2 contact-item_owner">ESG</div>
+					<div class="w-50 contact-item_tools">
+						<span class="small flex-center" style="font-size: 65%;">easternsingersg@gmail.com</span>
+						<a class="flex-center bounceClick" href="mailto:easternsingersg@gmail.com">Mail</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    
+	<!-- Web settings -->
+    <div class="bg-myBlue show-touch-sm isolate-y px-1 fix-draggable webSettings">
+		<button class="fa fa-close d-block w-2_5rem ratio-1-1 flex-center border-1 rounded-pill bg-transparent text-appColor-cons ms-auto ms-sm-0 me-sm-auto" onclick="hide_web_settings()"></button>
+		<div class="touch-anim"></div>
+		<h5 class="text-center fix-dragger fs-3">Web settings</h5>
+		<div class="clmn_wrapper dim-100 webSetPG">
+			<div class="webSetPG1">
+				<div class="w-100 h-50 d-grid webSetGrid">
+					<div class="d-flex flex-column">
+						<div class="p-1 text-center fs-5">Contact us</div>
+						<div class="position-relative flex-grow-1 mb-1 overflow-visible web-contactor contactor">
+							<span class="fa fa-phone rad-50 w-40 ratio-1-1 flex-center top-left"></span>
+							<span class="fa fa-envelope rad-50 w-20 ratio-1-1 flex-center b-middle-m"></span>
+							<span class="fab fa-whatsapp rad-50 w-50 ratio-1-1 display-4 flex-center bottom-right"></span>
+						</div>
+					</div>
+					<div class="d-flex flex-column">
+						<div class="p-1 text-center theme-name">Light</div>
+						<div class="position-relative mb-1 ms-auto me-auto h-80 theme-changer LG-Def">
+							<div class="position-absolute t-middle p-1 h-20 w-100 flex-center auto_theme LG-Def choice" tabindex="0">Auto</div>
+							<div class="position-absolute b-middle-m rad-30 h-75 w-100 themerICN LG-Def">
+								<span class="fa fa-moon position-absolute b-middle w-100 ratio-1-1 flex-center rad-50" tabindex="0"></span>
+							</div>
+						</div>
+					</div>
+					<div class="d-flex flex-column">
+						<div class="p-1 text-center">Guide</div>
+						<div class="position-relative flex-grow-1 d-grid guider">
+							<span class="fa fa-moon w-100 grid-center ptr" title="Theme"></span>
+							<span class="fa fa-mobile w-100 grid-center ptr" title="Animations"></span>
+							<span class="fa fa-lightbulb w-100 grid-center ptr" title="Tips"></span>
+							<span class="w-100 grid-center ptr" tabindex="0" onclick="show_guide()">All</span>
+						</div>
+					</div>
+					<div class="d-flex flex-column">
+						<div class="p-1 text-center fs-6">Terms and privacy</div>
+						<div class="position-relative my-auto pb-2">
+							<span class="fa fa-shield-alt w-100 h-100 grid-center display-5 ptr" onclick="show_terms()"></span>
+						</div>
+					</div>
+					<div class="d-flex flex-column">
+						<div class="p-1 text-center">Update</div>
+						<div class="position-relative my-auto pb-2" tabindex="0" onclick="window.location.reload()">
+							<span class="fa fa-flag w-100 h-100 grid-center small ptr"></span>
+						</div>
+					</div>
+					<div class="d-flex flex-column">
+						<div class="p-1 text-center">Reset</div>
+						<div class="position-relative my-auto pb-2" tabindex="0" onclick="reset_web()">
+							<span class="fa fa-refresh w-100 h-100 grid-center small ptr"></span>
+						</div>
+					</div>
+					<div>
+						<div class="dim-100 position-relative d-grid timeShow">
+							<span class="dim-100 h-100 grid-center ptr"></span>
+						</div>
+					</div>
+					<div>
+						<div class="h-100 position-relative sharePage">
+							<button class="btn dim-100 sharePage-button" title="Share this page">
+								Share <span class="fa fa-share ms-2"></span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="w-100 h-50 mySbar-sm pt-3 webSwitches">
+					<ul class="list-style-circle">
+						<li>
+							<div class="d-flex align-items-center justify-content-between pe-4 animation-control">
+								<span>Animations</span>
+								<div class="switch switch-x">
+									<div></div>
+								</div>
+							</div>
+							<small class="my-2">
+								If turned off, all animations and transitions are disabled for most items.
+							</small>
+						</li>
+						<li>
+							<div class="d-flex align-items-center justify-content-between pe-4 tips-control">
+								<span>Guide always</span>
+								<div class="switch switch-x OFF">
+									<div></div>
+								</div>
+							</div>
+							<small class="my-2">
+								If turned on, website guide and tips will pop-up every time the page loads.
+							</small>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="rad-5 webSetPG2">
+				<button class="fa fa-arrow-left l-middle-m ratio-1-1 bordered text-white-var rad-50 grid-center inx-high partGuideCloser"></button>
+			</div>
+		</div>
+    </div>
+    
+    <div class="fix-holder fix-holder-blue fade-to-back blur-bg-5px">
+        <div class="col-sm-8 col-md-6 col-lg-5 col-xl-4 mx-auto h-100 my-item item-warning mySbar-sm webTerms">
+            <div class="my-item-header">
+                <h4 class="my-item-header__title">Terms and privacy</h4>
+                <div class="rad-3 my-item-header__icons">
+                    <button class="fa fa-close hide-par-fix item-closer"></button>
+                </div>
+            </div>
+            <div class="my-item-body">
+                <p class="my-3">
+                    This is <b>Eastern Singers Group website</b>, dedicated to help users in different ways of praying, with music being the priority. You can <a href="about" class="text-goldR">learn more</a> about ESG.
+                </p>
+                <p class="p-1">
+                    Our platform has its foundation on the following terms:
+                    <ul class="list-style-square">
+                        <li>This is a non-profit religious platform <i>(website).</i></li>
+                        <li>No personal data are collected alongway using this website, unless they are asked for.</li>
+                        <li>
+                            We provide services which do not in anyway violate personal privacy or security of individuals/users.
+                        </li>
+                        <li>All rights are reserved.</li>
+                    </ul>
+                </p>
+                <p class="p-1">
+                    This platform provides downloadable documents that are related to music and prayers, and also has a space for users to upload their documents or share out those available on the website.<br>
+                    However, activities that are against the purpose of use for those actions are prohibited;
+                    <ul class="list-style-square">
+                        <li>Do not share our documents or someone's document(s) for business purpose unless permitted.</li>
+                        <li>It is prohibited to upload or share out a copy of someone's document calling it yours.</li>
+                        <li>
+                            It is prohibited to upload violence documents where possible on this platform, inluding contents about sexual matter, racial abuse, hatred content or any other type of violence.
+                        </li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="fix-holder fade-to-scaleY g-items-holder webGuide-fix">
+        <div class="webGuide g-items Sbar-none">
+            <div class="p-3 text-light grid-item mySbar-sm home view">
+                <h6 class="display-4">Guide</h6>
+                <p class="p-2">
+                    <span class="display-7 text-goldR">
+                        This guide is provided to help users enjoy smooth browsing experience on this platform
+                    </span><br><br>
+                    <b>Check about:</b>
+                    <ul class="mt-5">
+                        <li>Theme</li>
+                        <li>Animations</li>
+                        <li>Keybord shortcuts <kbd>alt</kbd> <kbd>s</kbd>.</li>
+                    </ul>
+                </p>
+            </div>
+            <div class="p-3 text-light grid-item mySbar-sm">
+                <h6 class="display-5">Theme</h6>
+                <p class="p-2">
+                    <span class="display-7 text-goldR">
+                        You can easily change how the website looks by switching to dark or light theme
+                    </span>
+                    <ul class="mt-5">
+                        <li>Go through web settings <span class="fa fa-gear"></span> and switch the themes, or</li>
+                        <li>Presh keybord shortcut <kbd>alt</kbd> <kbd>t</kbd>.</li>
+                    </ul>
+                </p>
+                <p class="p-2 mt-5">
+                    When <b><u>auto</u></b> setting is chosen, the default website schedule will be activated. i.e Dark theme will activate from 19:00 until morning 06:00.<br>
+                    However, any theme can be prefered by manual switch as mentioned above.
+                </p>
+            </div>
+            <div class="p-3 text-light grid-item mySbar-sm">
+                <h6 class="display-5" style="animation: slideInRight 7s infinite">Animations</h6>
+                <p class="p-2">
+                    <span class="display-7 text-goldR">
+                        If you dont feel confortable with web animations, you can switch them off
+                    </span>
+                    <ul class="mt-5">
+                        <li>
+                            Go through web settings <span class="fa fa-gear"></span> and switch off the animation enabler.
+                        </li>
+                    </ul>
+                </p>
+                <p class="p-2 mt-5">
+                    The default website behavior is set to animating. Turning off animations will reduce both item animations and transitions.<br>
+                    📌 <span style="color: cyan;">Some items may suddlenly appear or others may transition really fast.</span>
+                </p>
+            </div>
+            <div class="p-3 text-light grid-item mySbar-sm">
+                <h6 class="display-5">Tips</h6>
+                <p class="p-2 display-7 text-goldR">
+                        Navigate quickly through the pages and web items
+                </p>
+                <section class="p-2">
+                    <table class="w-100 px-3 mb-3">
+                        <caption class="display-7">Keyboard shortcuts</caption>
+                        <tr>
+                            <th>Keys</th>
+                            <th>Action</th>
+                        </tr>
+                        <tr>
+                            <td><kbd>alt</kbd> <kbd>s</kbd></td>
+                            <td>Show web settings</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>alt</kbd> <kbd>t</kbd></td>
+                            <td>Change theme</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>alt</kbd> <kbd>t</kbd> <kbd>a</kbd></td>
+                            <td>Set auto-theme</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>alt</kbd> <kbd>g</kbd></td>
+                            <td>Show this guide</td>
+                        </tr>
+                    </table>
+                    <p class="p-2">
+                        All shortcuts provided above works everywhere across this website and <mark>different pages may also have additional shortcuts</mark>.
+                        Check it where necessary to add more speed and experience.<br>
+                        📌 <span style="color: cyan;">If any of the shortcuts fail, check your keyboard setting.</span>
+                    </p>
+                    <table class="w-100 px-3 mb-3">
+                        <caption class="display-7">Additional shortcuts <b>(this page)</b></caption>
+                        <tr>
+                            <th>Keys</th>
+                            <th>Action</th>
+                        </tr>
+                        <tr>
+                            <td><kbd>ctrl + /</kbd></td>
+                            <td>Focus in a search box</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>Esc</kbd></td>
+                            <td>Focus out of a search box</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>alt + r</kbd></td>
+                            <td>Refresh images</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>Esc</kbd></td>
+                            <td>Hide some overlaying elements</td>
+                        </tr>
+                    </table>
+                    <span class="p-2">More Tips</span>
+                    <ul>
+                        <li>
+                            <u>Refresh pages for updates</u>. There's always new things to ease browsing.
+                        </li>
+                        <li>
+                            Visit different pages and find out what can be more interesting.
+                        </li>
+                        <li>
+                            Avoid forcing processes, by allowing them to finish smoothly. <i>(Especially when finding documents to download)</i>.
+                        </li>
+                    </ul>   
+                </section>
+            </div>
+            <div class="item-swichers">
+                <button class="fa fa-close top-right w-3rem ratio-1-1 g-itemsCloser"></button>
+                <button class="fa fa-arrow-left item-swicher left"></button>
+                <button class="fa fa-arrow-right item-swicher right"></button>
+                <div class="b-middle-m w-25 h-30px d-flex align-items-center justify-content-around item-pager">
+                    <button class="rad-50 view"></button>
+                    <button class="rad-50"></button>
+                    <button class="rad-50"></button>
+                    <button class="rad-50"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+	<!-- ************************** End of fixed Elements ************************** -->
+	
+	<main class="grids-main">
+
+		<!-- ************************** 1 Page header ************************** -->
+
+		<div id="pageHeader">
+			<div class="mb-4 bg-myBlue2 text-white p-4 SolfCAP">
+				<h1 class="display-4 reveal-text">Solfeggio</h1>
+				<span class="position-absolute display-3 w-25 ratio-1-1 flex-center text-white-var top-right-m
+				">&#119070;</span>
+				<div class="p-2 display-7">
+					Learn sheet music reading from experties and music professionals.
+				</div>
+			</div>
+			
+			<article class="p-4 text-justify fs-4 container">
+				<u>Solfeggio</u>, often referred to as solfège, is <strong>a system used in music education to teach sight-singing and pitch recognition</strong>. It involves assigning syllables to the notes of the musical scale to aid in singing melodies and understanding musical relationships.
+			</article>
+			<hr>
+		</div>
+
+		<!-- ************************** 2 Page navigator ************************** -->
+
+		<nav class="container px-lg-0" id="pageSidenav" style="perspective: 12rem; perspective-origin: center 30%">
+			<ul class="blur-bg-5px list-group list-unstyled" id="scrollSpy">
+				<li><a class="list-group-item list-group-item-action" href="#title1">The definition of music</a></li>
+				<li><a class="list-group-item list-group-item-action" href="#title2">Deep about music</a></li>
+				<li><a class="list-group-item list-group-item-action" href="#title3">Benefits of knowing Solfeggio</a></li>
+				<li><a class="list-group-item list-group-item-action" href="#title4">Learning progress</a></li>
+			</ul>
+		</nav>
+
+		<!-- ************************** 3 Main content ************************** -->
+
+		<div id="pageMainContent">
+			<div id="mainBody_Music">
+				<h3 class="ms-2 mb-4 display-5 gradient-underline" id="title1">The definition of music</h3>
+				<div class="p-sm-2 p-lg-3 d-lg-flex">
+					<p class="p-3 rounded dfn py-lg-5" style="flex-basis: 40%; flex-shrink: 0;">
+						According to the community of musicians, music is <dfn>a combination of sounds that brings beauty of emotional expressions</dfn>.<br>
+					</p>
+					<p class="p-3 fs-5">
+						Some may regard it as a leisure activity, but whether it truly qualifies as leisure is subjective. The grammatical definition of music is riddled with contradictions, as individuals tend to define it based on its personal impact. Nevertheless, for many of us, music embodies the harmonious fusion of sounds, be they vocal, instrumental, or a combination of both, creating an auditory experience that is pleasing to the ears and evokes emotional expressions.
+					</p>
+				</div>
+				<h3 class="ms-2 mb-4 display-5 gradient-underline" id="title2">Deep about music</h3>
+				<div class="p-3">
+					<p class=" fs-5">
+						Digging deeper, great music should include the best of <b> Melody, Harmony, Pitch, Timbre, Texture, Tempo, Dynamics, and Meter</b>. These components serve as the foundation for the diversity of songs we encounter. Take, for instance, the universally recognized 'Happy Birthday' song, an exemplar of musicality known worldwide. Its appeal lies in the harmonious interplay of melodies, showcasing how the same song can be rendered in various musical expressions.<br><br>
+					</p>
+					<div class="d-flex flex-wrap">
+						<div class="col-md-6 col-lg-4 col-xl-3 p-1">
+							<div class="card bg-transparent border-0">
+								<div class="card-body">
+									<h4 class="card-title text-secondary">Melody</h4>
+									<hr>
+									<p class="card-text">
+										A strong and memorable melody is a key characteristic of good music. A well-crafted melody has a clear and distinctive shape, often making it easy for listeners to remember and sing along.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-4 col-xl-3 p-1">
+							<div class="card bg-transparent border-0">
+								<div class="card-body">
+									<h4 class="card-title text-secondary">Harmony</h4>
+									<hr>
+									<p class="card-text">
+										Harmony involves the combination of different musical notes played simultaneously. Well-constructed harmonies complement the melody, creating depth and richness in the overall sound.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-4 col-xl-3 p-1">
+							<div class="card bg-transparent border-0">
+								<div class="card-body">
+									<h4 class="card-title text-secondary">Pitch</h4>
+									<hr>
+									<p class="card-text">
+										This is determined by the frequency of the sound waves, where higher frequencies result in higher pitch and lower frequencies in lower pitch. 
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-4 col-xl-3 p-1">
+							<div class="card bg-transparent border-0">
+								<div class="card-body">
+									<h4 class="card-title text-secondary">Timbre</h4>
+									<hr>
+									<p class="card-text">
+										Timbre, or tone color, refers to the unique quality of a sound. A variety of timbres, such as different instruments or voices, can add interest and diversity to the music.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-4 col-xl-3 p-1">
+							<div class="card bg-transparent border-0">
+								<div class="card-body">
+									<h4 class="card-title text-secondary">Texture</h4>
+									<hr>
+									<p class="card-text">
+										Texture relates to the layers of sound in a piece of music. Whether it's a sparse or densely orchestrated arrangement, the way different elements interact contributes to the overall texture.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-4 col-xl-3 p-1">
+							<div class="card bg-transparent border-0">
+								<div class="card-body">
+									<h4 class="card-title text-secondary">Tempo</h4>
+									<hr>
+									<p class="card-text">
+										The speed or pace at which a piece of music is performed. It is a crucial element that influences the overall feel and character of a musical composition. Tempo is typically measured in beats per minute (BPM).
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-4 col-xl-3 p-1">
+							<div class="card bg-transparent border-0">
+								<div class="card-body">
+									<h4 class="card-title text-secondary">Dynamics</h4>
+									<hr>
+									<p class=" collapse show">
+										Dynamics refer to the variations in volume and intensity within a piece of music. Effective use of dynamics can create contrast, build tension, and add emotional depth to the music.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-4 col-xl-3 p-1">
+							<div class="card bg-transparent border-0">
+								<div class="card-body">
+									<h4 class="card-title text-secondary">Meter</h4>
+									<hr>
+									<p class="card-text">
+										The meter of music refers to the rhythmic structure and organization of beats within a musical composition. It defines the recurring patterns of strong and weak beats that give a sense of regularity and pulse to the music.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>		
+					<p class="mt-4">
+						Understanding a song's melody is just a starting point for musicians or anyone aspiring to become one. This is where Solfeggio becomes invaluable. Solfeggio goes beyond recognizing melodies; it provides a deeper comprehension of music, helping you understand why certain notes are sung and the reasoning behind musical choices. Essentially, Solfeggio can be described as <mark>the written language of music</mark>.<br><br>
+						Nevertheless, it's crucial to acknowledge that not every musician must master Solfeggio. While it's not a universal requirement, possessing Solfeggio skills can significantly enhance the capabilities of a musician. The proficiency in this musical language opens doors to a deeper understanding of musical compositions, contributing to a musician's overall versatility and expertise. Here is why it's a great skill to cope with.
+					</p>
+				</div>
+				<h3 class="ms-2 mb-4 display-5 gradient-underline" id="title3">Benefits of knowing Solfeggio</h3>
+				<ul class="list-style-square ps-5 pe-2 pe-lg-3">
+					<li>
+						The foremost, you're not just reading song lyrics; you're also understanding and interpreting the melody.
+					</li>
+					<li>
+						Those skilled in music share a universal language. They interpret compositions similarly.
+					</li>
+					<li>
+						Composers don't need to worry about forgetting melodies; the musical score preserves them.
+					</li>
+					<li>
+						With Solfeggio skills, you can read and write any music, including your favorites and traditional songs, using sheet music.
+					</li>
+					<li>
+						Mastering musical note reading means you can tackle almost any song, even complex compositions or those not yet written. Plus, you can create your own great pieces.
+					</li>
+				</ul>
+		
+				<div class="carousel slide carousel-fade offset-sm-2 col-sm-8 p-3 p-sm-0" data-ride="carousel" data-interval="10000" data-pause="false" id="SolCar">
+					<ol class="carousel-indicators"></ol>
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img src="../Pics/Music_sheet4.jpg" alt="" class="img-fluid rounded">
+							<div class="carousel-caption">
+								<h4 class="heading">Solfeggio</h4>
+								<p>Read from the score</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img src="../Pics/Music_sheet1.jpg" alt="" class="img-fluid rounded">
+							<div class="carousel-caption">
+								<h4 class="heading">Solfeggio</h4>
+								<p>Read from the score</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img src="../Pics/Music_sheet2.jpg" alt="" class="img-fluid rounded">
+							<div class="carousel-caption">
+								<h4 class="heading">Solfeggio</h4>
+								<p>Practice</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img src="../Pics/Music_sheet.jpg" alt="" class="img-fluid rounded">
+							<div class="carousel-caption">
+								<h4 class="heading">Solfeggio</h4>
+								<p>Strengthen your skills</p>
+							</div>
+						</div>
+		
+						<a href="#SolCar" class="carousel-control-prev" data-slide="prev" for="navigation">
+							<span class="fa fa-chevron-left"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a href="#SolCar" class="carousel-control-next" data-slide="next" for="navigation">
+							<span class="fa fa-chevron-right"></span>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
+				</div>
+				<br><br>
+				
+				<h3 class="ms-2 mb-4 display-5 gradient-underline" id="title4">Learning progress.</h3>
+				<p class="p-3 fs-5">
+					Before embarking on learning Solfeggio, it's crucial to assess your current skills accurately to ensure effective knowledge acquisition. For beginners, starting with the 'Beginner's category' is recommended to establish a strong foundation. Avoid skipping steps, as it may lead to a less engaging and potentially dull learning experience.
+				</p>
+				<div class="my-2 mx-0 p-3 py-1 py-sm-2 item-secondary h-grids-controller" id="solfCategories" role="navigation">
+					<button type="button" class="btn btn-lg active">Beginner</button>
+					<button type="button" class="btn btn-lg">Intermediate</button>
+					<button type="button" class="btn btn-lg">Professional</button>
+				</div>
+				<div class="d-flex mb-5 h-grids-wrapper" data-scrolledby="solfCategories">
+					<section class="offset-sm-1 col-sm-10 mb-3 p-0 h-grids-item">
+						<h2 class="mt-3">Beginner</h2>
+						<div>
+							<p>
+								Before delving into the materials, it's essential to establish a few key considerations for an effective Solfeggio learning journey.
+							</p>
+							<ul>
+								<li>First and foremost, allocate sufficient time for your Solfeggio practice,</li>
+								<li>Your patience and focused attention are invaluable assets for comprehensive learning,</li>
+								<li>
+									Creativity may play a role in grasping intricate concepts, especially when dealing with complex musical compositions.<br> But rest assured, with commitment and dedication, you've got this.
+								</li>
+							</ul>
+							<p class="text-center">
+								<button class="btn btn-info target-link h-grids-item_link"><a href="Solfeggio/ESG_SolfeggioBGN">Begin learning</a> <span class="fa fa-angle-double-right"></span></button>
+							</p>
+						</div>
+					</section>
+					<section class="w-0 mb-3 p-0 h-grids-item">
+						<h2 class="mt-3">Intermediate</h2>
+						<div>
+							<p>
+								As a burgeoning musician, the learning journey unfolds with continuous exploration from the source.<br>
+								<strong>Tips at this stage:</strong>
+							</p>
+							<ul>
+								<li>
+									Assess and identify your frequent weaknesses in reading musical notes.
+								</li>
+								<li>
+									Channel your efforts towards addressing and improving those identified weaknesses.
+								</li>
+							</ul>
+							<p class="text-center">
+								<button class="btn btn-info target-link h-grids-item_link"><a href="Solfeggio/ESG_SolfeggioIM">Continue learning</a> <span class="fa fa-angle-double-right"></span></button>
+							</p>
+						</div>
+					</section>
+					<section class="w-0 mb-3 p-0 h-grids-item">
+						<h2 class="mt-3">Pro</h2>
+						<div>
+							<p>
+								In the current phase, it's undeniable that you've made significant progress in your musical journey, but there's always room for further advancement.
+							</p>
+							<ul>
+								<li>
+									Aspire to reach greater proficiency by actively seeking additional skills.
+								</li>
+								<li>
+									Distinguish yourself by tackling the most challenging compositions that push your limits.
+								</li>
+								<li>
+									Cultivate a unique and innovative approach to experiencing music.
+								</li>
+								<li>
+									Identify and address any persistent weaknesses in reading notes, particularly those involving quick and transposed compositions.
+								</li>
+								<li>
+									Concentrate your efforts on improving the areas where you face challenges.
+								</li>
+							</ul>
+							<p class="text-center">
+								<button class="btn btn-info target-link h-grids-item_link"><a href="Solfeggio/ESG_SolfeggioPRO">Continue learning</a> <span class="fa fa-angle-double-right"></span></button>
+							</p>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+	</main>
+	
+	<!-- ************************** Page Ending ************************** -->
+	
+	<footer class="py-3 Info">
+		<li class="small">
+			Check out <u><a href="About/ESG_Songs">ESG songs</a></u>
+		</li><br>
+		<div class="row m-0">
+			<div class="col-6 col-md-3">
+				<h4>Quick links</h4>
+				<ul class="list-unstyled p-2">
+					<li class="p-2">
+						<span class="fa fa-place-of-worship grid-center me-3"></span><a href="Services/CHM_Songs">Mass songs</a>
+					</li>
+					<li class="p-2">
+						<span class="fa fa-handshake grid-center me-3"></span><a href="services">Services</a>
+					</li>
+					<li class="p-2 Here">
+						<span class="grid-center me-3">&#119071;</span><a href="#">Solfeggio docs</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-6 col-md-3">
+				<h4>Follow us</h4>
+				<ul class="list-unstyled p-2">
+					<li class="p-2">
+						<span class="fab fa-instagram grid-center me-3"></span><a href="https://www.instagram.com/easternsingers/" target="_blank">Instagram</a>
+					</li>
+					<li class="p-2">
+						<span class="fab fa-facebook-f grid-center me-3"></span><a href="https://web.facebook.com/groups/221686289873729/" target="_blank">Facebook</a>
+					</li>
+					<li class="p-2">
+						<span class="fab fa-youtube grid-center me-3"></span><a href="https://www.youtube.com/channel/UC88VxWbKsZMbEjaL0kzLZIQ/" target="_blank">YouTube</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-6 col-md-3">
+				<h4>Contact</h4>
+				<ul class="list-unstyled p-2">
+					<li class="p-2">
+						<span class="fa fa-phone grid-center me-3"></span><a class="small" href="tel:+250783967092">(+250) 783967092</a>
+					</li>
+					<li class="p-2">
+						<span class="fa fa-phone grid-center me-3"></span><a class="small" href="tel:+250785459848">(+250) 785459848</a>
+					</li>
+					<li class="p-2">
+						<span class="fa fa-envelope grid-center me-3"></span><a href="contact">E-mail</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<hr>
+		<div class="text-center text-bold">
+			<small>
+				<small>
+					<strong>Copyright <span class="fa fa-copyright"></span> <span class="copyright-year">2022</span> Eastern Singers Group. All Rights Reserved.</strong><br>
+					<span class="fa fa-code me-1"></span> Powered by <a href="https://hirwa9.github.io" target="_blank" class=" text-muted"><strong>Hirwa</strong></a>
+				</small>
+			</small>
+			<div class="position-fixed fixed-bottom inx-high offset-sm-2 col-sm-8 offset-md-3 col-md-6 p-2 blur-bg-5px collapse win-hide designer">
+				<div class="ps-3 d-flex align-items-center justify-content-between">
+					<span>Developer <span class="fa fa-paint-brush ms-2"></span></span>
+					<button class="w-2rem bounceClick closerX" data-bs-toggle="collapse" data-bs-target=".designer"></button>
+				</div>
+				<hr>
+				<ul class="list-style-square small">
+					<li class="text-start">
+						E-mail: <a href="mailto:hirwawilly9@gmail.com">hirwawilly9@gmail.com <span class="fa fa-envelope ms-2"></span></a>
+					</li>
+					<li class="text-start">
+						Phone: <a href="tel:+250785459848" class="me-2">+250 785 459 848 <span class="fa fa-phone ms-2"></span></a>
+					</li>
+					<li class="text-start">
+						<a href="https://www.linkedin.com/in/hirwa-cyuzuzo-willy-94159427b" class="w-30px ratio-1-1 rad-50 grid-center border bounceClick" target="_blank">
+							<span class="fab fa-linkedin"></span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	
+	<script  src="../MyScripts.js?v=1.1105"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<div class="bg-myBlue show-touch-sm isolate-y px-1 fix-draggable {{'set': isWebSettingsVisible}} webSettings">
+    <button class="fa fa-close d-block w-2_5rem ratio-1-1 flex-center border-1 rounded-pill bg-transparent text-warning ms-auto ms-sm-0 me-sm-auto settingsCloser"></button>
+    <div class="touch-anim"></div>
+    <h5 class="text-center fix-dragger">Web settings</h5>
+    <div class="clmn_wrapper dim-100 webSetPG">
+        <div class="webSetPG1">
+            <div class="w-100 h-50 d-grid webSetGrid">
+                <div>
+                    <div class="h-20 flex-center">Contact us</div>
+                    <div class="h-80 position-relative overflow-visible web-contactor contactor">
+                        <span class="fa fa-phone rad-50 w-40 ratio-1-1 flex-center top-left"></span>
+                        <span class="fa fa-envelope rad-50 w-20 ratio-1-1 flex-center b-middle-m"></span>
+                        <span
+                            class="fab fa-whatsapp rad-50 w-50 ratio-1-1 display-4 flex-center bottom-right"></span>
+                    </div>
+                </div>
+                <div>
+                    <div class="h-20 flex-center theme-name">Light</div>
+                    <div class="position-relative ms-auto me-auto h-80 theme-changer LG-Def">
+                        <div class="position-absolute t-middle p-1 h-20 w-100 flex-center auto_theme LG-Def choice"
+                            tabindex="0">Auto</div>
+                        <div class="position-absolute b-middle-m rad-30 h-75 w-100 themerICN LG-Def">
+                            <span class="fa fa-moon position-absolute b-middle w-100 ratio-1-1 flex-center rad-50"
+                                tabindex="0"></span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="h-20 flex-center">Guide</div>
+                    <div class="h-80 position-relative d-grid guider">
+                        <span class="fa fa-moon w-100 grid-center ptr" title="Theme"></span>
+                        <span class="fa fa-mobile w-100 grid-center ptr" title="Animations"></span>
+                        <span class="fa fa-lightbulb w-100 grid-center ptr" title="Tips"></span>
+                        <span class="w-100 grid-center ptr" tabindex="0" onclick="show_guide()">All</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="h-20 flex-center">Terms and privacy</div>
+                    <div class="h-80 position-relative">
+                        <span class="fa fa-shield-alt w-100 h-100 grid-center display-5 ptr"
+                            onclick="show_terms()"></span>
+                    </div>
+                </div>
+                <div>
+                    <div class="h-25 flex-center">Update</div>
+                    <div class="h-75 position-relative" tabindex="0" onclick="window.location.reload()">
+                        <span class="fa fa-flag w-100 h-100 grid-center ptr"></span>
+                    </div>
+                </div>
+                <div>
+                    <div class="h-25 flex-center">Reset</div>
+                    <div class="h-75 position-relative" tabindex="0" onclick="reset_web()">
+                        <span class="fa fa-refresh w-100 h-100 grid-center ptr"></span>
+                    </div>
+                </div>
+                <div>
+                    <div class="dim-100 position-relative d-grid timeShow">
+                        <span class="dim-100 h-100 grid-center ptr"></span>
+                    </div>
+                </div>
+                <div>
+                    <div class="h-100 position-relative sharePage">
+                        <button class="btn btn-success dim-100 sharePage-button" title="Share this page">
+                            Share <span class="fa fa-share"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="w-100 h-50 mySbar-sm pt-2 webSwitches">
+                <ul class="list-style-circle">
+                    <li>
+                        <div class="d-flex align-items-center justify-content-between pe-4 animation-control">
+                            <span>Animations</span>
+                            <div class="switch switch-x">
+                                <div></div>
+                            </div>
+                        </div>
+                        <small class="my-2">
+                            If turned off, all animations and transitions are disabled for most items.
+                        </small>
+                    </li>
+                    <li>
+                        <div class="d-flex align-items-center justify-content-between pe-4 tips-control">
+                            <span>Guide always</span>
+                            <div class="switch switch-x OFF">
+                                <div></div>
+                            </div>
+                        </div>
+                        <small class="my-2">
+                            If turned on, website guide and tips will pop-up every time the page loads.
+                        </small>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="rad-5 webSetPG2">
+            <button
+                class="fa fa-arrow-left l-middle-m ratio-1-1 bordered text-white-var rad-50 grid-center inx-high partGuideCloser"></button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,2099 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="holyMassSongs" data-ng-controller="generalCTRL">
+<head>
+	<title>Holy Mass songs</title>
+	
+	<link rel="icon" type="image/x-icon" href="../../Pics/ESG_favicon1.ico">
+	<link rel="stylesheet" type="text/css" href="../../styles/chms.css?v=1.1200">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Hirwa Willy">
+    <meta name="keywords" content="holy mass songs, rwandan holy mass songs, catholich songs, rwandan catholich songs, rwandan catholich music, catholich music, esg, eastern singers group">
+	<meta name="description" content="A library of Rwandan Common Holy Mass Songs written by notes (Solfeggio).">
+	<meta name="robots" content="index, follow">
+	<meta property="og:type" content="website">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:site_name" content="Eastern Singers Group">
+	<meta property="og:title" content="ESG _ Common Holy Mass Songs">
+	<meta property="og:description" content="A library of Rwandan Common Holy Mass Songs written by notes/Solfeggio.">
+	<meta property="og:image" content="https://esgrprwanda.rf.gd/Pics/EasternSingersLogo.png">
+	<meta property="og:url" content="https://esgrprwanda.rf.gd/esgrp/Services/CHM_Songs">
+ 
+    <!-- online -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-sanitize.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ng-file-upload/12.2.13/ng-file-upload.min.js"></script> -->
+    <script src="chmsModule.js?v=1.1105"></script>
+    <script src="controllers/controllers.js?v=1.1171"></script>
+    
+    <!-- offline -->
+    
+    <!-- <link rel="stylesheet" href="../../bootstrap5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../fontawesome6-2-0/css/all.css">
+    <script src="../../bootstrap5/js/bootstrap.min.js"></script>
+    <script src="../../bootstrap5/js/bootstrap.bundle.min.js"></script>
+    <script src="../../bootstrap5/js/bootstrap.bundle.min.js.map"></script>
+    <script src="../../jq/jquery-3.7.1.js"></script> -->
+     
+    <!-- fonts -->
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-bodi Holy_Mass_Songs" data bs-spy="scroll" data-bs-target=".navbar" data-offset="20">
+
+    <div data-ng-show="nightLightOn" data-ng-style="{'background-color': nightLightFilterBG}" class="fixed-top inset-0 inx-max ptr-none" id="nightLightFilter" style="animation: fadeIN 1.5s 1;"></div>
+
+    <div class="fix-holder fix-holder-appColor2_cons inx-high p-2">
+        <div class="nav container-xs bordered-end-end Sbar-none shadow rounded-top" id="mySidenav">
+            <div class="position-absolute inx--1"></div>
+			<div>
+				<li class="nav-item"><a href="../../index" class="nav-link"><span class="fa fa-home text-white" style="font-size: 45px"></span></a></li>
+				<li class="nav-item"><a href="../about" class="nav-link">About</a></li>
+				<li class="nav-item"><a href="../About/ESG_Songs" class="nav-link">Songs</a></li>
+				<li class="nav-item"><a href="../services" class="nav-link">Services</a></li>
+				<li class="nav-item"><a href="../About/ESG_FAQs" class="nav-link">FAQs</a></li>
+				<li class="nav-item" data-bs-toggle="collapse"	data-bs-target=".MRNV"><a href="#" class="nav-link MoreMenu">More</a></li>
+			</div>
+			<div class="ps-3 mt-3 collapse MRNV">
+				<li class="nav-item"><a href="../About/ESG_Calendar" class="nav-link"> Calendar</a></li>
+				<li class="nav-item"><a href="../events" class="nav-link">ESG events</a></li>
+				<li class="nav-item"><a href="../Events/ESG_Gallery" class="nav-link">ESG gallery</a></li>
+				<li class="nav-item Here"><a href="#" class="nav-link">Holy Mass Songs</a></li>
+				<li class="nav-item"><a href="../solfeggio" class="nav-link">Learn Solfeggio</a></li>
+				<hr>
+				<li class="nav-item" id="settingsMenu"><a href="#" class="nav-link">Settings <span class="fa fa-gear"></span></a></li>
+			</div>
+            <div class="position-absolute r-middle-m theme-changer">
+                <div class="position-absolute t-middle p-1 auto_theme choice">Auto</div>
+                <div class="position-absolute b-middle-m rad-30 themerICN">
+                    <span class="fa fa-moon position-absolute b-middle w-100 ratio-1-1 flex-center rad-50"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	<!-- Contact us-->
+	<div class="position-fixed inx-15 collapse win-hide col-sm-7 col-md-6 col-lg-4 blur-bg-5px shadow item-myBlue contact-us">
+		<button class="fa fa-close contact-us_closer" data-bs-toggle="collapse" data-bs-target=".contact-us"></button>
+		<div class="d-flex w-100 mb-2 navigator-tabs">
+			<button class="fa fa-phone flex-center w-50 active clickDown"></button>
+			<button class="fa fa-envelope flex-center w-50 clickDown"></button>
+		</div>
+		<div class="clmn_wrapper navigator-space">
+			<div class="p-3">
+				<p class="fw-bold">
+					Questions? Need assistance? Just want to chat? Reach us easily via phone. Choose from our dedicated lines.
+				</p>
+				<div class="mb-2 contact-item">
+					<div class="w-50 h4 m-0 ps-2 contact-item_owner">President</div>
+					<div class="w-50 contact-item_tools">
+						<span class="small flex-center">(+250) 783967092</span>
+						<a class="flex-center bounceClick" href="tel:+250783967092">Call</a>
+					</div>
+				</div>
+				<div class="mb-2 contact-item">
+					<div class="w-50 h4 m-0 ps-2 contact-item_owner">VC President</div>
+					<div class="w-50 contact-item_tools">
+						<span class="small flex-center">(+250) 780789222</span>
+						<a class="flex-center bounceClick" href="tel:+250780789222">Call</a>
+					</div>
+				</div>
+				<div class="mb-2 contact-item">
+					<div class="w-50 h4 m-0 ps-2 contact-item_owner">Web issues</div>
+					<div class="w-50 contact-item_tools">
+						<span class="small flex-center">(+250) 785459848</span>
+						<a class="flex-center bounceClick" href="tel:+250785459848">Call</a>
+					</div>
+				</div>
+			</div>
+			<div class="p-3">
+				<p class="fw-bold">
+					Got questions? Require assistance? Or simply want to connect? Drop us an email.
+				</p>
+				<div class="mb-2 contact-item">
+					<div class="w-50 h4 m-0 ps-2 contact-item_owner">ESG</div>
+					<div class="w-50 contact-item_tools">
+						<span class="small flex-center" style="font-size: 65%;">easternsingersg@gmail.com</span>
+						<a class="flex-center bounceClick" href="mailto:easternsingersg@gmail.com">Mail</a>
+					</div>
+				</div>
+				<div class="my-3 d-grid" onclick="show_chatbot()">
+					<span class="mb-2">Or send us a Direct Message</span>
+					<button class="btn bg-transparent text-headerColor" style="border: 1px solid var(--_headerColor);">DM <span class="fa fa-paper-plane ps-2"></span></button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <!-- Page settings -->
+    <!-- <data-ng-include src="'../__PageComponents/web_settings.htm'" data-ng-controller="webSettingsCTRL" data-ng-class="{'set': isWebSettingsVisible}"></data-ng-include> -->
+    <!-- <data-ng-include src="'../__PageComponents/web_settings.htm'" data-ng-controller="webSettingsCTRL"></data-ng-include> -->
+    <div>
+        <!-- <div data-ng-include="'../__PageComponents/web_settings.htm'"></div> -->
+        <div class="bg-myBlue show-touch-sm isolate-y px-1 fix-draggable webSettings" data-ng-class="{'set': isWebSettingsVisible}">
+            <button class="fa fa-close d-block w-2_5rem ratio-1-1 flex-center border-1 rounded-pill bg-transparent text-appColor-cons ms-auto ms-sm-0 me-sm-auto" data-ng-click="toggleWebSettings()"></button>
+            <div class="touch-anim"></div>
+            <h5 class="text-center fix-dragger fs-3">Web settings</h5>
+            <div class="clmn_wrapper dim-100 webSetPG">
+                <div class="webSetPG1">
+                    <div class="w-100 h-50 d-grid webSetGrid">
+                        <div class="d-flex flex-column">
+                            <div class="p-1 text-center fs-5">Contact us</div>
+                            <div class="position-relative flex-grow-1 mb-1 overflow-visible web-contactor contactor">
+                                <span class="fa fa-phone rad-50 w-40 ratio-1-1 flex-center top-left"></span>
+                                <span class="fa fa-envelope rad-50 w-20 ratio-1-1 flex-center b-middle-m"></span>
+                                <span class="fab fa-whatsapp rad-50 w-50 ratio-1-1 display-4 flex-center bottom-right"></span>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <div class="p-1 text-center theme-name">Light</div>
+                            <div class="position-relative mb-1 ms-auto me-auto h-80 theme-changer LG-Def">
+                                <div class="position-absolute t-middle p-1 h-20 w-100 flex-center auto_theme LG-Def choice" tabindex="0">Auto</div>
+                                <div class="position-absolute b-middle-m rad-30 h-75 w-100 themerICN LG-Def">
+                                    <span class="fa fa-moon position-absolute b-middle w-100 ratio-1-1 flex-center rad-50" tabindex="0"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <div class="p-1 text-center">Guide</div>
+                            <div class="position-relative flex-grow-1 d-grid guider">
+                                <span class="fa fa-moon w-100 grid-center ptr" title="Theme"></span>
+                                <span class="fa fa-mobile w-100 grid-center ptr" title="Animations"></span>
+                                <span class="fa fa-lightbulb w-100 grid-center ptr" title="Tips"></span>
+                                <span class="w-100 grid-center ptr" tabindex="0" onclick="show_guide()">All</span>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <div class="p-1 text-center fs-6">Terms and privacy</div>
+                            <div class="position-relative my-auto pb-2">
+                                <span class="fa fa-shield-alt w-100 h-100 grid-center display-5 ptr" onclick="show_terms()"></span>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <div class="p-1 text-center">Update</div>
+                            <div class="position-relative my-auto pb-2" tabindex="0" onclick="window.location.reload()">
+                                <span class="fa fa-flag w-100 h-100 grid-center small ptr"></span>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <div class="p-1 text-center">Reset</div>
+                            <div class="position-relative my-auto pb-2" tabindex="0" onclick="reset_web()">
+                                <span class="fa fa-refresh w-100 h-100 grid-center small ptr"></span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="dim-100 position-relative d-grid timeShow">
+                                <span class="dim-100 h-100 grid-center ptr"></span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="h-100 position-relative sharePage">
+                                <button class="btn dim-100 sharePage-button" title="Share this page">
+                                    Share <span class="fa fa-share ms-2"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-100 h-50 mySbar-sm pt-3 webSwitches">
+                        <ul class="list-style-circle">
+                            <li>
+                                <div class="d-flex align-items-center justify-content-between pe-4 animation-control">
+                                    <span>Animations</span>
+                                    <div class="switch switch-x">
+                                        <div></div>
+                                    </div>
+                                </div>
+                                <small class="my-2">
+                                    If turned off, all animations and transitions are disabled for most items.
+                                </small>
+                            </li>
+                            <li>
+                                <div class="d-flex align-items-center justify-content-between pe-4 tips-control">
+                                    <span>Guide always</span>
+                                    <div class="switch switch-x OFF">
+                                        <div></div>
+                                    </div>
+                                </div>
+                                <small class="my-2">
+                                    If turned on, website guide and tips will pop-up every time the page loads.
+                                </small>
+                            </li>
+                            <li>
+                                <div class="d-flex align-items-center justify-content-between pe-4 night-light-control">
+                                    <span>Night light</span>
+                                    <div class="switch switch-x OFF" data-ng-click="togggleNightLight()" data-ng-class="{ OFF: !nightLightOn}">
+                                        <div></div>
+                                    </div>
+                                </div>
+                                <small class="my-2">
+                                    Adjust screen's blue light for your eyes care
+                                </small>
+                                <div class="d-flex px-2 py-1 rad-10 my-item item-myBlue bg-transparent text-headerColor ptr-all" data-ng-show="nightLightOn">
+                                    <input type="range" name="night_light_dragger" id="nightLightDragger" min="0" max="{{ filterLevelMax }}" step="0.003"
+                                    data-ng-model="filterLevel" class="flex-grow-1" style="accent-color: var(--_headerColor);">
+                                    <span class="w-20 px-2 text-nowrap"> {{ filterLevelPercentage }} %</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="rad-5 webSetPG2">
+                    <button
+                        class="fa fa-arrow-left l-middle-m ratio-1-1 bordered text-white-var rad-50 grid-center inx-high partGuideCloser"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="fix-holder fix-holder-blue fade-to-back blur-bg-5px">
+        <div class="col-sm-8 col-md-6 col-lg-5 col-xl-4 mx-auto h-100 my-item item-warning mySbar-sm webTerms">
+            <div class="my-item-header">
+                <h4 class="my-item-header__title">Terms and privacy</h4>
+                <div class="rad-3 my-item-header__icons">
+                    <button class="fa fa-close hide-par-fix item-closer"></button>
+                </div>
+            </div>
+            <div class="my-item-body">
+                <p class="my-3">
+                    This is <b>Eastern Singers Group website</b>, dedicated to help users in different ways of praying,
+                    with music being the priority. You can <a href="../about" class="text-goldR">learn more</a> about ESG.
+                </p>
+                <p class="p-1">
+                    Our platform has its foundation on the following terms:
+                <ul class="list-style-square">
+                    <li>This is a non-profit religious platform <i>(website).</i></li>
+                    <li>No personal data are collected alongway using this website, unless they are asked for.</li>
+                    <li>
+                        We provide services which do not in anyway violate personal privacy or security of individuals/users.
+                    </li>
+                    <li>All rights are reserved.</li>
+                </ul>
+                </p>
+                <p class="p-1">
+                    This platform provides downloadable documents that are related to music and prayers, and also has a
+                    space for users to upload their documents or share out those available on the website.<br>
+                    However, activities that are against the purpose of use for those actions are prohibited;
+                <ul class="list-style-square">
+                    <li>Do not share our documents or someone's document(s) for business purpose unless permitted.</li>
+                    <li>It is prohibited to upload or share out a copy of someone's document calling it yours.</li>
+                    <li>
+                        It is prohibited to upload violence documents where possible on this platform, inluding contents
+                        about sexual matter, racial abuse, hatred content or any other type of violence.
+                    </li>
+                </ul>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="fix-holder fade-to-scaleY g-items-holder webGuide-fix">
+        <div class="webGuide g-items Sbar-none">
+            <div class="p-3 text-light grid-item mySbar-sm home view">
+                <h6 class="display-4">Guide</h6>
+                <p class="p-2">
+                    <span class="display-7 text-goldR">
+                        This guide is provided to help users enjoy smooth browsing experience on this platform
+                    </span><br><br>
+                    <b>Check about:</b>
+                <ul class="mt-5">
+                    <li>Theme</li>
+                    <li>Animations</li>
+                    <li>Keybord shortcuts <kbd>alt</kbd> <kbd>s</kbd>.</li>
+                </ul>
+                </p>
+            </div>
+            <div class="p-3 text-light grid-item mySbar-sm">
+                <h6 class="display-5">Theme</h6>
+                <p class="p-2">
+                    <span class="display-7 text-goldR">
+                        You can easily change how the website looks by switching to dark or light theme
+                    </span>
+                <ul class="mt-5">
+                    <li>Go through web settings <span class="fa fa-gear"></span> and switch the themes, or</li>
+                    <li>Presh keybord shortcut <kbd>alt</kbd> <kbd>t</kbd>.</li>
+                </ul>
+                </p>
+                <p class="p-2 mt-5">
+                    When <b><u>auto</u></b> setting is chosen, the default website schedule will be activated. i.e Dark
+                    theme will activate from 19:00 until morning 06:00.<br>
+                    However, any theme can be prefered by manual switch as mentioned above.
+                </p>
+            </div>
+            <div class="p-3 text-light grid-item mySbar-sm">
+                <h6 class="display-5" style="animation: slideInRight 7s infinite">Animations</h6>
+                <p class="p-2">
+                    <span class="display-7 text-goldR">
+                        If you dont feel confortable with web animations, you can switch them off
+                    </span>
+                <ul class="mt-5">
+                    <li>
+                        Go through web settings <span class="fa fa-gear"></span> and switch off the animation enabler.
+                    </li>
+                </ul>
+                </p>
+                <p class="p-2 mt-5">
+                    The default website behavior is set to animating. Turning off animations will reduce both item
+                    animations and transitions.<br>
+                    📌 <span style="color: cyan;">Some items may suddlenly appear or others may transition really
+                        fast.</span>
+                </p>
+            </div>
+            <div class="p-3 text-light grid-item mySbar-sm">
+                <h6 class="display-5">Tips</h6>
+                <p class="p-2 display-7 text-goldR">
+                    Navigate quickly through the pages and web items
+                </p>
+                <section class="p-2">
+                    <table class="w-100 px-3 mb-3">
+                        <caption class="display-7">Keyboard shortcuts</caption>
+                        <tr>
+                            <th>Keys</th>
+                            <th>Action</th>
+                        </tr>
+                        <tr>
+                            <td><kbd>alt</kbd> <kbd>s</kbd></td>
+                            <td>Show web settings</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>alt</kbd> <kbd>t</kbd></td>
+                            <td>Change theme</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>alt</kbd> <kbd>t</kbd> <kbd>a</kbd></td>
+                            <td>Set auto-theme</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>alt</kbd> <kbd>g</kbd></td>
+                            <td>Show this guide</td>
+                        </tr>
+                    </table>
+                    <p class="p-2">
+                        All shortcuts provided above works everywhere across this website and <mark>different pages may
+                            also have additional shortcuts</mark>.
+                        Check it where necessary to add more speed and experience.<br>
+                        📌 <span style="color: cyan;">If any of the shortcuts fail, check your keyboard setting.</span>
+                    </p>
+                    <table class="w-100 px-3 mb-3">
+                        <caption class="display-7">Additional shortcuts <b>(this page)</b></caption>
+                        <tr>
+                            <th>Keys</th>
+                            <th>Action</th>
+                        </tr>
+                        <tr>
+                            <td><kbd>alt</kbd> <kbd>n</kbd></td>
+                            <td>See notifications</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>alt</kbd> <kbd>h</kbd></td>
+                            <td>See help/guide about songs</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>ctrl</kbd> <kbd>/</kbd></td>
+                            <td>Focus in a search box</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>Esc</kbd></td>
+                            <td>Focus out of a search box</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>alt</kbd> <kbd>r</kbd></td>
+                            <td>Refresh songs</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>ctrl</kbd> <kbd>←</kbd></td>
+                            <td>Move back from song category</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>Numpad 8</kbd> and <kbd>Numpad 2</kbd></td>
+                            <td>Move up/down the list of <u>song search results</u></td>
+                        </tr>
+                        <tr>
+                            <td><kbd>Esc</kbd></td>
+                            <td>Hide some overlaying elements</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>f</kbd></td>
+                            <td>Add selected song to your favorites</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>p</kbd></td>
+                            <td>Preview the selected song</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>l</kbd></td>
+                            <td>Get a link for selected song</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>s</kbd></td>
+                            <td>Share selected song</td>
+                        </tr>
+                        <!-- <tr>
+                            <td><kbd>v</kbd></td>
+                            <td>Search video for selected song</td>
+                        </tr> -->
+                    </table>
+                    <span class="p-2">More Tips</span>
+                    <ul>
+                        <li>
+                            <u>Refresh pages for updates</u>. There's always new things to ease browsing.
+                        </li>
+                        <li>
+                            Visit different pages and find out what can be more interesting.
+                        </li>
+                        <li>
+                            Avoid forcing processes, by allowing them to finish smoothly. <i>(Especially when finding
+                                documents to download)</i>.
+                        </li>
+                    </ul>
+                </section>
+            </div>
+            <div class="item-swichers">
+                <button class="fa fa-close top-right w-3rem ratio-1-1 g-itemsCloser"></button>
+                <button class="fa fa-arrow-left item-swicher left"></button>
+                <button class="fa fa-arrow-right item-swicher right"></button>
+                <div class="b-middle-m w-25 h-30px d-flex align-items-center justify-content-around item-pager">
+                    <button class="rad-50 view"></button>
+                    <button class="rad-50"></button>
+                    <button class="rad-50"></button>
+                    <button class="rad-50"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+			
+    <!-- Custom chatbot mailer-->
+    <div class="fix-holder fade-to-bottom p-sm-3">
+        <div class="clmn_wrapper fix-draggable item-appColor chatbot-wrapper">
+            <div class="container pt-2" style="color: var(--_headerColor);">
+                <div class="d-flex"><button class="ms-auto w-2rem rad-10 border-0 bg-black4 shadow-sm bounceClick closerX" onclick="hide_chatbot()"></button></div>
+                <h5 class="display-6 text-center"><span class="fa fa-paper-plane me-3"></span> ESG mailer</span></h5>
+                <div class="p-2 mt-4">
+                    <p class="h5 mb-3 text-center">Send us a direct message</p>
+                    <p class="small text-black2 text-justify">
+                        Feel free to contact us directly from here. You can share your opinions, suggestions, or report any issues you find.<br>
+                        <strong>Please provide an email address where we can respond to you promptly.</strong>
+                    </p>
+                </div>
+                
+                <!-- Chatbot-form -->
+                <form action="../../send_dm_message.php" method="POST" id="directMessageForm" class="px-2 mt-5">
+                    <div class="mb-3">
+                        <label for="pEmail" class="form-label fw-bold">Email *</label>
+                        <input type="email" name="Person_Email" required class="form-control text-center" id="pEmail" placeholder="Enter email">
+                    </div>
+                    <div class="mb-3 d-none">
+                        <label for="message" class="form-label fw-bold">Message *</label>
+                        <input type="text" name="Direct_Message"required class="form-control" id="message" placeholder="Enter message">
+                    </div>
+                    <div class="mb-3">
+                        <!-- <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table"> -->
+                        <input type="hidden" name="_subject" value="You have a DM from ESG website!">
+                    </div>
+                    
+                    <div class="d-none justify-content-between">
+                        <button type="reset" class="btn btn-secondary my-5" style="width: 29%;">Cancel</button>
+                        <button type="submit" id="sendCustomDM" class="btn bg-headerColor text-mainColor my-5" style="width: 69%;">Send <span class="fa fa-paper-plane"></span></button>
+                    </div>
+                </form>
+                <div class="mx-2 mb-5">
+                    <button class="btn text-headerColor w-100 shadow-sm clickDown" style="border: 2px dashed var(--appColor3_cons);" onclick="scroll_chatbot_to_messages()">Continue</button>
+                </div>
+            </div>
+
+            <!-- Chatbot-UI -->
+            <div class="shadow pt-2 chatbot">
+                <div class="d-flex align-items-center justify-content-between chatbot-header">
+                    <button class="fa fa-arrow-left bounceClick" onclick="scroll_chatbot_home()"></button>
+                    <div class="w-fit d-grid p-1 chatbot-name fix-dragger">
+                        <span class="mx-auto fw-bold">ESG mailer</span>
+                        <span class="mx-auto">Online</span>
+                    </div>
+                    <div class="rad-3 me-3 my-item-header__icons">
+                        <button class="fa fa-ellipsis-h" data-menu-toggle=".chatbot-cont-menu"></button>
+                        <button class="fa fa-angle-down bounceClick" title="Minimize" onclick="hide_chatbot()"></button>
+                    </div>
+                </div>
+                <div class="mt-2 p-3 Sbar-none chatbot-body">
+                    <div class="message-holder"></div>
+                </div>
+                <div class="py-2 chatbot-footer">
+                    <button class="fa fa-angle-double-down clickDown small to-bottom-button"></button>
+                    <div class="d-flex align-items-center h-100 chatbot-messenger">
+                        <textarea name="message" id="chatbotMessageInput" cols="30" rows="10" placeholder="Message" class="p-2 Sbar-none"></textarea>
+                        <button class="btn fa fa-arrows-alt-v clickDown small text-dark textarea-expander"></button>
+                        <button class="btn fa pe-1 clickDown" id="sendMessageBtn" title="Ctrl + Enter"><span class="paper-plane-top-icon"></span> </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Chatbot options -->
+    <div class="rad-7 my-cont-menu chatbot-cont-menu">
+        <ul>
+            <li class="favorite-songs-copier" onclick="hide_chatbot()"><span class="fa fa-close w-25px"></span>Close</li>
+            <hr class="my-1">
+            <li class="border-0 chatbot-message-clearer"><span class="fa fa-trash-alt w-25px"></span>Clear messages</li>
+        </ul>
+    </div>
+
+    <!-- Favorite songs -->
+
+    <div class="fix-holder fix-holder-appColor1_cons">
+        <div class="col-sm-8 col-md-6 col-lg-5 col-xl-4 mx-auto h-100 overflow-auto Sbar-none my-item item-appColor favorite-songs">
+            <div class="my-item-header">
+                <h5 class="my-item-header__title"><span class="fa fa-star mr-3"></span> My favorites</h5>
+                <div class="rad-3 my-item-header__icons">
+                    <button class="fa fa-info" title="Info" data-bs-toggle="collapse" data-bs-target=".my-favorites-about"></button>
+                    <button class="fa fa-ellipsis-v favorite-cont-icon"></button>
+                    <button class="fa fa-close hide-par-fix item-closer"></button>
+                </div>
+            </div>
+            <div class="bg-mainColor text-headerColor text-justify p-4 px-md-5 small collapse my-favorites-about">
+                <!-- <p class="h6 text-center mb-4 small-title small-title-sm item-info w-fit mx-auto">Group your favorites</p> -->
+                <p class="m-0">
+                    Make a list of your favorite songs that you can easily access from here. <span class="badge bg-headerColor text-mainColor"> - How to -</span> When a song/document is selected, click menu <span class="fa fa-ellipsis-v btn btn-sm border text-headerColor"></span> and choose <i>Favorite</i> option.
+                </p>
+            </div>
+            <div class="d-grid my-item-body">
+                <ol class="notranslate my-list pe-3 small favorite-songs-list"></ol>
+                <button class="btn mt-3 mx-auto col-8 bounceClick hide-par-fix item-search item-adder" style="color: var(--black1_cons) !important;">+ Add</button>
+            </div>
+        </div>
+    </div>
+    <div class="rad-7 my-cont-menu favorite-cont-menu">
+        <ul>
+            <li class="favorite-songs-copier" onclick="copy_list($('.favorite-songs-list'), '⭐ My favorites')">
+                <span class="fa fa-copy w-25px mr-2"></span> Copy list
+            </li>
+            <li class="border-0 favorite-songs-copier" onclick="sort_favorite_songs()">
+                <span class="fa fa-filter w-25px mr-2"></span>
+                Sort
+            </li>
+            <hr class="my-1">
+            <li class="favorite-songs-clearer" onclick="$('.favorite-unsaved-dialog').show()">
+                <span class="fa fa-trash-alt w-25px mr-2"></span> Clear list
+            </li>
+        </ul>
+    </div>
+
+    <div class="my-dialog self-close favorite-unsaved-dialog">
+        <div class="col-11 col-sm-8 col-md-6 col-lg-4 bg-light shadow my-dialog-content">
+            <h5 class="m-0 text-danger"><span class="fa fa-warning me-2"></span> Clear favorites list</h5>
+            <p class="p-4 small" style="color: var(--black1_cons);">Your list of favorite songs will be deleted</p>
+            <div class="my-dialog-buttons">
+                <button class="show-touch">Cancel <span class="touch-anim d-md-none"></span></button>
+                <button class="text-danger show-touch" onclick="clear_favorite_songs()">Clear <span class="touch-anim d-md-none"></span></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ************************** End of navigations ************************** -->
+
+    <div class="d-md-none ios-assistive-touch-toggler">
+        <div>
+            <div>
+                <div>
+                    <span>
+                        <!-- ♪ -->
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="rad-20 ratio-1-1 inx-15 ios-assistive-touch-menu">
+        <div class="clmn_wrapper h-100">
+            <section>
+                <div class="item-search" title="search">
+                    <span class="fa fa-search"></span>
+                </div>
+                <div class="chms-favorites" title="Favorites">
+                    <span class="fa fa-star"></span>
+                </div>
+                <div class="" data-totoggle="#UploadS" title="Upload a song">
+                    <span class="fa fa-cloud-upload-alt"></span>
+                </div>
+                <div class="ptr-none" title="Request a song" data-totoggle="#requestSong" aria-disabled="true">
+                    <span class="fa fa-file-pdf"></span>
+                </div>
+                <div class="" title="Followups" onclick="show_CHMS_help()">
+                    <span class="fa fa-shield-alt"></span>
+                </div>
+                <div class="" title="Settings" data-ng-click="toggleWebSettings()">
+                    <span class="fa fa-gear"></span>
+                </div>
+            </section>
+            <section>
+                <div class="ptr-none iOS-church" title="Repertoire" aria-disabled="true">
+                    <span class="fa fa-church"></span>
+                </div>
+                <div class="" title="Send a DM" onclick="show_chatbot()">
+                    <span class="fa fa-paper-plane"></span>
+                </div>
+                <div class="" title="Notifications" onclick="show_notifications()">
+                    <span class="far fa-bell"></span>
+                </div>
+                <div class="" title="Guide" onclick="show_guide()">
+                    <span class="fa fa-lightbulb"></span>
+                </div>
+                <div class="ptr-none" title="" aria-disabled="true">
+                    <span class="fa fa-plus"></span>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Popups -->
+
+    <!-- Go to other documents -->
+    <div class="my-popup my-popup_more-documents item-myBlue">
+        <p class="small pt-1">Proceed with the link below to find books, styles and more related documents of liturgy.</p>
+        <a href="ESG_more_documents" class="btn">Proceed <i class="fa fa-arrow-right ms-2"></i></a>
+    </div>
+    
+    <!-- Tips -->
+    <div class="position-fixed p-1 w-20rem item-primary web-tip" style="--_rad: 5px;">
+        <div class="web-tip_header web-tip_header-top">
+            <div class="w-2rem ratio-1-1 grid-center rad-50 tip-icon">
+                <span class="small fa fa-lightbulb"></span>
+            </div>
+            <div class="px-2 fw-bold tip-name">Tips</div>
+        </div>
+        <div class="p-2 small web-tip_body">
+			<div class="tip-message"></div>
+			<div class="gap-2 web-tip_navs">
+				<button class="btn btn-sm border bounceClick" onclick="next_web_tips()">Next</button>
+				<button class="btn btn-sm bounceClick tip-closer" onclick="hide_web_tips()">Got it</button>
+			</div>
+        </div>
+		<div class="web-tip_header web-tip_header-bottom">
+			<div class="w-2rem ratio-1-1 grid-center rad-50 tip-icon">
+				<span class="fa small fa-lightbulb"></span>
+			</div>
+			<div class="px-2 fw-bold tip-name">Tips</div>
+		</div>
+    </div>
+    
+    <!-- Repertoire -->
+    <!-- <div class="fix-holder overf-y-a repertoirePar">
+        <div class="position-absolute bg-appColor_cons m-auto px-2 px-sm-3 pb-3 pb-sm-3 shadow Sbar-none repertoire-wrapper">
+            <h4 class="mb-3 py-3 inx-high">Holy Mass Repertoire
+                <span class="text-dark rad-20 my-item-header__icons">
+                    <button class="fa fa-info repertoire-guider"></button>
+                    <button class="fa fa-ellipsis-v repertoire-menu-icon"></button>
+                </span>
+            </h4>
+            <div class="my-alert repertoire-guide offset-lg-1 col-lg-10 offset-xxl-2 col-xxl-8">
+                <div class="my-alert-head">
+                    <div class="text-center h3">How it works</div>
+                    <button class="my-alert-closer">&minus;</button>
+                </div>
+                <div class="my-alert-body">
+                    You can prepare your Mass repertoire by adding details (choir, place and time, songs, ..) to the
+                    preparation and click options <span class="fa fa-ellipsis-v px-2 py-1 rad-5 bordered"></span> to
+                    save it on your device.<br>
+                    <strong class="emph text-center">Closing this tab <i>(or opening the link in a new tab)</i> can
+                        clear your work. Remember to save changes.</strong>
+                </div>
+            </div>
+            <div class="repertoire-details mb-3">
+                <input type="text" name="MassChoir" id="repChoir" placeholder="...choir's name"
+                    class="mx-auto mb-3 px-1 h-50px rad-30">
+                <div class="d-flex flex-wrap repertoire-date justify-content-around">
+                    <span class="col-12 col-sm-6 mb-2">
+                        <span class="fa fa-calendar"></span> Date: <input type="datetime-local" name="MassDate"
+                            id="repDateTime" value="2020-01-01T02:00" min="2020-01-01T02:00" max="2020-01-01T02:00">
+                    </span>
+                    <span class="col-12 col-sm-6 mb-2">
+                        <span class="fa fa-map-marker-alt"></span> At <input type="text" name="MassDate"
+                            id="repMassPlace" placeholder="...location" class="px-2 bg-appColor_cons">
+                    </span>
+                </div>
+            </div>
+            <hr>
+            <div class="d-md-flex repertoire-planner">
+                <div class="p-2 rad-5 repertoire usualHM">
+                    <h5 class="working">Kwinjira</h5>
+                    <ul class="forMore RepSongList">
+                        <textarea name="" id="" cols="30" rows="2" placeholder="+ Add"></textarea>
+                    </ul>
+                    <h5>Kyrie</h5>
+                    <ul class="RepSongList">
+                        <textarea name="" id="" cols="30" rows="2" placeholder="+ Add"></textarea>
+                    </ul>
+                    <h5>Gloria</h5>
+                    <ul class="RepSongList">
+                        <textarea name="" id="" cols="30" rows="2" placeholder="+ Add"></textarea>
+                    </ul>
+                    <h5>Isomo rya mbere / Zaburi</h5>
+                    <ul class="RepSongList">
+                        <textarea name="" id="" cols="30" rows="2" placeholder="+ Add"></textarea>
+                    </ul>
+                    <h5>Alleluia</h5>
+                    <ul class="RepSongList">
+                        <textarea name="" id="" cols="30" rows="2" placeholder="+ Add"></textarea>
+                    </ul>
+                    <h5>Indangakwemera</h5>
+                    <ul class="RepSongList">
+                        <textarea name="" id="" cols="30" rows="2" placeholder="+ Add"></textarea>
+                    </ul>
+                    <h5>Igisabisho</h5>
+                    <ul class="RepSongList">
+                        <textarea name="" id="" cols="30" rows="2" placeholder="+ Add"></textarea>
+                    </ul>
+                    <h5>Gutura</h5>
+                    <ul class="forMore RepSongList">
+                        <textarea name="" id="" cols="30" rows="2" placeholder="+ Add"></textarea>
+                    </ul>
+                    <h5>Sanctus</h5>
+                    <ul class="RepSongList">
+                        <textarea name="" id="" cols="30" rows="2" placeholder="+ Add"></textarea>
+                    </ul>
+                    <h5>Agnus Dei</h5>
+                    <ul class="RepSongList">
+                        <textarea name="" id="" cols="30" rows="2" placeholder="+ Add"></textarea>
+                    </ul>
+                    <h5>Guhazwa</h5>
+                    <ul class="forMore RepSongList">
+                        <textarea name="" id="" cols="30" rows="2" placeholder="+ Add"></textarea>
+                    </ul>
+                    <h5>Gushimira</h5>
+                    <ul class="forMore RepSongList">
+                        <textarea name="" id="" cols="30" rows="2" placeholder="+ Add"></textarea>
+                    </ul>
+                    <h5>Gutaha / Bikiramariya</h5>
+                    <ul class="forMore RepSongList">
+                        <textarea name="" id="" cols="30" rows="2" placeholder="+ Add"></textarea>
+                    </ul>
+                </div>
+                <div class="repSsuggestions p-2 pb-4 blur-bg-3px Sbar-none">
+                    <div class="position-relative p-1 mb-4 search-box repertoire-search-box">
+                        <span class="fa fa-filter flex-center"></span>
+                        <input type="text" class="px-2" placeholder="...find a song">
+                        <div class="grid-center r-middle-m sugRepNum"></div>
+                    </div>
+                    <div class="rep-sug-list"></div>
+                </div>
+            </div>
+            <div class="inx-max repertoire-menu">
+                <div class="d-grid">
+                    <button class="bordered-bottom border-white3 px-3 py-2 bg-none repertoire-closer">Exit</button>
+                    <button class="bordered-bottom border-white3 px-3 py-2 bg-none repertoire-clear">Clear</button>
+                    <button class="px-3 py-2 bg-none borderless repertoire-saver">Save</button>
+                </div>
+            </div>
+            <div class="rad-7 my-cont-menu repertoire-cont-menu">
+                <ul>
+                    <li class="repertoire-song-removal-btn">Remove</li>
+                </ul>
+            </div>
+
+            <div class="my-dialog rep-unsaved-dialog self-close">
+                <div class="col-11 col-sm-8 col-md-6 col-lg-4 bg-light shadow my-dialog-content">
+                    <h5 class="m-0">You are about to abandon the list !!</h5>
+                    <div class="my-dialog-buttons">
+                        <button class="text-warning show-touch" onclick="go_back()">Discard <span class="touch-anim d-md-none"></span></button>
+                        <button class="text-success show-touch" onclick="save_repertoire()">Save <span class="touch-anim d-md-none"></span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Song searcher -->
+    <div class="position-fixed inx-max sSearchTool">
+        <div class="position-absolute col-12 col-sm-8 col-lg-6 mx-auto p-2 shadow-sm randomSCH">
+            <div class="d-grid auto-flow-col mb-2">
+                <div class="page-searcher" title="Ctrl + / or Backspace">
+                    <div class="position-relative p-1 border-0 target-input search-box">
+                        <span class="fa fa-search grid-center"></span>
+                        <input type="text" placeholder="Find a song" class="border-0 search-box__input" id="chmsSearcher">
+                        <button class="r-middle search-box__clearer">&times;</button>
+                    </div>
+                </div>
+                <button class="btn-sm justify-self-end w-2rem h-2rem me-1 my-auto ratio-1-1 border-0 clickDown closerX closerX-black1" onclick="go_back()"></button>
+            </div>
+            <div class="schResults-navigator">
+                <div class="pt-1 pt-md-0" id="RESULT-AVB">
+                    <div class="p-1 SONG-AVB">
+                        <span class="px-2">Songs</span>
+                        <span class="AVB-Num">0</span>
+                    </div>
+                    <div class="p-1 BOOK-AVB" data-topopup=".my-popup_more-documents">
+                        <span class="px-2">Books</span>
+                        <span class="AVB-Num">0</span>
+                    </div>
+                    <div class="p-1 STYLE-AVB" data-topopup=".my-popup_more-documents">
+                        <span class="px-2">Styles</span>
+                        <span class="AVB-Num">0</span>
+                    </div>
+                </div>
+                <div id="RESULT-AVB-NAV">
+                    <div class="h-100 bg-myBlue3"></div>
+                </div>
+            </div>
+            <div class="w-100 list-unstyled rounded-bottom clmn_wrapper schResults">
+                <div class="p-1 pt-3 pb-5 px-md-3 mySbar-sm scroll-smooth notranslate mySbar"></div>
+                <div class="p-1 pt-3 pb-5 px-md-3 mySbar-sm scroll-smooth notranslate"></div>
+                <div class="p-1 pt-3 pb-5 px-md-3 mySbar-sm scroll-smooth notranslate"></div>
+            </div>
+            <!-- <div class ="position-fixed pill ptr extend-search">Extend search</div> -->
+        </div>
+    </div>
+
+    <!-- Song Uploader -->
+    <div class="fix-holder fix-holder-appColor1_cons" id="UploadS">
+        <div class="col-sm-8 col-md-6 col-lg-5 col-xl-4 mx-auto h-100 overflow-auto my-item item-appColor">
+            <div class="my-item-header">
+                <h5 class="my-item-header__title"><span class="fa fa-cloud-upload-alt mr-3"></span> Upload a song</h5>
+                <div class="rad-3 my-item-header__icons">
+                    <button class="fa fa-info" title="Info" data-bs-toggle="collapse" data-bs-target=".upload-song-about"></button>
+                    <button class="fa fa-close hide-par-fix item-closer" onclick="scroll_left($('#UploadS .clmn_wrapper'))"></button>
+                </div>
+            </div>
+            <div class="bg-mainColor text-headerColor text-justify p-4 px-md-5 small collapse upload-song-about">
+                <!-- <p class="h6 text-center mb-4 small-title small-title-sm item-light w-fit mx-auto">Help to expand the collection</p> -->
+                <p class="m-0">
+                    If you have any composition that you would like to share, this is where to start. <span class="badge bg-headerColor text-mainColor"> - How to -</span> Upload the composition's file and we will include it into the collection. It requires only a few clicks.
+                </p>
+            </div>
+            <div class="my-item-body" style="height: calc(100% - 45px);">
+                <div class="clmn_wrapper overflow-hidden">
+                    <div class="p-3">
+                        <p class="text-justify small">
+                            We aim to facilitate access to widely used songs in the Catholic Church for various musicians and choirs. When you contribute a song here, it becomes part of a shared list accessible to everyone. This ensures easy and cost-effective discovery from a centralized location.
+                        </p>
+                        <div class="display-6 h2">Note</div>
+                        <p>Before uploading a song, please ensure the following:</p>
+                        <ul class="list-style-tick">
+                            <li>Confirm that the song is not already included in our shared collection.</li>
+                            <li>Provide a clear music sheet in PDF format.</li>
+                        </ul>
+                        <div class="d-flex p-3">
+                            <span class="fa fa-warning me-2"></span>
+                            <small>Unclear files (copies) will be rejected upon review.</small>
+                        </div>
+                        <a href="#" class="d-block col-8 mx-auto my-5 btn bg-mainColor text-headerColor clickDown" onclick="$(this).closest('.clmn_wrapper').scrollLeft(winWid)">
+                            Proceed <span class="fa fa-angle-right ms-2"></span>
+                        </a>
+                    </div>
+                    <div class="p-3">
+                        <!-- Upload form -->
+                        <form name="song_upload_form" method="POST" enctype="multipart/form-data" ng-submit="uploadSongPdfFile($event)" class="item-myBlue">
+                            <div class="mb-3">
+                                <div class="input_placeholder-wrapper">
+                                    <input type="email" name="Uploader_Email" class="form-control border-0 border-start border-2" id="uploaderEmail" ng-model="formData.Uploader_Email" data-ng-blur="checkInputValue($event)" required>
+                                    <span class="field-placeholder">Email</span>
+                                </div>
+                                <div class="form-text text-danger" ng-show="song_upload_form.Uploader_Email.$touched && song_upload_form.Uploader_Email.$dirty && song_upload_form.Uploader_Email.$invalid">
+                                    This field is invalid
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="songFile" class="form-label fw-bold">File</label>
+                                <input type="file" name="Song_File" required class="form-control border-0 border-start border-2 h-fit" id="songFile" file-model="formData.Song_File" accept=".pdf">
+                                <div class="form-text">PDF document</div>
+                            </div>
+                        
+                            <div class="mb-3">
+                                <label for="SongCategoryUp" class="form-label fw-bold" data-ng-class="getSongCategoryClasses()">Song category</label>
+                                <select required name="Song_Category" class="form-select border-0 border-start border-2" id="SongCategoryUp" ng-model="formData.Song_Category">
+                                    <option value="" disabled>Not selected</option>
+                                    <option data-ng-repeat="x in availableCategories" data-ng-value="x">{{ x }}</option>
+                                </select>
+                            </div>
+                        
+                            <div class="mb-3" ng-show="formData.Song_Category == 'Others'" style="animation: zoomInBack .5s 1;">
+                                <div class="input_placeholder-wrapper">
+                                    <input type="text" name="Other_Song_Category" ng-required="formData.Song_Category == 'Others'" class="form-control border-0 border-start border-2" id="SCT" ng-model="formData.Other_Song_Category" data-ng-blur="checkInputValue($event)">
+                                    <span class="field-placeholder">Enter other category</span>
+                                </div>
+                            </div>
+                        
+                            <div class="mb-3">
+                                <label for="SongMine" class="form-label fw-bold">Song is mine</label>
+                                <div class="d-flex gap-3 flex-wrap px-3">
+                                    <div class="form-check d-flex align-items-baseline gap-2">
+                                        <input type="radio" class="form-check-input w-1_5rem h-1_5rem" name="Ownership_Choice" id="SongMine" value="yes" ng-model="formData.Ownership_Choice">
+                                        <label for="SongMine" class="form-check-label">Yes</label>
+                                    </div>
+                                    <div class="form-check d-flex align-items-baseline gap-2">
+                                        <input type="radio" class="form-check-input w-1_5rem h-1_5rem" name="Ownership_Choice" id="SongNotMine" value="no" ng-model="formData.Ownership_Choice">
+                                        <label for="SongNotMine" class="form-check-label">No</label>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="mb-3" ng-show="formData.Ownership_Choice == 'yes'">
+                                <div class="input_placeholder-wrapper">
+                                    <input type="text" name="Uploader_Name" ng-required="formData.Ownership_Choice == 'yes'" class="form-control border-0 border-start border-2" id="uploaderName" ng-model="formData.Uploader_Name" data-ng-blur="checkInputValue($event)">
+                                    <span class="field-placeholder">Enter your name</span>
+                                </div>
+                                <div class="form-text text-danger" ng-show="song_upload_form.Uploader_Name.$touched && song_upload_form.Uploader_Name.$dirty && song_upload_form.Uploader_Name.$invalid">
+                                    This field is invalid
+                                </div>
+                            </div>
+                        
+                            <div class="d-flex justify-content-between">
+                                <button type="reset" class="col-4 btn btn-outline-secondary border-0 my-5 hide-par-fix" onclick="scroll_left($('#UploadS .clmn_wrapper'))">
+                                    Discard
+                                </button>
+                                <button type="submit" class="col-7 btn bg-appColor text-black1 my-5">
+                                    Upload file <span class="fa fa-cloud-upload-alt ms-2"></span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loaders -->
+
+    <!-- Bars loader -->
+
+    <div class="flex-center Loading_fix">
+        <div class="loading-motion-wave">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+
+    <!-- Disk loader -->
+
+    <!-- <div class="flex-center Loading_fix">
+        <div class="position-absolute rad-50 inx-inherit anim-imp loading-motion-disk">
+            <div class="position-absolute w-50 h-auto">
+                <div class="position-absolute r-middle rad-50">
+                    <div class="center dim-30 rad-50 bg-brown1"></div>
+                </div>
+            </div>
+            <div class="position-absolute w-50 h-auto">
+                <div class="position-absolute r-middle rad-50">
+                    <div class="center dim-50 rad-50 bg-brown1"></div>
+                </div>
+            </div>
+            <div class="position-absolute w-50 h-auto">
+                <div class="position-absolute r-middle rad-50">
+                    <div class="center dim-60 rad-50 bg-brown1"></div>
+                </div>
+            </div>
+            <div class="position-absolute w-50 h-auto">
+                <div class="position-absolute r-middle rad-50">
+                    <div class="center dim-75 rad-50 bg-brown1"></div>
+                </div>
+            </div>
+            <div class="position-absolute w-50 h-auto">
+                <div class="position-absolute r-middle rad-50">
+                    <div class="center dim-100 rad-50 bg-brown1"></div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Boxes loader -->
+
+    <!-- <div class="grid-center Loading_fix">
+        <div class="loading-motion-boxes">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </div> -->
+
+    <!-- Loaders -->
+
+    <!-- <div class="position-fixed inx-max rad-50 Comp_Downloader">
+        <div class="position-absolute bg-navi w-50 Comp_tool_1 Comp_tl_1">
+            <div class="position-absolute l-middle rad-50 flex-center Comp_tl_in">
+                <span class="fa fa-share"></span>
+            </div>
+        </div>
+        <div class="position-absolute bg-navi w-100 Comp_tool_2 Comp_tl_2">
+            <div class="position-absolute l-middle rad-50 flex-center Comp_tl_in CMP_TOOL_SLECTED">
+                <span class="fa fa-download"></span>
+            </div>
+        </div>
+        <div class="position-absolute bg-navi w-50 Comp_tool_3 Comp_tl_3">
+            <div class="position-absolute l-middle rad-50 flex-center Comp_tl_in">
+                <span class="fa fa-home"></span>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="position-fixed notifications-holder collapse">
+        <div class="position-absolute offset-md-1 col-md-10 offset-lg-2 col-lg-8 px-1 mb-2" id="Notifications">
+            <h3 class="d-flex align-items-center justify-content-around py-2 text-info w-100 Notif_Head">Notifications
+            </h3>
+            <div class="Notifs_sider d-flex">
+                <div class="d-flex w-50 align-items-center justify-content-end pe-3">
+                    <span class="rad-50 ptr"></span>
+                </div>
+                <div class="d-flex w-50 align-items-center justify-content-start ps-3">
+                    <span class="rad-50 ptr"></span>
+                </div>
+            </div>
+            <div class="clmn_wrapper Notifs_wrapper">
+                <div class="Notifs_1">
+                    <div class="Notifs_sider_bg-1"></div>
+                    <!-- UPDATES-NOTIF -->
+                    <!-- <div class="Updates_all">
+                        <div class="rad-5 p-2 bg-dark Updates_Elem">
+                            <div class="rounded-top">
+                                <div class="mb-2 py-1 px-1 bg-white3 text-light text-center">
+                                    Updates
+                                </div>
+                                <div class="text-light px-2 px-sm-5 py-3" style="font-size: 1.1rem;">
+                                        Please clear your browser or phone cache after some days to see more updates for this platform.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="my-close" onclick="$(this).parent().slideUp()">&times;</div>
+                        <hr class="my-2">
+                    </div> -->
+
+                    <!-- NOTIF-NOTIF -->
+                    <div class="p-2 p-sm-3 Notif_Elem Notif_Elem-uploads">
+                        <button tabindex="0" class="fa fa-angle-down position-absolute ptr Notif_XPND"></button>
+                        <p class="px-1">
+                            <span class="fa fa-cloud-upload-alt"></span> <span>New songs added</span><span class="upToToday small ms-1 small"></span>
+                        </p>
+                        <div class="py-1 px-3 rounded-top small">
+                            About <span class="new-added-songs"></span> files were added in the collection.
+                        </div>
+                        <div class="notif-body">
+                            <div>
+                                <div class="d-lg-flex mb-3">
+                                    <div class="small col-md-9 mx-3 mx-md-auto px-lg-3">
+                                        Continuously adding new songs ensures a wider selection for Christians to access and use. By uploading regularly, we bridge the gap of unavailable music and provide valuable resources for musicians. Your support in providing more copies helps expand our reach and enrich the worship experience for all.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- NOTIF-NOTIF -->
+                    <div class="p-2 p-sm-3 Notif_Elem Notif_Elem-stream">
+                        <button tabindex="0" class="fa fa-angle-down position-absolute ptr Notif_XPND"></button>
+                        <p class="px-1">
+                            <span class="fa fa-film"></span> <span>ESG streamed a new song</span><span
+                                class="upToToday small ms-1"></span>
+                        </p>
+                        <div class="py-1 px-3 rounded-top small">
+                            Check out our new video song!
+                        </div>
+                        <div class="notif-body">
+                            <div>
+                                <div class="d-lg-flex mb-3">
+                                    <ul class="col-lg-6">
+                                        <li>
+                                            Itara - Eastern singers group
+                                        </li>
+                                    </ul>
+                                </div>
+                                <p class="mb-2 p-1 small">
+                                    <a href="https://youtu.be/sUqO_bu9GsU" target="_blank" class="px-4 py-1 text-decoration-none">Watch</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- NOTIF-NOTIF -->
+                    <div class="p-2 p-sm-3 Notif_Elem Notif_Elem-tips">
+                        <button tabindex="0" class="fa fa-angle-down position-absolute ptr Notif_XPND"></button>
+                        <p class="px-1">
+                            <span class="fa fa-globe-africa"></span> <span>Web tips</span>
+                        </p>
+                        <div class="py-1 px-3 rounded-top small">
+                            Make use of shortcuts.
+                        </div>
+                        <div class="notif-body">
+                            <div>
+                                <div class="d-lg-flex mb-3">
+                                    <ul class="col-md-9 mx-3 mx-md-auto px-lg-3">
+                                        <li>
+                                            Swipe right or <kbd class="text-light">Alt</kbd> <kbd class="text-light">click</kbd> on a song to download it
+                                        </li>
+                                        <li>
+                                            Press <kbd class="text-light">Ctrl</kbd> <kbd class="text-light">/</kbd> to toggle search tool, and <kbd class="text-light">esc</kbd>
+                                            key to hide it.<br>
+                                            <small>This will also focus in or out of any search box.</small>
+                                        </li>
+                                        <li>
+                                            Press <kbd class="text-light">Alt</kbd> <kbd class="text-light">r</kbd> to refresh songs.
+                                        </li>
+                                        <li>
+                                            Press <kbd class="text-light">Alt</kbd> <kbd class="text-light">h</kbd> to see help.
+                                        </li>
+                                        <li>
+                                            Press <kbd class="text-light">Alt</kbd> <kbd class="text-light">n</kbd> to see our notifications.
+                                        </li>
+                                        <li>
+                                            <b>Refresh this page frequently for updates.</b>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- NOTIF-NOTIF -->
+                    <div class="p-2 p-sm-3 Notif_Elem">
+                        <button tabindex="0" class="fa fa-angle-down position-absolute ptr Notif_XPND"></button>
+                        <p class="px-1">
+                            <span class="fa fa-flag"></span> <span>Get more than songs</span><span
+                                class="small ms-1 text-white2 small text-white2"></span>
+                        </p>
+                        <div class="py-1 px-3 rounded-top small">
+                            Now you can also find music styles and Liturgy documents.
+                        </div>
+                        <div class="notif-body">
+                            <div>
+                                <div class="d-lg-flex mb-3">
+                                    <ul class="col-lg-6">
+                                        <li>
+                                            3/4, 4/4, 5/8 and more style.
+                                        </li>
+                                        <li>
+                                            Liturgy documents/books and Prayers.
+                                        </li>
+                                    </ul>
+                                    <div class="small col-md-6 mx-3 mx-md-auto px-lg-3">
+                                        You can find documents related to the Catholic Liturgy including Liturgy
+                                        books, Prayers, music styles
+                                        (beats) and more.
+                                    </div>
+                                </div>
+                                <p class="mb-2 p-1 small">
+                                    <a href="ESG_more_documents" class="px-4 py-1 text-decoration-none">Check it out</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- NOTIF-NOTIF -->
+                    <div class="p-2 p-sm-3 Notif_Elem">
+                        <button tabindex="0" class="fa fa-angle-down position-absolute ptr Notif_XPND"></button>
+                        <p class="px-1">
+                            <span class="fa fa-users"></span> <span>Unlisted songs</span>
+                        </p>
+                        <div class="py-1 px-3 rounded-top small">
+                            Stay updated for upcoming song releases.
+                        </div>
+                        <div class="notif-body">
+                            <div>
+                                <div class="d-lg-flex mb-3">
+                                    <ul class="col-lg-6">
+                                        <li>
+                                            Thomas Bicamumpaka
+                                        </li>
+                                    </ul>
+                                    <div class="small col-md-6 mx-3 mx-md-auto px-lg-3">
+                                        For various reasons, some composers have chosen not to share their songs on our platform at this time. However, these songs are expected to be available in the near future.
+                                    </div>
+                                </div>
+                                <p class="mb-2 p-1 small">
+                                    Stay tuned to know when they're available.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- NOTIF-NOTIF -->
+                    <div class="p-2 p-sm-3 Notif_Elem Notif_Elem-clarify">
+                        <button tabindex="0" class="fa fa-angle-down position-absolute ptr Notif_XPND"></button>
+                        <p class="px-1">
+                            <span class="fa fa-chart-pie"></span> <span>Song categorization notice</span>
+                        </p>
+                        <div class="py-1 px-3 rounded-top small">
+                            Help us to organize the collection
+                        </div>
+                        <div class="notif-body">
+                            <div>
+                                <div class="d-lg-flex mb-3">
+                                    <div class="small col-md-9 mx-3 mx-md-auto px-lg-3">
+                                        When we encounter challenges in classifying songs, we place some of them in the <span class="px-1 fw-bold" style="text-decoration: dotted underline;">More songs</span> category. It is possible to help us better organize this collection by selecting a song and request that it can be moved to a more appropriate category. To do this, choose the <b>Organize</b> option once the song is selected.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- NOTIF-NOTIF -->
+                    <div class="p-2 p-sm-3 Notif_Elem">
+                        <button tabindex="0" class="fa fa-angle-down position-absolute ptr Notif_XPND"></button>
+                        <p class="px-1">
+                            <span class="fa fa-music"></span> <span>Learn Solfeggio</span>
+                        </p>
+                        <div class="py-1 px-3 rounded-top small">
+                            You can know how to read music notation!
+                        </div>
+                        <div class="notif-body">
+                            <div>
+                                <div class="d-lg-flex mb-3">
+                                    <ul class="col-md-9 mx-3 mx-md-auto px-lg-3">
+                                        <li>First and foremost, allocate sufficient time for your Solfeggio practice,</li>
+                                        <li>Your patience and focused attention are invaluable assets for comprehensive learning,</li>
+                                        <li>
+                                            Creativity may play a role in grasping intricate concepts, especially when dealing with complex musical compositions.<br> But rest assured, with commitment and dedication, you've got this.
+                                        </li>                                        
+                                    </ul>
+                                </div>
+                                <p class="mb-2 p-1 small">
+                                    <a href="../solfeggio" class="px-4 py-1 text-decoration-none">Go for it</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- NOTIF-NOTIF -->
+                </div>
+                <div class="Notifs_2">
+                    <div class="Notifs_sider_bg-2"></div>
+                    <div class="rad-5">
+                        <!-- <section for="Current season"
+                            class="display-7 p-3 rad-30 bordered-bottom border-white4 Catholic_Season">
+                            Season : <span></span>
+                        </section> -->
+                        <!-- Dynamic needle watch -->
+                        <div class="p-3 h-30vh rounded flex-center text-wheat display-5 clock">
+                            <div class="rad-10 clock_sticks">
+                                <div class="position-absolute center rad-50 bg-danger clock-around-nums">
+                                    <div class="twelve">12</div>
+                                    <div class="one">1</div>
+                                    <div class="two">2</div>
+                                    <div class="three">3</div>
+                                    <div class="four">4</div>
+                                    <div class="five">5</div>
+                                    <div class="six">6</div>
+                                    <div class="seven">7</div>
+                                    <div class="eight">8</div>
+                                    <div class="nine">9</div>
+                                    <div class="ten">10</div>
+                                    <div class="eleven">11</div>
+                                </div>
+                                <div class="bg-goldR hrs_stick"></div>
+                                <div class="min_stick"></div>
+                                <div class="bg-white sec_stick">
+                                    <div class="position-absolute b-middle rad-50 ratio-1-1 rad-50"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <section for="Day statistics" class="p-3">
+                            <table class="w-100 song-stats-table">
+                                <caption>A short statistics of available documents on this platform</caption>
+                                <tr>
+                                    <th>
+                                        Songs
+                                    </th>
+                                    <td class="available_songs">{{ allChmSongsNum }}</td>
+                                </tr>
+                                <!-- <tr>
+                                    <th>
+                                        Composers
+                                    </th>
+                                    <td class="available_composers"></td>
+                                </tr> -->
+                                <tr>
+                                    <th>
+                                        Books
+                                    </th>
+                                    <td>You can find books <a href="ESG_more_documents">here</a></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Styles
+                                    </th>
+                                    <td>You can find styles <a href="ESG_more_documents">here</a></td>
+                                </tr>
+                            </table>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <button class="position-absolute w-100 text-center p-2 Notif_Closer"
+                onclick="hide_Notif();">
+                <span class="fa fa-angle-up rad-50"></span>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Followups -->
+    <div class="fix-holder fix-holder-appColor2 fade-to-bottom blur-bg-2px">
+        <div class="offset-md-1 col-md-10 offset-lg-2 col-lg-8 Sbar-none my-item item-myBlue informer-lg">
+            <div class="my-item-header">
+                <h4 class="flex-grow-1 justify-content-center my-item-header__title">Followups</h4>
+                <div class="rad-3 my-item-header__icons">
+                    <button class="fa fa-close hide-par-fix item-closer" onclick="hide_CHMS_help()"></button>
+                </div>
+            </div>
+            <div class="px-3 rad-inherit my-item-body informer-lg_Notes">
+                <ul class="ps-0 px-md-4 mb-0 list-style-angle-right">
+                    <li>
+                        It is recommended to use <a href="#" class="item-search" onclick="hide_CHMS_help()">search tool</a> for quick results.
+                    </li>
+                    <li>
+                        Same song can be found from different categories.
+                    </li>
+                </ul><br>
+                <strong class="display-6 px-md-4">Note:</strong>
+                <ul class="p-2 ps-4 px-md-5 inx-inherit">
+                    <li>
+                        All available documents are provided free of charge for personal use and educational purposes.
+                    </li>
+                    <li>
+                        This platform exclusively hosts Catholic Church songs, which can be accessed accordingly.
+                    </li>
+                    <li>
+                        Each song provided is the rightful property of its respective composer. Copying, modifying, or trading any of them without proper authorization is strictly prohibited.
+                    </li>
+                    <li>
+                        Users are prohibited from redistributing, selling, or otherwise distributing the documents to third parties without the consent of the platform or the respective composers.
+                    </li>
+                    <li>
+                        We respect the intellectual property rights of composers and creators. Any unauthorized use or reproduction of the documents is strictly prohibited.
+                    </li>
+                    <li>
+                        Users are encouraged to report any instances of misuse or copyright infringement regarding the documents available on the platform.
+                    </li>
+                    <li>
+                        The platform takes measures to ensure the accuracy and quality of the documents provided, but users are encouraged to verify the information independently if necessary.
+                    </li>
+                    <li>
+                        Documents may be removed or updated at the discretion of the platform or the composers, and users are advised to check for the latest versions regularly.
+                    </li>
+                    <li>
+                        By accessing and downloading documents from the platform, users agree to abide by the terms and conditions outlined in the <a href="#" onclick="hide_CHMS_help(), show_terms()">privacy policy and terms</a> of use.
+                    </li>
+                </ul>
+                <div class="Songs-Privacy padLock position-absolute top-right-m h-100 w-25 inx--1">
+                    <div class="padLock-body">
+                        <div class="padLock-ring"></div>
+                        <div class="padLock-rect"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ************************** End of fixed ************************** -->
+    
+    <!-- Navigation -->
+    <nav class="position-fixed fixed-top d-flex justify-content-between align-items-center d-sm-none ps-3 nav-chms">
+        <h1 class="fs-4 mb-0 text-black1">HM Songs</h1>
+        <div class="flex-align-center">
+            <button class="far fa-bell bg-transparent text-black1 border-0 bounceClick w-3rem ratio-1-1 all-center" onclick="show_notifications()"></button>
+            <button class="fa fa-search bg-transparent text-black1 border-0 bounceClick w-3rem ratio-1-1 all-center item-search"></button>
+            <button class="fa fa-ellipsis-v d-sm-none bg-transparent text-black1 border-0 bounceClick w-3rem ratio-1-1 all-center" data-bs-toggle="dropdown" id="moreSongActions" aria-expanded="false" data-bs-toggle="tooltip" title="More"></button>
+            <ul class="dropdown-menu me-3 me-sm-0 my-dropdown" aria-labelledby="moreSongActions">
+                <li class="d-sm-none my-navigator"><a class="dropdown-item d-flex align-items-center" href="#"><span class="fa fa-bars me-2 text-black2 small"></span> Menu</a></li>
+                <li class="d-none d-sm-block d-lg-none item-search"><a class="dropdown-item d-flex align-items-center" href="#"><span class="fa fa-search me-2 text-black2 small"></span> Search</a></li>
+                <li class="d-lg-none chms-favorites"><a class="dropdown-item d-flex align-items-center" href="#">Favorites <span class="badge border border-secondary text-secondary rounded-pill ms-2 favorite-songs-num"></span></a></li>
+                <li class="d-none d-sm-block d-lg-none" data-totoggle="#UploadS"><a class="dropdown-item d-flex align-items-center" href="#">Upload a song</a></li>
+                <li class="d-none d-sm-block" onclick="show_chatbot()"><a class="dropdown-item d-flex align-items-center" href="#">Send a DM</a></li>
+                <li class="guideBtn"><a class="dropdown-item d-flex align-items-center" href="#">Followups</a></li>
+                <li class="d-none d-sm-block web-tips-toggler"><a class="dropdown-item d-flex align-items-center" href="#">Tips</a></li>
+                <li class="d-none d-sm-block request-notif" onclick="show_notifications()"><a class="dropdown-item d-flex align-items-center" href="#">Notifications</a></li>
+                <li class="d-none d-sm-block d-md-none" onclick="toggle_ios_assistive_touch()"><a class="dropdown-item d-flex align-items-center" href="#">Assistive touch</a></li>
+                <li class="d-lg-none" data-ng-click="toggleWebSettings()"><a class="dropdown-item d-flex align-items-center" href="#">Settings</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Songs -->
+    <div class="songsControl">
+        <div class="">
+            <div class="songsControl-nav">
+                <button class="fa fa-bars d-none d-sm-grid no-activeness my-navigator"></button>
+                <button class="active songsControl-nav_to-home" title="Home">
+                    <span class="d-grid"><span class="fa fa-home my-2"></span> <span class="icon-text d-sm-none">Home</span></span>
+                </button>
+                <button class="songsControl-nav_to-songs" title="Songs">
+                    <span class="d-grid"><span class="fa fa-music my-2"></span> <span class="icon-text d-sm-none">Music</span></span>
+                </button>
+                <button class="d-sm-none d-lg-grid songsControl-nav_to-Tools" title="Tools">
+                    <span class="d-grid"><span class="fa fa-tools my-2"></span> <span class="icon-text d-sm-none">Tools</span></span>
+                </button>
+                <li class="dropdown-divider d-none d-lg-block w-50 mx-auto rad-100vw" style="border-top: .2rem solid var(--black4);"></li>
+                <button class="fa fa-search d-none d-lg-grid no-activeness item-search" title="Search"></button>
+                <button class="fa fa-star position-relative d-none d-lg-grid no-activeness chms-favorites" title="Favorites"><span class="position-absolute br-0 mb-n1 inx--1 badge text-black1 rounded-pill favorite-songs-num" style="scale: .67; background-color: var(--white);"></span></button>
+                <li class="dropdown-divider d-none d-lg-block w-50 mx-auto rad-100vw" style="border-top: .2rem solid var(--black4);"></li>
+                <button class="fa fa-shield-alt d-none d-lg-grid no-activeness" onclick="show_CHMS_help()" title="Followups"></button>
+                <button class="fa fa-ellipsis-v d-none d-sm-block no-activeness" data-bs-toggle="dropdown" id="moreSongActions" aria-expanded="false" data-bs-toggle="tooltip" title="More"></button>
+                <ul class="dropdown-menu me-3 me-sm-0 my-dropdown" aria-labelledby="moreSongActions">
+                    <li class="d-none d-sm-block d-lg-none item-search"><a class="dropdown-item d-flex align-items-center" href="#"><span class="fa fa-search me-2 text-black2 small"></span> Search</a></li>
+                    <li class="d-lg-none chms-favorites"><a class="dropdown-item d-flex align-items-center" href="#">Favorites <span class="badge border border-secondary text-secondary rounded-pill ms-2 favorite-songs-num"></span></a></li>
+                    <li class="d-none d-sm-block d-lg-none" data-totoggle="#UploadS"><a class="dropdown-item d-flex align-items-center" href="#">Upload a song</a></li>
+                    <li class="d-none d-sm-block d-lg-none" onclick="show_chatbot()"><a class="dropdown-item d-flex align-items-center" href="#">Send a DM</a></li>
+                    <li class="d-lg-none guideBtn"><a class="dropdown-item d-flex align-items-center" href="#">Followups</a></li>
+                    <li class="d-none d-sm-block web-tips-toggler"><a class="dropdown-item d-flex align-items-center" href="#">Tips</a></li>
+                    <li class="d-none d-sm-block request-notif" onclick="show_notifications()"><a class="dropdown-item d-flex align-items-center" href="#">Notifications</a></li>
+                    <li class="d-none d-sm-block d-md-none" onclick="toggle_ios_assistive_touch()"><a class="dropdown-item d-flex align-items-center" href="#">Assistive touch</a></li>
+                    <li class="d-lg-none" data-ng-click="toggleWebSettings()"><a class="dropdown-item d-flex align-items-center" href="#">Settings</a></li>
+                </ul>
+                <button class="fa fa-laptop d-none d-lg-grid no-activeness" id="fullscreen-toggler" title="Fullscreen"></button>
+                <button class="fa fa-gear d-none d-lg-grid no-activeness" data-ng-click="toggleWebSettings()" id="settings" data-bs-toggle="tooltip" title="Settings"></button>
+            </div>
+            <div class="pb-sm-1 Sbar-none songsControl-CATS">
+                <!-- Page homepage -->
+                <div class="d-sm-none songsControl-CATS_home">
+                    <div class="flex-align-center gap-2 px-3 overflow-auto quick-tools">
+                        <button class="fa fa-moon w-1_5rem ratio-1-1 rounded-pill bounceClick small" onclick="change_theme_randomly();"></button>
+                        <button class="rounded-pill px-2 bounceClick flex-align-center chms-favorites">
+                            Favorites <span class="badge bg-appColor text-black1 rounded-pill ms-2 favorite-songs-num"></span>
+                        </button>
+                        <button class="rounded-pill px-2 bounceClick" onclick="show_terms()">Terms</button>
+                        <!-- <button class="fa fa-close w-1_5rem ratio-1-1 ms-auto border-0 bg-transparent rounded-pill bounceClick small" onclick="hide_home_quick_tools()"></button> -->
+                    </div>
+                    <div class="p-sm-2 overf-y-a sCatgHolder-home">
+                        <div class="song-stats isolate">
+                            <!-- Design image -->
+                            <!-- <div class="h-20vh mask-top-bottom hero-cover-image"></div> -->
+                            <!-- Heo secrion -->
+                            <section class="p-3 pb-5 container position-relative inx-1 hero">
+                                <img src="../../Pics/Church_icon_image.png" alt="" class="col-6 mx-auto object-fit-cover">
+                                <h2 class="display-5 mb-4 pt-4 fw-bolder text-black2 text-balance">Get the compositions you want</h2>
+                                <p class="text-black1">
+                                    Explore a diverse collection of Catholic music notations. Easily find, download, and share the sacred songs that inspire and elevate your worship.
+                                </p>
+                                <button class="btn rounded-pill fw-bold text-black2 continue-button clickDown" onclick="scroll_smooth_to_music()">Get started</button>
+                            </section>
+
+                            <section class="position-relative isolate-y d-grid mx-2 mx-md-0 pb-4 mask-bottom bg-image-none section_elem" style="clip-path: unset;">
+                                <div class="rad-50 item-myBlue data-stats-disk">
+                                    <div class="position-absolute dim-100 inset-0 m-auto rad-inherit data-stats-ring song-stats-ring"></div>
+                                    <div class="position-absolute inset-0 m-auto grid-center rad-inherit data-stats-num">
+                                        <span class="fw-bold text-mainColor"><span class="available_songs">{{ allChmSongsNum }}</span> files</span>
+                                    </div>
+                                </div>
+                                <div class="text-myBlue-var d-grid fs-3 p-3 fw-bold">
+                                    Solfeggio songs that you can use in different places
+                                </div>
+                                <div class="p-3 w-fit pb-5">
+                                    <ul class="list-style-square fw-bold">
+                                        <li class="py-2">Holy Mass songs</li>
+                                        <li class="py-2">Concert songs</li>
+                                        <li class="py-2">More different songs</li>
+                                    </ul>
+                                </div>
+                            </section>
+                        </div>
+
+                        <!-- <div class="d-flex flex-wrap mb-5">
+                            <div class="col-sm-4 col-md-3 col-xl-2 card-informer">
+                                <div class="card-informer_title">
+                                    Lorem ipsum dolor sit amet consectetur.
+                                </div>
+                                <div class="Sbar-sm-low-opacity card-informer_body">
+                                    <h5>Lorem ipsum dolor sit amet consectetur.</h5>
+                                    <hr class="my-1">
+                                    <p class="card-informer_explaination">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi distinctio aliquid explicabo reprehenderit recusandae unde eum cumque accusantium architecto esse error, nihil corrupti quos, sunt modi ratione necessitatibus harum totam.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-md-3 col-xl-2 card-informer" style="--bgImage: url(../../Pics/Music_sheet1.jpg);">
+                                <div class="card-informer_title">
+                                    Lorem ipsum dolor sit amet consectetur.
+                                </div>
+                                <div class="Sbar-sm-low-opacity card-informer_body">
+                                    <h5>Lorem ipsum dolor sit amet consectetur.</h5>
+                                    <hr class="my-1">
+                                    <p class="card-informer_explaination">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi distinctio aliquid explicabo reprehenderit recusandae unde eum cumque accusantium architecto esse error, nihil corrupti quos, sunt modi ratione necessitatibus harum totam.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-md-3 col-xl-2 card-informer" style="--bgImage: url(../../Pics/Music_sheet5.jpg);">
+                                <div class="card-informer_title">
+                                    Lorem ipsum dolor sit amet consectetur.
+                                </div>
+                                <div class="Sbar-sm-low-opacity card-informer_body">
+                                    <h5>Lorem ipsum dolor sit amet consectetur.</h5>
+                                    <hr class="my-1">
+                                    <p class="card-informer_explaination">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi distinctio aliquid explicabo reprehenderit recusandae unde eum cumque accusantium architecto esse error, nihil corrupti quos, sunt modi ratione necessitatibus harum totam.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-md-3 col-xl-2 card-informer" style="--bgImage: url(../../Pics/Music_sheet12.png);">
+                                <div class="card-informer_title">
+                                    Lorem ipsum dolor sit amet consectetur.
+                                </div>
+                                <div class="Sbar-sm-low-opacity card-informer_body">
+                                    <h5>Lorem ipsum dolor sit amet consectetur.</h5>
+                                    <hr class="my-1">
+                                    <p class="card-informer_explaination">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi distinctio aliquid explicabo reprehenderit recusandae unde eum cumque accusantium architecto esse error, nihil corrupti quos, sunt modi ratione necessitatibus harum totam.
+                                    </p>
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="d-flex mb-5 mx-3 border p-3 ps-0 rad-10" style="border-color: var(--black4) !important;">
+                            <span class="fa fa-file-alt w-3rem flex-shrink-0 text-myBlue-var text-center"></span>
+                            <div>
+                                <h6 class="fs-6">More documents</h6>
+                                <p class="mb-1 text-black2 small">
+                                    Find books, styles and more related documents of liturgy
+                                </p>
+                                <a href="ESG_more_documents" class="small text-decoration-none fw-bold text-myBlue-var bounceClick">Find more <span class="fa fa-angle-right ms-2"></span> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Page category listing -->
+                <div class="Sbar-sm-low-opacity songsControl-CATS_categories">
+                    <div class="trans-0 p-1 target-input d-none d-sm-flex search-box">
+                        <span class="fa fa-filter ptr grid-center"></span>
+                        <input type="text" data-ng-model="categoryFilter" placeholder="..category" class="borderless categoryFilter" name="songs_category_filter">
+                        <button class="r-middle bg-black3 border border-2 me-lg-2 search-box__clearer" data-ng-show="categoryFilter !== '' && categoryFilter !== undefined" data-ng-click="categoryFilter = ''">&times;</button>
+                    </div>
+                    <div class="mt-2 active-options Sbar-none categoryTogglers">
+                        <div data-ng-if="ctgListing == undefined" class="grid-center visible-y h-50vh my-auto ptr-none">
+                            <div class="loading-motion-circle" style="width: 3rem; border-color: var(--black3);"></div>
+                        </div>
+                        <div data-ng-repeat="ctg in ctgListing | filter: categoryFilter" class="notranslate sControlCATG px-2">
+                            <h6 class="nameOfCategory notranslate {{ ctg.catgClassName + 'CAT' }}" data-ng-bind-html="ctg.name"></h6>
+                            <div class="numberOfSongs" data-ng-bind-html="ctg.numSongsRepresentation"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Page tools -->
+                <div class="mt-4 mt-lg-0 p-2 pb-5 d-sm-none d-lg-block Sbar-sm-low-opacity songsControl-CATS_tools">
+                    <div class="d-flex mb-4 p-3 ps-0 rad-10 tool-wrapper">
+                        <span class="fa fa-star w-3rem flex-shrink-0 text-myBlue-var text-center"></span>
+                        <div>
+                            <h6 class="fs-6">Group favorites</h6>
+                            <p class="mb-1 text-black2 small">
+                                Narrow the search by making a list of your favorite compositions to access them easily
+                            </p>
+                            <a href="#" class="small text-decoration-none text-myBlue-var bounceClick chms-favorites">View My Favorites</a>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-4 p-3 ps-0 rad-10 tool-wrapper">
+                        <span class="fa fa-cloud-upload-alt w-3rem flex-shrink-0 text-myBlue-var text-center"></span>
+                        <div>
+                            <h6 class="fs-6">Upload songs</h6>
+                            <p class="mb-1 text-black2 small">
+                                Contribute a song here, and it will become part of a shared collection accessible to different choirs everywhere
+                            </p>
+                            <a href="#" class="small text-decoration-none text-myBlue-var bounceClick" data-totoggle="#UploadS">Upload Now</a>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-4 p-3 ps-0 rad-10 tool-wrapper">
+                        <span class="fa fa-paper-plane w-3rem flex-shrink-0 text-myBlue-var text-center"></span>
+                        <div>
+                            <h6 class="fs-6">Send a DM</h6>
+                            <p class="mb-1 text-black2 small">
+                                Feel free to contact us directly from here. Share your opinions, suggestions, or report any issues you find
+                            </p>
+                            <a href="#" class="small text-decoration-none text-myBlue-var bounceClick" onclick="show_chatbot()">Send Direct Message</a>
+                        </div>
+                    </div>
+                    <div class="d-flex d-lg-none mb-4 p-3 ps-0 rad-10 tool-wrapper">
+                        <span class="fa fa-dot-circle w-3rem flex-shrink-0 text-myBlue-var text-center"></span>
+                        <div>
+                            <h6 class="fs-6">Assistive Touch</h6>
+                            <p class="mb-1 text-black2 small">
+                                Simplify your interactions and enhance your experience by keeping essential actions at your fingertips
+                            </p>
+                            <a href="#" class="small text-decoration-none text-myBlue-var bounceClick" onclick="toggle_ios_assistive_touch()">Toggle Assistive Touch</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Calendrier liturgique -->
+                    <h3 class="d-lg-none ms-3 mt-5 py-3 display-6 fw-bolder text-black2" id="Calendrier_liturgique">Calendrier liturgique</h3>
+                    <div class="d-lg-none panel currentMonthDynamic">
+                        <div class="d-flex align-items-center justify-content-between card-header">
+                            <h5 class="card-title w-fit mb-0 MonName"><span class="currentMonthDynamic__name">This month</span>, <span class="currentYearDynamic__name"></span></h5>
+                            <div class="my-item-header__icons">
+                                <button class="fa fa-angle-left rad-5 hide-par-fix month-previous" title="Previous month"></button>
+                                <button class="fa fa-angle-right rad-5 hide-par-fix month-next" title="Next month"></button>
+                                <button class="fa fa-caret-down rad-5 hide-par-fix" data-bs-toggle="dropdown" id="liturgyMonthsList" aria-expanded="false" data-bs-toggle="tooltip" title="Choose a month"></button>
+                                <ul class="dropdown-menu me-3 me-sm-0 my-dropdown my-dropdown-sm" aria-labelledby="liturgyMonthsList">
+                                    <li class=""><a class="dropdown-item" href="#">January</a></li>
+                                    <li class=""><a class="dropdown-item" href="#">February</a></li>
+                                    <li class=""><a class="dropdown-item" href="#">March</a></li>
+                                    <li class=""><a class="dropdown-item" href="#">April</a></li>
+                                    <li class=""><a class="dropdown-item" href="#">May</a></li>
+                                    <li class=""><a class="dropdown-item" href="#">June</a></li>
+                                    <li class=""><a class="dropdown-item" href="#">July</a></li>
+                                    <li class=""><a class="dropdown-item" href="#">August</a></li>
+                                    <li class=""><a class="dropdown-item" href="#">September</a></li>
+                                    <li class=""><a class="dropdown-item" href="#">October</a></li>
+                                    <li class=""><a class="dropdown-item" href="#">November</a></li>
+                                    <li class=""><a class="dropdown-item" href="#">December</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row p-1 bg-image-none monthElem">
+                            <div class="col-md-8 col-lg-7 pb-2 ms-0 month-body monthElem_data">
+                                <div class="row monthDays mb-2 d-flex justify-content-between">
+                                    <span class="col-1 py-2">Sun</span>
+                                    <span class="col-1 py-2">Mon</span>
+                                    <span class="col-1 py-2">Tue</span>
+                                    <span class="col-1 py-2">Wed</span>
+                                    <span class="col-1 py-2">Thur</span>
+                                    <span class="col-1 py-2">Fri</span>
+                                    <span class="col-1 py-2">Sat</span>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-lg-5 mt-4 mt-sm-2 month-stat">
+                                <div class="liturgy-day-specs" style="columns: 2;">
+                                    <h6>Day</h6>
+                                    <p class="small ps-1 ps-lg-3 day-info">...</p>
+                                    <h6>Lectures</h6>
+                                    <p class="small ps-1 ps-lg-3 day-lectures">...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Sbar-none sCatgHolder">
+            <div class="p-2 overf-y-a sCatgHolder-home">
+                <h2 class="text-center display-5 py-3">Holy Mass Celebration</h2>
+                <div class="px-4 h-100vh chms-home">
+                    <q class="p-4 fs-4">
+                        O sing the Lord a new song; for he hath done marvellous things: His right hand and His Holy arm, hath gotten him the victory.<br>
+                        <strong class="ms-3 small"><i>Psalm 98:1</i></strong>
+                    </q>
+                </div>
+                <div class="song-stats">
+                    <section class="position-relative isolate-y d-grid mx-2 mx-md-0 pb-4 mb-4 mask-bottom section_elem" style="clip-path: unset;">
+                        <div class="rad-50 item-myBlue data-stats-disk">
+                            <div class="position-absolute dim-100 inset-0 m-auto rad-inherit data-stats-ring song-stats-ring"></div>
+                            <div class="position-absolute inset-0 m-auto grid-center rad-inherit data-stats-num">
+                                <span class="fw-bold text-mainColor"><span class="available_songs">{{ allChmSongsNum }}</span> songs</span>
+                            </div>
+                        </div>
+                        <div class="text-myBlue-var d-grid fs-1 p-3 fw-bold">
+                            Solfeggio songs that you can use in different places
+                        </div>
+                        <div class="p-3 w-fit pb-5">
+                            <ul class="list-style-square fw-bold">
+                                <li class="py-2">Holy Mass songs</li>
+                                <li class="py-2">Concert songs</li>
+                                <li class="py-2">More different songs</li>
+                            </ul>
+                        </div>
+                        <div class="position-absolute inset-0 bg-contain ptr-none" style="background-image: url(../../Pics/musical_notes.svg); background-attachment: fixed; opacity: .13;"></div>
+                    </section>
+                </div>
+
+                <!-- Calendrier liturgique -->
+                <h3 class="text-end py-3 display-6 heading-list" id="Calendrier_liturgique">Calendrier liturgique</h3>
+                <div class="panel currentMonthDynamic">
+                    <div class="d-flex align-items-center justify-content-between card-header">
+                        <h5 class="card-title w-fit mb-0 MonName"><span class="currentMonthDynamic__name">This month</span>, <span class="currentYearDynamic__name"></span></h5>
+                        <div class="my-item-header__icons">
+                            <button class="fa fa-angle-left rad-5 hide-par-fix month-previous" title="Previous month"></button>
+                            <button class="fa fa-angle-right rad-5 hide-par-fix month-next" title="Next month"></button>
+                            <button class="fa fa-caret-down rad-5 hide-par-fix" data-bs-toggle="dropdown" id="liturgyMonthsList" aria-expanded="false" data-bs-toggle="tooltip" title="Choose a month"></button>
+                            <ul class="dropdown-menu me-3 me-sm-0 my-dropdown my-dropdown-sm" aria-labelledby="liturgyMonthsList">
+                                <li class=""><a class="dropdown-item" href="#">January</a></li>
+                                <li class=""><a class="dropdown-item" href="#">February</a></li>
+                                <li class=""><a class="dropdown-item" href="#">March</a></li>
+                                <li class=""><a class="dropdown-item" href="#">April</a></li>
+                                <li class=""><a class="dropdown-item" href="#">May</a></li>
+                                <li class=""><a class="dropdown-item" href="#">June</a></li>
+                                <li class=""><a class="dropdown-item" href="#">July</a></li>
+                                <li class=""><a class="dropdown-item" href="#">August</a></li>
+                                <li class=""><a class="dropdown-item" href="#">September</a></li>
+                                <li class=""><a class="dropdown-item" href="#">October</a></li>
+                                <li class=""><a class="dropdown-item" href="#">November</a></li>
+                                <li class=""><a class="dropdown-item" href="#">December</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row p-1 bg-image-none monthElem">
+                        <div class="col-lg-8 col-xl-7 pb-2 ms-0 month-body monthElem_data monthElem_data-lg">
+                            <div class="row monthDays mb-2 d-flex justify-content-between">
+                                <span class="col-1 py-2">Sun</span>
+                                <span class="col-1 py-2">Mon</span>
+                                <span class="col-1 py-2">Tue</span>
+                                <span class="col-1 py-2">Wed</span>
+                                <span class="col-1 py-2">Thur</span>
+                                <span class="col-1 py-2">Fri</span>
+                                <span class="col-1 py-2">Sat</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-xl-5 mt-4 mt-sm-2 month-stat">
+                            <div class="liturgy-day-specs" style="columns: 2;">
+                                <h6>Day</h6>
+                                <p class="small ps-1 ps-lg-3 day-info">...</p>
+                                <h6>Lectures</h6>
+                                <p class="small ps-1 ps-lg-3 day-lectures">...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- More docs -->
+                <div class="col-lg-8 col-xl-6 d-flex my-4 mx-3 mx-lg-auto border p-3 ps-0 rad-10" style="border-color: var(--black4) !important;">
+                    <span class="fa fa-file-alt w-3rem flex-shrink-0 text-myBlue-var text-center"></span>
+                    <div>
+                        <h6 class="fs-6">More documents</h6>
+                        <p class="mb-1 text-black2 small">
+                            Find books, styles and more related documents of liturgy
+                        </p>
+                        <a href="ESG_more_documents" class="small text-decoration-none fw-bold text-myBlue-var bounceClick">Find more <span class="fa fa-angle-right ms-2"></span> </a>
+                    </div>
+                </div>
+
+                <!-- <div class="d-flex flex-wrap mb-5">
+                    <div class="col-md-6 col-lg-4 card-informer">
+                        <div class="card-informer_title">
+                            Lorem ipsum dolor sit amet consectetur.
+                        </div>
+                        <div class="Sbar-sm-low-opacity card-informer_body">
+                            <h5>Lorem ipsum dolor sit amet consectetur.</h5>
+                            <hr class="my-1">
+                            <p class="card-informer_explaination">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi distinctio aliquid explicabo reprehenderit recusandae unde eum cumque accusantium architecto esse error, nihil corrupti quos, sunt modi ratione necessitatibus harum totam.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 card-informer" style="--bgImage: url(../../Pics/Music_sheet1.jpg);">
+                        <div class="card-informer_title">
+                            Lorem ipsum dolor sit amet consectetur.
+                        </div>
+                        <div class="Sbar-sm-low-opacity card-informer_body">
+                            <h5>Lorem ipsum dolor sit amet consectetur.</h5>
+                            <hr class="my-1">
+                            <p class="card-informer_explaination">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi distinctio aliquid explicabo reprehenderit recusandae unde eum cumque accusantium architecto esse error, nihil corrupti quos, sunt modi ratione necessitatibus harum totam.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 card-informer" style="--bgImage: url(../../Pics/Music_sheet5.jpg);">
+                        <div class="card-informer_title">
+                            Lorem ipsum dolor sit amet consectetur.
+                        </div>
+                        <div class="Sbar-sm-low-opacity card-informer_body">
+                            <h5>Lorem ipsum dolor sit amet consectetur.</h5>
+                            <hr class="my-1">
+                            <p class="card-informer_explaination">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi distinctio aliquid explicabo reprehenderit recusandae unde eum cumque accusantium architecto esse error, nihil corrupti quos, sunt modi ratione necessitatibus harum totam.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 card-informer" style="--bgImage: url(../../Pics/Music_sheet12.png);">
+                        <div class="card-informer_title">
+                            Lorem ipsum dolor sit amet consectetur.
+                        </div>
+                        <div class="Sbar-sm-low-opacity card-informer_body">
+                            <h5>Lorem ipsum dolor sit amet consectetur.</h5>
+                            <hr class="my-1">
+                            <p class="card-informer_explaination">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi distinctio aliquid explicabo reprehenderit recusandae unde eum cumque accusantium architecto esse error, nihil corrupti quos, sunt modi ratione necessitatibus harum totam.
+                            </p>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            
+            <!-- Songs categories holder -->
+            
+            <div class="sCatgHolder-room">
+                <div class="h-100vh mySbar Sbar-sm-none sCategories">
+                    <div class="pb-2 pb-sm-0 ScatTools">
+                        <div class="ScatSearch">
+                            <button class="fa fa-arrow-left grid-center rad-5 ptr" title="ctrl + ←" onclick="out_of_songs()" id="leaveCategory"></button>
+                            <input class="m-0 px-2 rad-5" type="text" name="ManSc" id="manualSearch" placeholder="Find a song">
+                            <button class="fa fa-ellipsis-v disabled options" title="Options" data-menu-toggle=".chms-cont-menu"></button>
+                        </div>
+                        <div class="ScatName"></div>
+                        <div class="blur-bg-2px songTools">
+                            <div>
+                                <button class="fa fa-search" id="schIcon" title="Search" onclick="$('#manualSearch').focus()"></button>
+                            </div>
+                            <div>
+                                <button class="fa fa-refresh" id="refreshIcon" title="Refresh songs" onclick="refresh_songs()"></button>
+                            </div>
+                            <div class="SongsToTop noSelection d-none">
+                                <button class="fa fa-angle-double-up" title="Top"></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Display all song category containers -->
+                    <div data-ng-repeat="ctg in ctgListing" class="mt-lg-2 ScatSongs {{ ctg.catgClassName + 'D' }}">
+                        <button class="d-block d-lg-none mx-auto mb-3 mt-sm-2 border-0 border-black4 badge bg-transparent text-black2 bounceClick" data-bs-toggle="collapse" data-bs-target=".category-song-tools" title="About song category" style="font-size: 65%; border-style: solid;"><span class="fa fa-info-circle"></span> info</button>
+                        <!-- Category info and side tools  -->
+                        <div class="display-10 collapse d-lg-block category-song-tools">
+                            <!-- Info -->
+                            <div class="p-3 CATG_description">
+                                <button class="d-block d-lg-none ms-auto btn-close" data-bs-toggle="collapse" data-bs-target=".category-song-tools"></button>
+                                <h5 class="mb-2 text-center notranslate CATG_name">{{ ctg.name }}</h5>
+                                <p data-ng-bind-html="ctg.about"></p>
+                            </div>
+                            <!-- Tools -->
+                            <div class="d-none d-lg-flex flex-wrap p-2 rad-10 grid-options">
+                                <div class="w-3rem p-1 ratio-1-1 rad-inherit">
+                                    <button class="border-0 fa fa-eye rad-inherit dim-100 clickDown previewChmSong" title="Preview selected"></button>
+                                </div>                                
+                                <div class="w-3rem p-1 ratio-1-1 rad-inherit">
+                                    <button class="border-0 fa fa-star rad-inherit dim-100 clickDown starChmSong" title="Favorite selected"></button>
+                                </div>                                
+                                <div class="w-3rem p-1 ratio-1-1 rad-inherit">
+                                    <button class="border-0 fa fa-link rad-inherit dim-100 clickDown copyLinkChmSong" title="Copy link of selected"></button>
+                                </div>                                
+                                <div class="w-3rem p-1 ratio-1-1 rad-inherit">
+                                    <button class="border-0 fa fa-share-alt rad-inherit dim-100 clickDown shareChmSong" title="Share selected"></button>
+                                </div>                                
+                                <div class="w-3rem p-1 ratio-1-1 rad-inherit">
+                                    <button class="border-0 fa fa-chart-pie rad-inherit dim-100 clickDown organizeChmSong" title="Organize selected"></button>
+                                </div>
+                                <div class="w-3rem p-1 ratio-1-1 rad-inherit">
+                                    <button class="border-0 fab fa-youtube rad-inherit dim-100 clickDown videoQueryChmSong" title="Search video of selected"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Songs listing -->
+                        <ul class="CATG_list"></ul>
+                    </div>
+
+                    <!-- Song actions -->
+                    <div class="rad-7 my-cont-menu chms-cont-menu">
+                        <ul>
+                            <li class="d-flex justify-content-between previewChmSong"><span><span class="fa fa-eye w-25px"></span> Preview</span> <span class="d-none d-md-inline opacity-75 ms-3">p</span></li>
+                            <li class="d-flex justify-content-between starChmSong"><span><span class="fa fa-star w-25px"></span> Favorite</span> <span class="d-none d-md-inline opacity-75 ms-3">f</span></li>
+                            <li class="d-flex justify-content-between copyLinkChmSong"><span><span class="fa fa-link w-25px"></span> Copy link</span> <span class="d-none d-md-inline opacity-75 ms-3">l</span></li>
+                            <li class="d-flex justify-content-between border-0 shareChmSong"><span><span class="fa fa-share-alt w-25px"></span> Share</span> <span class="d-none d-md-inline opacity-75 ms-3">s</span></li>
+                            <li class="d-flex justify-content-between border-0 organizeChmSong"><span><span class="fa fa-chart-pie w-25px"></span> Organize</span> <span class="d-none d-md-inline opacity-75 ms-3">o</span></li>
+                            <hr class="my-1">
+                            <li class="d-flex justify-content-between videoQueryChmSong"><span><span class="fab fa-youtube w-25px"></span> Search video</span></li>
+                        </ul>
+                    </div>
+                    <!-- Other results -->
+                    <div class="col-12 offset-sm-2 col-sm-8 px-1 notranslate otherResults Sbar-none">
+                        <div class="position-sticky sticky-top pt-3">
+                            <h6 class="mb-3 text-center">Found some results here</h6>
+                            <button class="btn-close bg-appColor_cons r-middle-m" onclick="hide_other_schResults()"></button>
+                            <hr class="bg-black1 pb-2 bg-clip-cont">
+                        </div>
+                        <hr class="position-absolute b-middle mb-5">
+                    </div>
+                    <!-- File preview -->
+                    <div class="fix-holder fix-holder-appColor2_cons blur-bg-2px chms-iframe-viewer">
+                        <div class="dim-100 item-dark p-md-3 iframe-viewer">
+                            <div class="col-md-8 iframe-viewer_body">
+                                <div class="position-absolute inx--1 flex-center visible-y bg-transparent Loading_fix">
+                                    <div class="grid-center Loading_fix visible-y">
+                                        <div class="loading-motion-circle"></div>
+                                    </div>
+                                </div>
+                                <iframe src="" frameborder="0" class="dim-100"></iframe>
+                            </div>
+                            <div class="col-md-4 my-item iframe-viewer_actions">
+                                <div class="my-item-header">
+                                    <h4 class="my-item-header__title">Song preview</h4>
+                                    <div class="me-3 me-md-0 p-1 my-item-header__icons">
+                                        <button class="fa fa-ellipsis-v rad-50 preview-cont-menu" title="Options" data-menu-toggle=".chms-cont-menu"></button>
+                                        <button class="fa fa-close rad-50 hide-par-fix item-closer" title="Close (q)" onclick="hide_preview()"></button>
+                                    </div>
+                                </div>
+                                <div class="my-item-body">
+                                    <span class="fa fa-file-pdf flex-center"></span>
+                                    <div class="d-flex flex-wrap justify-content-center gap-2 py-3 iframe-file-actions">
+                                        <button class="hide-par-fix chmsPreviewFileDownload">Download</button>
+                                        <button class="hide-par-fix chmsPreviewFileLink">Copy link</button>
+                                        <button class="hide-par-fix chmsPreviewFileShare">Share</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- File organizer -->
+                    <div class="fix-holder fix-holder-appColor1_cons p-sm-3" id="oragnizeSong">
+                        <div class="container col-lg-9 p-0 h-100 overflow-auto my-item item-myBlue">
+                            <div class="my-item-header">
+                                <h5 class="my-item-header__title"><span class="fa fa-chart-pie mr-3"></span> Organize songs</h5>
+                                <div class="rad-3 my-item-header__icons">
+                                    <button class="fa fa-info" title="Info" data-bs-toggle="collapse" data-bs-target=".oragnize-song-about"></button>
+                                    <button class="fa fa-close hide-par-fix item-closer"></button>
+                                </div>
+                            </div>
+                            <div class="bg-mainColor text-light text-justify p-4 px-md-5 small collapse oragnize-song-about">
+                                <!-- <p class="h6 text-center mb-4 small-title small-title-sm item-light w-fit mx-auto">Help us to organize files</p> -->
+                                <p class="m-0">
+                                    When classifying songs, there's a chance that some might end up in incorrect or unsuitable categories. This step is to help us properly organize songs in the collection, ensuring that they are sorted accurately and in good order.
+                                </p>
+                            </div>
+                            <div class="my-item-body overf-y-a" style="height: calc(100% - 45px);">
+                                <div class="p-3">
+                                    <p class="text-mainColor text-justify mb-3">
+                                        You can help us to organize this song. Where do you think it should be classified?
+                                    </p>
+                                    <ul class="list-style-arrow-right mb-4 px-2 small rounded">
+                                        <li class="py-1">
+                                            Organizing: "<span class="fw-bold song-name-to-organize">Song name</span>"
+                                        </li>
+                                        <li class="py-1">
+                                            From: "<span class="fw-bold song-category-to-organize">Category name</span>"
+                                        </li>
+                                    </ul>
+                                    <p class="text-mainColor mb-4">
+                                        Please select from the options below.
+                                    </p>
+                                    <ul class="list-unstyled select-options-any p-0">
+                                        <li class="small px-2 py-2 mb-2 rounded">Kwinjira <span class="far fa-check-square"></span></li>
+                                        <li class="small px-2 py-2 mb-2 rounded">Tubabarire <span class="far fa-check-square"></span></li>
+                                        <li class="small px-2 py-2 mb-2 rounded">Imana nisingizwe mu ijuru <span class="far fa-check-square"></span></li>
+                                        <li class="small px-2 py-2 mb-2 rounded">Isomo rya mbere <span class="far fa-check-square"></span></li>
+                                        <li class="small px-2 py-2 mb-2 rounded">Alleluya <span class="far fa-check-square"></span></li>
+                                        <li class="small px-2 py-2 mb-2 rounded">Indangakwemera <span class="far fa-check-square"></span></li>
+                                        <li class="small px-2 py-2 mb-2 rounded">Amasakaramentu <span class="far fa-check-square"></span></li>
+                                        <li class="small p-2 mb-2 rounded">Amasengesho rusange <span class="far fa-check-square"></span></li>
+                                        <li class="small p-2 mb-2 rounded">Gutura <span class="far fa-check-square"></span></li>
+                                        <li class="small p-2 mb-2 rounded">Nyirubutagatifu <span class="far fa-check-square"></span></li>
+                                        <li class="small p-2 mb-2 rounded">Ntama w'Imana <span class="far fa-check-square"></span></li>
+                                        <li class="small p-2 mb-2 rounded">Guhazwa <span class="far fa-check-square"></span></li>
+                                        <li class="small p-2 mb-2 rounded">Gushimira <span class="far fa-check-square"></span></li>
+                                        <li class="small p-2 mb-2 rounded">Gutaha <span class="far fa-check-square"></span></li>
+                                        <li class="small p-2 mb-2 rounded">Bikiramariya <span class="far fa-check-square"></span></li>
+                                        <li class="small p-2 mb-2 rounded">Ugushyingirwa <span class="far fa-check-square"></span></li>
+                                        <li class="small p-2 mb-2 rounded">Noheli <span class="far fa-check-square"></span></li>
+                                        <li class="small p-2 mb-2 rounded">Igisibo <span class="far fa-check-square"></span></li>
+                                        <li class="small p-2 mb-2 rounded">Pasika <span class="far fa-check-square"></span></li>
+                                        <li class="small p-2 mb-2 rounded">Abatagatifu <span class="far fa-check-square"></span></li>
+                                        <li class="small p-2 mb-2 rounded">Roho Mutagatifu <span class="far fa-check-square"></span></li>
+                                        <li class="small p-2 mb-2 rounded">Asensiyo <span class="far fa-check-square"></span></li>
+                                        <li class="small p-2 mb-2 rounded">Ibitaramo <span class="far fa-check-square"></span></li>
+                                    </ul>
+                                    <style>
+                                        #oragnizeSong .select-options-any {
+                                            columns: 2;
+                                        }
+                                        @media screen and (min-width: 768px) {
+                                            #oragnizeSong .select-options-any {
+                                                columns: 3;
+                                            }                                            
+                                        }
+                                    </style>
+                                </div>
+                                <button class="btn btn-myBlue d-block mx-auto my-5 my-md-3" id="requestToOrganizeSong">Request to organize <span class="fa fa-chart-pie ms-2"></span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- More tools -->
+    <!-- <div class="position-fixed bottom-0" style="display: none;">
+        <audio src="../../assests/audios/success_notification.wav" id="notifSuccessSound">Success notification sound</audio>
+        <audio src="../../assests/audios/error_notification.wav" id="notifErrorSound">Error notification sound</audio>
+    </div> -->
+
+	<!-- ************************** Page Ending ************************** -->
+	
+	<!-- <footer class="py-3 Info">
+		<li class="small">
+			Check out <u><a href="../About/ESG_Songs">ESG Songs</a></u>
+		</li><br>
+		<div class="row m-0">
+			<div class="col-6 col-md-3">
+				<h4>Quick links</h4>
+				<ul class="list-unstyled p-2">
+					<li class="p-2 Here">
+						<span class="fa fa-place-of-worship grid-center me-3"></span><a href="#">Mass songs</a>
+					</li>
+					<li class="p-2">
+						<span class="fa fa-handshake grid-center me-3"></span><a href="../services">Services</a>
+					</li>
+					<li class="p-2">
+						<span class="grid-center me-3">&#119071;</span><a href="../solfeggio">Solfeggio docs</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-6 col-md-3">
+				<h4>Follow us</h4>
+				<ul class="list-unstyled p-2">
+					<li class="p-2">
+						<span class="fab fa-instagram grid-center me-3"></span><a href="https://www.instagram.com/easternsingers/" target="_blank">Instagram</a>
+					</li>
+					<li class="p-2">
+						<span class="fab fa-facebook-f grid-center me-3"></span><a href="https://web.facebook.com/groups/221686289873729/" target="_blank">Facebook</a>
+					</li>
+					<li class="p-2">
+						<span class="fab fa-youtube grid-center me-3"></span><a href="https://www.youtube.com/channel/UC88VxWbKsZMbEjaL0kzLZIQ/" target="_blank">YouTube</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-6 col-md-3">
+				<h4>Contact</h4>
+				<ul class="list-unstyled p-2">
+					<li class="p-2">
+						<span class="fa fa-phone grid-center me-3"></span><a class="small" href="tel:+250783967092">(+250) 783967092</a>
+					</li>
+					<li class="p-2">
+						<span class="fa fa-phone grid-center me-3"></span><a class="small" href="tel:+250785459848">(+250) 785459848</a>
+					</li>
+					<li class="p-2">
+						<span class="fa fa-envelope grid-center me-3"></span><a href="../contact">E-mail</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<hr>
+		<div class="text-center text-bold">
+			<small>
+				<small>
+					<strong>Copyright <span class="fa fa-copyright"></span> <span class="copyright-year">2022</span> Eastern Singers Group. All Rights Reserved.</strong><br>
+					<span class="fa fa-code me-1"></span> Powered by <a href="https://hirwa9.github.io" target="_blank" class=" text-muted"><strong>Hirwa</strong></a>
+				</small>
+			</small>
+			<div class="position-fixed fixed-bottom inx-high offset-sm-2 col-sm-8 offset-md-3 col-md-6 p-2 blur-bg-5px collapse win-hide designer">
+				<div class="ps-3 d-flex align-items-center justify-content-between">
+					<span>Developer <span class="fa fa-paint-brush ms-2"></span></span>
+					<button class="w-2rem bounceClick closerX" data-bs-toggle="collapse" data-bs-target=".designer"></button>
+				</div>
+				<hr>
+				<ul class="list-style-square small">
+					<li class="text-start">
+						E-mail: <a href="mailto:hirwawilly9@gmail.com">hirwawilly9@gmail.com <span class="fa fa-envelope ms-2"></span></a>
+					</li>
+					<li class="text-start">
+						Phone: <a href="tel:+250785459848" class="me-2">+250 785 459 848 <span class="fa fa-phone ms-2"></span></a>
+					</li>
+					<li class="text-start">
+						<a href="https://www.linkedin.com/in/hirwa-cyuzuzo-willy-94159427b" class="w-30px ratio-1-1 rad-50 grid-center border bounceClick" target="_blank">
+							<span class="fab fa-linkedin"></span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</footer> -->
+    
+    <!-- ************************** Page end ************************** -->
+    
+    <script src="../../MyScripts.js?v=1.1163"></script>
+    <script src="chmSongsArray.js?v=1.1188"></script>
+    <script src="chmsData.js?v=1.1196"></script>
+    
+    <!-- <script src="../../scripts/uploadToGDrive.js"></script> -->
+     <script>
+        create_current_month();
+     </script>
+</body>
+</html>

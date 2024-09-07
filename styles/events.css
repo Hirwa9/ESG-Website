@@ -1,0 +1,174 @@
+@import "../all.css?v=1.1159";
+
+/**
+* ESG_Events
+*/
+
+#aniv {
+	display: none;
+	top: 60px; 
+	right: 0;
+	max-height: calc(100vh - 40px);
+	max-height: calc(100dvh - 40px);
+	overflow-y: auto;
+	border: 1px solid var(--white3_cons);
+	background-image: linear-gradient(to right bottom, var(--black4_cons) 40%, var(--black3_cons) 30%, var(--black4_cons));
+	background-color: var(--myBlue);
+	animation: aniv 2s 1 , anivBG 20s infinite ease-in-out;
+	transition: top .3s;
+}
+#aniv > hr {
+	border-color: var(--white2_cons);
+}
+/* #aniv > .anniv-title {
+	position: sticky;
+	top: 0;
+} */
+#aniv > .anniv-message {
+	color: var(--white_var);
+}
+.anivClose {
+	/* position: sticky; */
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	background-color: var(--white2_cons);
+	color: black;
+	/* font-size: 1.5rem; */
+}
+.anivCallClose {
+	border-color: var(--white3_cons) !important;
+}
+@media screen and (max-width: 576px) {
+	#aniv {
+		top: 40px;
+	}
+	
+}
+@keyframes aniv {
+	1% {
+		top: 100vh;
+		right: 100vw;
+		bottom: 0;
+		left: 0;
+		height: 5vh;
+		overflow: hidden;
+	}
+	40% {
+		bottom: auto;
+		left: auto;
+		top: 20vh;
+		right: 50vw;
+		transform: rotateZ(-750deg);
+		border-radius: 50%;
+		height: 25vh;
+	}
+	60% {
+		height: 40vh;
+	}
+	100% {
+		bottom: auto;
+		left: auto;
+		top: 60px;
+		right: 0;
+		transform: rotateZ(-360deg);
+		overflow: auto;
+		/* transform: skewX(10deg); */
+	}
+}
+@keyframes anivBG {
+	0% {
+		background-position: -500px, 0;
+	}
+	50% {
+		background-position: 500px, 0;
+	}
+	100% {
+		background-position: -500px, 0;
+	}
+
+}
+.MomCar-Caption {
+	position: absolute !important;
+	bottom: 0; left: 0;
+	background-color: var(--white3);
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+}
+#anivGuest {
+	background-color: black;
+}
+#anivGuest a {
+	text-decoration: none;
+	color: var(--white_var);
+}
+#anivGuest a:hover {
+	color: goldenrod;
+}
+#aniver {
+	top: 60px; right: 0;
+	height: 80px;
+	width: auto;
+	display: grid;
+	align-items: center;
+	border-left: 10px solid var(--white2_cons);
+	border-bottom: 2px dotted var(--white2_cons);
+	border-bottom-left-radius: 50%;
+	background-color: var(--myBlue);
+	color: var(--white_var);
+	transition: var(--trans);
+}
+#aniver:hover {
+	background-color: goldenrod;
+}
+.EventCard {
+	background-color: transparent !important;
+	border-color: transparent !important;
+	border-left: 5px solid var(--myBlue);
+	border-bottom: 0;
+	margin-bottom: 2rem;
+}
+.EventCard .card-link {
+	padding-left: 1rem;
+	font-weight: bold;
+	color: var(--myBlue_cons) !important;
+}
+.EventBody {
+	position: relative;
+	/* border-right: 12px solid var(--myBlue); */
+	/* border-bottom: 4px solid var(--myBlue); */
+	/* border-left: 5px solid var(--myBlue); */
+	border-bottom: 0;
+	overflow: hidden;
+	/* background-color: var(--myBlue3) !important; */
+}
+.EventBody * {
+	transition: var(--trans);
+}
+.EventBody a {
+	text-decoration: underline;
+}
+.EventBody a:hover {
+	color: goldenrod;
+}
+.EventBody > div:first-letter {
+	font-size: 5rem;
+	line-height: .5;
+}
+.EventBody > div {
+	letter-spacing: .5px;
+}
+.EventBody > div > div {
+	height: 40vh;
+	height: 40dvh;
+	float: right;
+	overflow: hidden;
+	border-radius: .5rem;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 40%;
+	/* clip-path: polygon(0 0, 100% 0, 98% 50%, 100% 100%, 0 100%); */
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 2% 50%);
+	animation: wobbleTop 1.5s 1;
+	animation: slideInLeftSM 1.5s 1;
+}

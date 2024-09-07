@@ -1,0 +1,308 @@
+@import "../all.css?v=1.1152";
+
+/**
+* yalliance
+*/
+
+.sidebar {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    min-width: 15rem;
+    z-index: 100;
+    padding: 48px 0 0;
+    overflow: hidden;
+    /* background-color: var(--bs-light); */
+    /* background-color: #ced8e4; */
+    background-color: var(--appColor);
+}
+
+@media screen and (max-width: 768px) {
+    .sidebar {
+        animation: slideInLeft .5s 1;
+    }
+}
+
+.sidebar .nav-link {
+    position: relative;
+    font-weight: 500;
+    color: var(--black2_cons) !important;
+    transition: border-radius 0s, margin var(--trans);
+}
+
+.sidebar .nav-link .fas {
+    margin-right: 4px;
+}
+
+.sidebar .nav-link.active {
+    margin-left: 1rem;
+    background-color: var(--bs-light);
+    color: var(--black1_cons) !important;
+    border-radius: 1rem 0 0 1rem;
+}
+
+.sidebar .nav-link.active::before,
+.sidebar .nav-link.active::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 1rem;
+    height: 1rem;
+}
+
+.sidebar .nav-link.active::before {
+    top: 0;
+    translate: 0 -100%;
+    border-radius: 0 0 .7rem 0;
+    box-shadow: .25rem .25rem var(--bs-light);
+}
+
+.sidebar .nav-link.active::after {
+    bottom: 0;
+    translate: 0 100%;
+    border-radius: 0 .7rem 0 0;
+    box-shadow: .25rem -.25rem var(--bs-light);
+}
+
+#mainContent {
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+
+@media screen and (min-width: 768px) {
+    .sidebar {
+        display: block;
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        background-color: transparent;
+    }
+
+    #mainContent {
+        border-radius: 1rem;
+        min-height: calc(100vh - 2rem);
+        min-height: calc(100dvh - 2rem);
+    }
+}
+
+.admins-list tr.active td {
+    background-color: var(--secondary-color);
+    color: var(--bs-light);
+}
+
+.dynamic-data-section>nav>.nav-tabs .nav-link {
+    color: var(--myBlue_cons) !important;
+    border-radius: 100vw;
+    transition: none;
+    padding: .3rem .55rem;
+    font-size: 80%;
+    border: 0;
+}
+
+.dynamic-data-section>nav>.nav-tabs .nav-link.active {
+    border: none;
+    /* border-bottom: 2px solid var(--black3); */
+    background-color: transparent;
+}
+
+.dynamic-data-section>nav>.nav-tabs .nav-link.active {
+    background-color: var(--myBlue);
+    color: aliceblue !important;
+    /* border: none;
+    border-bottom: 2px solid var(--black3); */
+}
+
+.admins-list tr.active td {
+    background-color: var(--myBlue3);
+    color: var(--bs-dark);
+}
+
+.footer {
+    /* position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f8f9fa; */
+    padding: 10px 0;
+}
+
+.logo {
+    width: 30px;
+    height: auto;
+}
+
+.organization-name {
+    margin-left: 10px;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+/* Music element */
+
+.music-element {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+    position: relative;
+    transition: outline var(--trans);
+}
+
+.music-element-info {
+    /* display: none; */
+    width: 100%;
+    height: fit-content;
+    max-height: 100vh;
+    max-height: 100dvh;
+    border-radius: 1rem 1rem 0 0;
+    overflow: hidden;
+    overflow-y: auto;
+    background-color: #dfe0e1;
+    /* background-color: var(--bs-info); */
+    bottom: 0;
+    right: 0;
+    animation: slideInBottom .5s 1;
+}
+
+@media screen and (min-width: 576px) {
+    .music-element-info {
+        width: 30rem;
+        right: 2rem;
+    }
+
+}
+
+/* @media screen and (min-width: 1200px) { */
+@media screen and (min-width: 992px) {
+    /* .music-element:not(.position-fixed) {
+        height: 100%;
+    } */
+
+    .music-element-info {
+        top: 0;
+        bottom: 0;
+        margin-block: auto;
+        border-radius: 1rem;
+        animation: slideInRightSM .5s 1;
+    }
+}
+
+/* .music-element:hover {
+    background-color: var(--black4);
+} */
+
+.music-element > :first-child>button {
+    background-color: transparent;
+    border: 0;
+}
+
+.music-element:has(.composition-details.collapse:not(.show)) {
+    border-bottom: 2px solid var(--black4);
+    box-shadow: none;
+}
+
+.music-element:has(.composition-details.collapse:not(.show)) .composition-title {
+    margin-bottom: 0 !important;
+    font-weight: normal;
+
+}
+
+.music-element:has(.composition-details.collapse:not(.show)) .composition-title>span:first-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 1.3rem !important;
+}
+
+.music-element .composition-details {
+    transition: none;
+}
+
+.music-element .deselect-composition {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    translate: -50% 70%;
+    /* animation: flyInTopSM .3s 1; */
+}
+
+/* :has(> .music-element) {
+    animation: zoomInBack .5s 1;
+} */
+
+.active:has(> .music-element) .music-element {
+    background-color: rgba(25, 135, 84, .2);
+    outline: 4px solid rgba(25, 135, 84, .3);
+    outline-offset: 3px;
+}
+
+.active:has(> .music-element) .deselect-composition {
+    display: block;
+}
+
+form input,
+form select {
+    border: 1px solid var(--black3_cons) !important;
+}
+
+form input {
+    height: 2.5rem;
+}
+
+form input:focus,
+form select:focus {
+    box-shadow: 0 0 0 .25rem var(--black3_cons) !important;
+}
+
+/*  Person info card */
+
+.person-info-card {
+    max-width: 15rem;
+}
+
+.person-info-card.working {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-width: unset;
+    animation: slideInBottom var(--trans) 1;
+    animation: flyInBottomSM var(--trans) 1;
+    max-height: calc(100vh - 1.5rem);
+    max-height: calc(100dvh - 1.5rem);
+}
+
+@media screen and (max-width: 992px) {
+    .person-info-card.working {
+        z-index: 1031;
+    }
+}
+
+.person-info-card.working .my-item-body {
+    max-height: calc(100vh - 45px);
+    max-height: calc(100dvh - 45px);
+    overflow-y: auto;
+}
+
+@media screen and (min-width: 576px) {
+    .person-info-card.working {
+        max-width: 17rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .person-info-card,
+    .person-info-card.working {
+        position: sticky;
+        top: .5rem;
+        max-width: 15rem;
+    }
+}
+
+.statistics-wrapper {
+    animation-name: slideInLeft;
+    animation-duration: 1ms; /* Firefox requires this to apply the animation */
+    animation-direction: alternate;
+    animation-timeline: scroll(block nearest);
+    /* view-timeline-name: --squareTimeline;
+    animation-timeline: --squareTimeline; */
+}

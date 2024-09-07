@@ -1,0 +1,269 @@
+@import "../all.css?v=1.1159";
+
+/**
+* ESG_Solfeggio
+*/
+
+#mainBody_Music {
+	font-family: sans-serif, 'Roboto';
+}
+#mainBody_Music > h3 {
+	padding-inline: .5rem;
+	padding-block: 1.2rem;
+	color: var(--myBlue_cons);
+}
+#mainBody_Music > h3:first-of-type + div > p:first-child {
+	font-size: 1.2rem;
+	background-color: var(--myBlue3_cons);
+	letter-spacing: normal;
+	line-height: 1.7;
+}
+#mainBody_Music > p mark {
+	background-color: var(--myBlue2_cons);
+	color: var(--black_var);
+}
+.SolfCAP {
+	position: relative;
+	height: 40vh;
+	min-height: 300px;
+	overflow: hidden;
+	background-image: linear-gradient(to right, var(--myBlue1) 20%, var(--myBlue3)), url(../Pics/Music_sheet9.jpg);
+	background-size: cover;
+	background-position: center;
+}
+@media screen and (min-width: 576px) {
+	.SolfCAP {
+		height: 60vh;
+	}
+}
+.SolfCAP span {
+	animation: slideInLeft .5s 1;
+	filter: drop-shadow(0px 0px 7px black);
+	/* box-shadow: 0px 0px 10px black; */
+}
+.SolfCAP > div {
+	position: absolute;
+	right: 2%;
+	bottom: 8%;
+	width: 50%;
+	background-color: var(--black2_cons);
+}
+/* .SolfCAP ~ p {
+	position: relative;
+	overflow: hidden;
+	transition: .2s;
+	line-height: 1.5rem;
+	letter-spacing: 1.5px;
+	font-weight: 500;
+}
+.SolfCAP ~ p.less {
+	height: 300px;
+} */
+@media screen and (max-width: 576px) {	
+	.SolfCAP {
+		border-radius: 0;
+	}
+	.SolfCAP > div {
+		width: 75%;
+	}
+}
+
+.h-grids-wrapper {
+	height: 60vh;
+	overflow-y: auto !important;
+	transition: height var(--trans);
+}
+.h-grids-item {
+	position: relative;
+	overflow: hidden !important;
+	/* background-image: linear-gradient(180deg, var(--_mainColor) 70%, transparent 95%, var(--bodi)); */
+	background-image: linear-gradient(180deg, var(--grey2) 70%, transparent 95%, var(--bodi));
+	transition: .6s !important;
+}
+.h-grids-item::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	height: 100%;
+	width: 6px;
+	background-color: var(--grey2);
+}
+.h-grids-item > * {
+	margin-left: 1rem;
+}
+.h-grids-controller {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(170px, 3fr));
+	gap: 2px;
+}
+.h-grids-controller > button {
+	border-width: 2px;
+	border-color: var(--_mainColor);
+	/* background-color: var(--_headerColor); */
+	background-color: transparent !important;
+	color: var(--_mainColor);
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+}
+.h-grids-controller > button.active {
+	background-color: var(--_mainColor) !important;
+	color: var(--_headerColor);
+}
+
+.h-grids-item_link > a {
+	text-decoration: none;
+	color: whitesmoke;
+}
+.h-grids-item_link >a:hover {
+	color: whitesmoke;
+}
+.SolfPAGING li > a {
+	border: 1px solid var(--white2);
+	border-radius: 5px;
+	background-color: var(--myBlue);
+}
+.SolfPAGINGDiv {
+	background-image: linear-gradient(to bottom, transparent, #4E8BBE, #4E8BBE);
+	z-index: 6;
+}
+.SolfPAGING li>a:hover {
+	background-color: var(--navi2);
+}
+.SolfPAGING > li.disabled {
+	background-color: var(--MTcolor);
+	color: var(--MTcolor);
+	cursor: no-drop;
+}
+#SolCar > div > div.carousel-item > div > p {
+	color: white;
+	display: inline;
+	background-color: brown;
+	padding: .25rem;
+	padding-right: .5rem;
+	padding-left: .5rem;
+	border-radius: 25px;
+}
+
+.Solf_Header {
+	display: grid;
+	height: 50vh;
+	grid-template-columns: 5fr minmax(100px, 2fr);
+	gap: .3rem;
+	grid-template-rows: 30%;
+}
+.Solf_Header * {
+	overflow: hidden;
+}
+.Solf_Header > div {
+	border-radius: 7px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.Solf_Header > div:first-child {
+	position: relative;
+	grid-row: span 2;
+	background-size: cover;
+	background-position: center;
+	/* box-shadow: 0 0 16px 0 inset var(--myBlue2); */
+	border-radius: 0;
+	border: 5px solid;
+	border-image: radial-gradient(circle at top left,  var(--myBlue) 20%, transparent, goldenrod, indigo);
+	border-image-slice: 40;
+}
+.Solf_Header > div:first-child > img {
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	height: 80%;
+	width: 60%;
+	border-radius: 5px;
+	transform: perspective(500px) rotateY(25deg);
+	box-shadow: 0 0 0 .6px black, 0 0 0 5px white, 0 0 0 6px black, -5px 15px 16px 0 var(--black2);
+}
+.Solf_Header > div:first-child > div {
+	position: absolute;
+	animation: flyInBottomSM 2s 1;
+}
+.Solf_Header > div:first-child::before {
+	position: absolute;
+	content: '';
+	inset: 0;
+	background-color: var(--navi3);
+}
+.Solf_Header > div:nth-child(2) {
+	background-color: var(--bodi);
+	border: 1px solid var(--black3);
+	color: var(--myBlue_var);
+	font-weight: lighter;
+	letter-spacing: 1px;
+}
+.Solf_Header > div:last-child {
+	display: grid;
+	grid-auto-flow: row;
+	grid-auto-rows: 80%;
+	gap: 1px;
+	overflow: scroll;
+	scroll-snap-type: y mandatory;
+}
+.Solf_Header > div:last-child > div {
+	position: relative;
+	perspective: 300px;
+	scroll-snap-align: start;
+	border: 1px solid;
+	border-image: radial-gradient(circle at top left,  violet 20%, grey, var(--myBlue));
+	border-image-slice: 40;
+}
+@media screen and (max-width: 576px) {
+	.Solf_Header {
+		display: grid;
+		height: 50vh;
+		grid-template-columns: 100%;
+		grid-template-rows: 4fr 4fr 4fr 4fr;
+	}
+	/* .Solf_Header > div:first-child {
+		grid-row: span 2;
+	} */
+	.Solf_Header > div:last-child {
+		display: grid;
+		grid-auto-flow: column;
+		grid-auto-columns: 80%;
+		grid-template-rows: 100%;
+		overflow-x: scroll;
+		scroll-snap-type: x mandatory;
+	}
+	/* .Solf_Header > div:last-child > div {
+		perspective: 300px;
+	} */
+}
+
+.SongElement , .SongElement1 {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	list-style-type: none;
+	cursor: pointer;
+	border-radius: 5px;
+	min-height: 50px;
+	border: 1px solid grey;
+	transition: var(--trans);
+}
+
+#MusicDocs {
+	columns: 2;
+	list-style-type: none;
+}
+@media screen and (max-width: 768px) {
+	#MusicDocs {
+		columns: 1;
+	}
+}
+#MusicDocs .SongElement1 > div:first-child {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+#MusicDocs .SongElement1 {
+	border: none;
+	border-radius: 0;
+	border-bottom: 1px solid var(--myBlue2_cons);
+}

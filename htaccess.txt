@@ -1,0 +1,25 @@
+
+ErrorDocument 404 /404.html
+
+RewriteEngine On
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:CF-Visitor} !{"scheme":"https"}
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# BEGIN WordPress
+# The directives (lines) between "BEGIN WordPress" and "END WordPress" are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
+
+# END WordPress
+
+
+#remove html file extension https://example.com/page.html
+# to https://example.com/page
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !\.(css|js|jpg|png)$ [NC]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html
+RedirectMatch 301 ^/CHM_Songs$ /esgrp/services/CHM_Songs
+RedirectMatch 301 ^/services$ /esgrp/services

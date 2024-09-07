@@ -1,0 +1,354 @@
+@import "../all.css?v=1.1159";
+
+/**
+* ESG_Calendar
+*/
+
+#noted {
+	position: relative;
+	width: 100%;
+	height: 0;
+	display: inline-block;
+	border-bottom: 1px solid grey;
+	background-color: var(--myBlue3);
+	animation: note 1s 1;
+	animation-timing-function: ease;
+}
+#noted span {
+	position: absolute;
+	/* opacity: 0; */
+	bottom: -4px;
+	right: 0;
+	transform: translateX(90%);
+	animation: underline 1s 1 forwards;
+}
+@keyframes note {
+	0% {
+		width: 1px;
+	}
+}
+@keyframes underline {
+	99% {
+		visibility: visible;
+	}
+	100% {
+		visibility: hidden;
+	}
+}
+.schedContainer {
+	transform: translateX(0%) translateY(-100%);
+	-webkit-transform:translateX(0%) translateY(-100%);
+	-moz-transform: translateX(0%) translateY(-100%);
+	-ms-transform: translateX(0%) translateY(-100%);
+	-o-transform: translateX(0%) translateY(-100%);
+
+	background-color: rgba(0, 0, 0, .8);
+}
+#Schedule {
+	color: var(--black1);
+	font-family: Tahoma, serif;
+}
+
+.Calendar {
+	padding-bottom: 1.5rem;
+}
+.Calendar > div > div.card-header, .currentMonthDynamic .card-header {
+	position: relative;
+	padding: 1rem;
+	line-height: 3;
+	background-image: linear-gradient(to right, transparent 5%, var(--black4) 95%);
+	color: var(--myBlue_var);
+}
+#Schedule > div:nth-child(2) > h5 {
+	font-weight: 800;
+}
+
+.calendarTable {
+	background-color: var(--myBlue3_cons);
+}
+.calendarTable th {
+	border-left: 3px solid var(--black3);
+}
+.calendarTable td {
+	padding: .5rem;
+	font-size: small;
+	border-left: 1px solid var(--black3);
+}
+
+.currentMonthDynamic > .card-header {
+	border-left: 10px solid var(--myBlue3) !important;
+	background-clip: padding-box;
+}
+.currentMonthDynamic > .card-header > h5 {
+	color: var(--myBlue_cons);
+	font-size: 1.5rem;
+	font-weight: 800;
+}
+.Calendar .MonSchedule {
+	background-image: linear-gradient(var(--white1), var(--white2)), url(../Pics/Es43.jpg);
+	background-image: linear-gradient(var(--white1), var(--white2)), url(../Pics/YardImage.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.Calendar > div > div.MonSchedule > div:first-child {
+	border: none;
+	border-left: 5px solid var(--myBlue2_cons);
+}
+.MonSchedule > div:first-child {
+	border-radius: 5px;
+}
+.MonSchedule > div:first-child > p {
+	font-size: 80%;
+	font-weight: 400;
+	padding-block: 8px;
+	margin-bottom: 0;
+}
+.Calendar .monthElem {
+	border-radius: .5rem .5rem 0 0;
+}
+.monthElem {
+	background-image: linear-gradient(transparent, var(--myBlue3));
+	transition: .5s;
+}
+@media screen and (max-width: 576px) {	
+	.monthElem {
+		transition: var(--trans);
+	}
+}
+.monthElem, .monthElem .row {
+	margin-inline: 0 !important;
+}
+.month-body {
+	padding-inline: 0 !important;
+	border-end-end-radius: 10px;
+	overflow: hidden;
+	transition: var(--trans);
+}
+.month-body span {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: .9rem;
+	padding-block: .5rem;
+
+}
+.monthDates {
+	padding-inline: .25rem;
+}
+.monthDates span:first-child:not(.text-muted) {
+	background-image: linear-gradient(to bottom, transparent 80%, var(--white2_cons));
+}
+.month-body .monthDays {
+	padding-block: .5rem;
+	padding-inline: .25rem;
+	border-start-start-radius: 3px;
+	border-bottom: 5px solid var(--black3);
+	font-size: 1.1rem;
+	font-weight: 500;
+}
+.monthDays > span {
+	color: var(--myBlue_cons);
+	font-weight: bold;
+}
+.monthDates span.text-muted {
+	font-weight: lighter;
+	opacity: .3;
+}
+.monthDates span:not(.text-muted) {
+	cursor: default;
+	color: var(--black_var);
+	border: 1px solid transparent;
+	border-radius: 4px;
+	transition: .2s;
+}
+.monthDates span:not(.text-muted, .daySPC):hover {
+	border: 1px solid var(--white2);
+	background-color: var(--grey1);
+}
+.monthDates span.today {
+	background-color: #00800099;
+}
+/* .month-stat {
+	background-image: linear-gradient(transparent 2%, var(--myBlue2));
+} */
+.month-stat h6 {
+	font-weight: 800;
+	color: var(--myBlue1_cons);
+	border-left: 1px solid var(--myBlue1_cons);
+	padding-left: .25rem;
+}
+.daySPC {
+	background-image: linear-gradient(to bottom, transparent 70%, var(--bs-info)) !important;
+}
+.daySPC:hover {
+	border: 1px solid var(--white2);
+	background-color: var(--bs-info);
+	cursor: pointer !important;
+}
+.daySPCfound {
+	border: 1px solid var(--myBlue3);
+	animation: emphSelecion 1s 2;
+}
+.monthSPC > div:first-child {
+	border-left-color: goldenrod !important;
+	/* border-left-color: var(--myBlue_cons) !important; */
+}
+@keyframes emphSelecion {
+	50% {
+		background-color: var(--myBlue2_cons);
+		/* background-color: rgba(255, 217, 0, 0.45); */
+	}
+}
+.monSPCindicator {
+	position: absolute;
+	top: 50%;
+	right: 15px;
+	width: 20px;
+	height: 20px;
+	transform: translateY(-50%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	background-color: var(--myBlue_var);
+	color: var(--white);
+	font-size: .65rem;
+}
+
+.EventBody > div > div::before {
+	position: absolute;
+	bottom: -20%; right: -20%;
+	height: 40%;
+	width: 40%;
+	display: flex;
+	justify-content: left;
+	align-items: flex-start;
+	content: '';
+	font-size: 1.3rem;
+	font-family: Cambria;
+	padding-left: 6%;
+	padding-top: 0;
+	background-color: var(--appColor);
+	border-radius: 50%;
+	border-top: 6px solid var(--grey1);
+	animation: flyIn 1s 1;
+}
+.eventDetails {
+	height: 100vh;
+	height: 100dvh;
+	min-height: 600px;
+	animation: flyInBottom .3s 1;
+}
+.eventDetails .eventDet-title {
+	height: 12%;
+	border-radius: 0 0 .5rem .5rem;
+	background-color: var(--navi);
+	color: var(--white_var);
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+.eventDetails .eventDet-body {
+	overflow-y: auto;
+	height: 80%;
+	height: calc(88% - 3rem);
+	padding-bottom: 5vh !important;
+	padding-bottom: 5dvh !important;
+}
+.eventDetails .eventDet-body p {
+	border-top: 3px dashed var(--black4);
+	margin-top: 1rem;
+	color: var(--black1);
+	line-height: 25px;
+	text-align: justify;
+}
+.eventDetails .eventDet-body a {
+	border-color: var(--bs-info);
+	background-color: var(--bs-info);
+	-webkit-text-fill-color: var(--white_var);
+	text-decoration: none;
+}
+.eventDetails .eventDet-footer {
+	height: 3rem;
+	/* border-radius: 20px 20px 0 0; */
+	background-color: var(--navi2_cons);
+	color: var(--white_var);
+}
+.eventDet-imgs {
+	--_Space: .25rem;
+	display: grid;
+	grid-template-columns: 80% 20%;
+	grid-template-rows: 70% 30%;
+	height: 20rem;
+	max-height: 50vh;
+	max-height: 50dvh;
+	padding: var(--_Space);
+	border-radius: 20px;
+	background-color: var(--white);
+	transition: grid-template-columns .2s, grid-template-rows .2s;
+}
+.eventDet-imgs > * {
+	height: 100%;
+	padding: var(--_Space);
+	border-radius: inherit;
+	object-fit: cover;
+	background-color: var(--navi2_cons);
+	background-clip: content-box;
+	transition: .3s, scale .2s;
+	animation: zoomInBack 1s 1;
+}
+.eventDet-imgs > *:hover {
+	scale: 0.985;
+}
+.eventDet-imgs img:first-child {
+	grid-column: span 1;
+	grid-row: span 1;
+}
+.eventDet-imgs img:nth-child(2) {
+	grid-area: 1 / 2 / 1 / 2;
+}
+.eventDet-imgs img:nth-child(3) {
+	grid-area: 2 / 1 / 2 / 3;
+}
+.eventDet-imgs.sub2  {
+	grid-template-columns: 20% 80%;
+}
+.eventDet-imgs.sub3  {
+	grid-template-rows: 30% 70%;
+}
+.eventDet-body p {
+	padding: 1rem;
+}
+#StuM > div > div {
+	height: 80vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 40%;
+	box-shadow: 0 3px 3px var(--white2);
+	float: right;
+	animation: eventPosition 15s infinite;
+}
+@media screen and (max-width: 576px) {
+	#StuM > div > div {
+		background-image: url(Pics/Es75.jpg) !important;
+	}												
+}
+#StuM > div > div::before {
+	position: absolute;
+	bottom: -20%; right: -20%;
+	height: 40%;
+	width: 40%;
+	display: flex;
+	justify-content: left;
+	align-items: flex-start;
+	content: '';
+	font-size: 1.3rem;
+	font-family: Cambria;
+	/* padding-left: 6%; */
+	padding-top: 8%;
+	background-color: var(--appColor);
+	border-radius: 50%;
+	border-top: 6px solid var(--grey1);
+	animation: flyIn 1s 1;
+}

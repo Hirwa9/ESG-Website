@@ -1,0 +1,207 @@
+@import "../all.css?v=1.1159";
+
+/**
+* ESG_index
+*/
+
+#IndexNavi {
+    position: relative;
+    display: grid;
+    grid-template-columns: 10% 70%;
+    place-items: center;
+    padding-left: 2rem;
+    overflow: hidden;
+    /* background-image: linear-gradient(125deg, var(--white1_cons) 10%, var(--myBlue) 90%); */
+    transition: var(--trans);
+}
+#IndexNavi > .ESGlogo {
+    display: block;
+    width: 100%;
+    padding: .25rem;
+    border-radius: 10px;
+}
+@media screen and (max-width: 576px) {
+    #IndexNavi {
+        grid-template-columns: 25% 75%;
+        padding-left: 1rem;
+    }
+}
+#IndexNavi > #Gname {
+    font-size: 2rem;
+}
+.home-sectionABT > h2 {
+	text-transform: uppercase;
+    font-weight: 800;
+}
+.home-sectionABT ul {
+	line-height: 1.7;
+	animation: slideInLeft 1s 1;
+}
+@media screen and (min-width: 922px) {
+	.home-sectionABT ul > li {
+		border-left: 2px solid var(--black2);
+		padding-left: 1rem;
+		list-style: none;
+	}
+}
+@media screen and (max-width: 576px) {	
+    #IndexNavi > #Gname {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+    #IndexNavi > #Gname::after {
+        transform-origin: 50% 65%;
+    }
+}
+.HOME-NAV-Container {
+    background-color: var(--myBlue2);
+    background-image: linear-gradient(to right, transparent 20%, var(--myBlue2), var(--myBlue));
+    background-image: linear-gradient(to right, transparent 20%, var(--white2), var(--myBlue));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.HOME-NAV-Container > div {
+    min-height: 200px;
+}
+.HOME-NAV-Container.DISCLASS1 {
+    background-image: linear-gradient(to right, transparent 20%, var(--white2), var(--white)), url(../Pics/Es45.jpg);
+}
+.HOME-NAV-Container.DISCLASS2 {
+    background-image: linear-gradient(to left, transparent 20%, var(--white2), var(--white)), url(../Pics/Music_sheet4.jpg);
+}
+.HOME-NAV-Container.DISCLASS3 {
+    background-image: linear-gradient(to right, transparent 20%, var(--white2), var(--white)), url(../Pics/Wedding1.jpg);
+}
+@media screen and (max-width: 576px) {
+    .HOME-NAV-Container.DISCLASS1 {
+        background-image: linear-gradient(to right, transparent 20%, var(--white2), var(--white)), url(../Pics/Es75.jpg);
+    }
+    .HOME-NAV-Container.DISCLASS2 {
+        background-image: linear-gradient(to left, transparent 20%, var(--white2), var(--white)), url(../Pics/Music_sheet11.png);
+    }
+    .HOME-NAV-Container.DISCLASS3 {
+        background-image: linear-gradient(to right, transparent 20%, var(--white2), var(--white)), url(../Pics/Wedding.jpg);
+    }
+}
+.HOME-NAV-Container > div > div {
+    overflow: hidden;
+	border-radius: inherit;
+    background-image: linear-gradient(transparent, var(--myBlue2), var(--myBlue1));
+    animation: flyInBottom 1s 1;
+}
+.HOME-NAV-Container > div > div > div:first-child {
+	text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--white_var);
+    transition: var(--trans);
+}
+.HOME-NAV-Container:first-child > div > div > div:first-child {
+    justify-content: right;
+}
+.HOME-NAV-Container:nth-child(2) > div > div > div:first-child {
+    justify-content: left;
+}
+.page-navigator {
+	top: 100%;
+	background-color: var(--black2_cons);
+	left: 0;
+	bottom: 0;
+	backdrop-filter: saturate(0);
+	-webkit-backdrop-filter: saturate(0);
+	/* backdrop-filter: blur(2px);
+	-webkit-backdrop-filter: blur(2px); */
+	transition: var(--trans);
+}
+.HOME-NAV-Container > div > div:hover .page-navigator {
+	top: 0;
+}
+.HOME-NAV-Container > div > div:hover > div:first-child {
+	transform: translateY(-100%);
+}
+
+.home-coming {
+	position: relative;
+	overflow: hidden;
+	mask-image: linear-gradient(transparent, black 60%, black);
+	background-image: linear-gradient(var(--myBlue), transparent);
+	height: calc(100vh - 5.5rem);
+}
+.home-coming_content {
+	position: absolute;
+	width: 100%;
+	height: 30%;
+	bottom: 0;
+	margin-top: 5vh;
+	background-image: linear-gradient(transparent, var(--myBlue1));
+	color: var(--bs-light);
+    font-size: calc(1.525rem + 3.3vw);
+    font-weight: 700;
+    line-height: 1.2;
+	animation: flyInBottom 3s 1;
+	transition: var(--trans);
+}
+.home-coming_bg, .home-coming_bg1 {
+	background-color: var(--myBlue3);
+	background-image: url(../Pics/Es93.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.home-coming_bg1 {
+	box-shadow: 0 -7px 10px 0 black;
+	clip-path: polygon(0 30%, 30% 75%, 42% 70%, 50% 72%, 100% 37%, 100% 100%, 0 100%);
+	animation: slideInRightSM 1s 1;
+}
+@media screen and (min-width: 768px) {
+	.home-coming_bg, .home-coming_bg1 {
+		/* background-image: url(../Pics/events/PXL_20231203_150538.jpg); */
+		background-image: url(../Pics/events/PXL_20231203_162415.jpg);
+		background-position: center 0%;
+	}
+	.home-coming_bg1 {
+		box-shadow: 0 -60px 5rem 0 var(--myBlue) inset;
+	}
+}
+
+.intro-index > div:first-of-type {
+	perspective: 2000px;
+	overflow: hidden;
+}
+.intro-index > div:first-of-type > div:first-child {
+	display: flex;
+	flex-wrap: wrap;
+}
+.intro-index > div:first-of-type > div:first-child > section {
+	background-image: radial-gradient(var(--myBlue3_cons), transparent 70%);
+}
+@media screen and (max-width: 576px) {
+	.intro-index > div:first-of-type > div:first-child > section {
+		min-height: 40vh;
+		min-height: 40dvh;
+	}
+}
+
+.intro-index > div:first-of-type > div:first-child > section > p {
+	font-size: 1.02rem;
+	text-align: center;
+	animation: flyInBottomSM 1s 1;
+	transition: var(--trans);
+}
+.intro-index > div:first-of-type > div:first-child > section > p:hover {
+	scale: 1.03;
+}
+.intro-index > div:first-of-type > div:first-child > section > span {
+	color: var(--white_var);
+	animation: bounceElem 1.5s 1;
+}
+.intro-index > div:first-of-type > div:first-child > section:nth-child(2) > span {
+	animation-delay: .3s;
+}
+.intro-index > div:first-of-type > div:first-child > section:nth-child(3) > span {
+	animation-delay: .1s;
+}
+.intro-index > div:first-of-type > p::selection {
+	background-color: rgba(255, 166, 0, 0.45);
+	color: black;
+}

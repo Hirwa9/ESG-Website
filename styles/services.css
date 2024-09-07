@@ -1,0 +1,116 @@
+@import "../all.css?v=1.1159";
+
+/**
+* ESG_Services
+*/
+
+main.grids-main > nav#pageSidenav > div > div {
+	position: relative;
+}
+main.grids-main > nav#pageSidenav .servive-menu-title {
+	position: relative;
+	padding-block: 1.5rem;
+	padding-left: clamp(.5rem, 3vw, 3rem);
+	cursor: default;
+	color: var(--myBlue_var);
+	font-weight: 650;
+	transition: .15s;
+	border-bottom: 1px solid var(--black3);
+}
+main.grids-main > nav#pageSidenav .servive-menu-title::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 7%;
+	translate: -50% -50%;
+	width: .5rem;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	background-color: var(--myBlue_cons);
+	outline: 7px solid var(--myBlue3_cons);
+	transition: scale var(--trans);
+	z-index: -1;
+}
+main.grids-main > nav#pageSidenav .servive-menu-title:hover::before {
+	/* background-color: goldenrod;
+	outline-color: rgba(255, 217, 0, 0.5); */
+	scale: 1.5;
+}
+@media screen and (max-width: 992px) {
+	main.grids-main > nav#pageSidenav .servive-menu-title::before {
+		left: auto;
+		right: 7%;
+	}
+}
+
+main.grids-main #pageMainContent h2 {
+	color: var(--myBlue_cons);
+}
+main.grids-main #pageMainContent img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+main.grids-main #pageMainContent > div {
+	position: relative;
+	min-height: 40vh;
+	min-height: 40dvh;
+	overflow: hidden;
+	isolation: isolate;
+}
+main.grids-main #pageMainContent > div > div:first-child {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 70%;
+	background-image: linear-gradient(to right, transparent, var(--black));
+	z-index: -1;
+}
+main.grids-main #pageMainContent > div > div:last-child {
+	width: 60%;
+	margin-left: auto;
+	padding-left: 15%;
+	clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
+	background-image: linear-gradient(to left, var(--myBlue), var(--myBlue4));
+	color: var(--white_var);
+	text-align: justify;
+	animation: slideInRight 2s 1;
+	transition: background .2s;
+	z-index: inherit;
+}
+main.grids-main #pageMainContent > div > div:last-child:hover {
+	background-color: var(--myBlue1);
+}
+@media screen and (max-width: 768px) {
+	main.grids-main #pageMainContent img {
+		object-fit: contain;
+	}
+}
+@media screen and (max-width: 576px) {
+	main.grids-main #pageMainContent > div > div:first-child {
+		position: static;
+		width: 100%;
+		border-start-end-radius: 10px;
+		border-start-start-radius: 10px;
+		overflow: hidden;
+		background-image: none;
+		animation: flyInBottomSM 1s 1;
+	}
+	main.grids-main #pageMainContent > div > div:last-child {
+		width: 100%;
+		margin-left: 0;
+		margin-top: auto;
+		padding: .5rem;
+		translate: 0 -10px;
+		border-start-start-radius: 7px;
+		border-start-end-radius: 7px;
+		background-image: none;
+		background-color: var(--myBlue1);
+		clip-path: polygon(0 0, 50% 8px, 100% 0, 100% 100%, 0 100%);
+		animation: none;
+	}
+}
+main.grids-main #pageMainContent > div > div:last-child p {
+	line-height: 1.7;
+}
