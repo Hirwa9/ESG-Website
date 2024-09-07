@@ -1,0 +1,51 @@
+# Ignore media files
+Pics/
+esgrp/About/esgSongsFiles/
+esgrp/Services/Songs/
+esgrp/Services/Beat_styles/
+
+# Ignore offline files
+bootstrap4/
+bootstrap5/
+fontawesome6-2-0/
+jq/
+Songs/
+Sitemaps/
+ESG.css
+
+# Ignore environment and sensitive files
+.env
+google2edc407fa5cdb7c6.html
+
+# Ignore Composer dependencies
+/vendor/
+
+# Ignore operating system files
+.DS_Store
+Thumbs.db
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+
+# Ignore npm dependencies (if applicable)
+node_modules/
+
+# Ignore database exports
+DB exports/
+
+# Ignore Git and other version control system files
+.git/
+
+# Ignore IDE/editor files
+.vscode/
+.idea/
+
+# Ignore other temporary or build artifacts
+*.lock
+*.cache
+*.bak
+*.swp
+
+# Ignore generated asset files (if applicable)
+assets/
