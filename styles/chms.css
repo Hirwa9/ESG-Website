@@ -14,28 +14,6 @@ body {
     }
 }
 
-.song-stats .hero-cover-image {
-    opacity: 0.15;
-    background-image: url(../../Pics/musical_notes.svg);
-    background-attachment: fixed;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center 10%;
-    animation: zoomInBack 3s 1;
-    filter: blur(2px);
-    -webkit-filter: blur(2px);
-}
-
-.dark-theme .song-stats .hero-cover-image {
-    opacity: 1;
-}
-
-/* .hero {
-	border-radius: 3rem 3rem 0 0;
-	box-shadow: 0 -2rem 7rem var(--black4);
-	transition: box-shadow 1s;
-} */
-
 .hero > img {
     opacity: 0.5;
     mix-blend-mode: luminosity;
@@ -1367,11 +1345,17 @@ body {
 }
 
 .randomSCH > div:first-child {
-    height: 38px;
-    grid-template-columns: 70% 30%;
+    height: 2.7rem;
+    grid-template-columns: 100%;
 }
 
 @media screen and (min-width: 768px) {
+    .randomSCH > div:first-child {
+        grid-template-columns: 60% 40%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
     .randomSCH > div:first-child {
         grid-template-columns: 50% 50%;
     }
@@ -1396,6 +1380,7 @@ body {
 .page-searcher > .search-box {
     width: 100%;
     height: 100%;
+    background-color: var(--white2_cons);
 }
 
 .page-searcher > .search-box > span {
@@ -1404,9 +1389,7 @@ body {
 
 .page-searcher > .search-box .search-box__clearer {
     display: none;
-    background-color: var(--appColor_cons);
-    border: 1px solid var(--black3_cons) !important;
-    color: black;
+    width: 1.5rem;
 }
 
 .page-searcher > .search-box > input {
@@ -1417,6 +1400,10 @@ body {
 .page-searcher > .search-box > input::selection {
     background-color: var(--myBlue);
     color: white;
+}
+
+.page-searcher > .search-box > input::placeholder {
+    color: var(--black2);
 }
 
 .extend-search {
@@ -1439,7 +1426,7 @@ body {
     border-start-start-radius: 1rem;
     border-start-end-radius: 1rem;
     overflow: hidden;
-    background-image: linear-gradient(var(--bodi1_cons), var(--bodi_cons));
+    background-image: linear-gradient(var(--white4_cons), var(--bodi));
     z-index: inherit;
 }
 
@@ -1474,7 +1461,7 @@ body {
     align-items: center;
     justify-content: center;
     border-radius: 5px;
-    color: black;
+    color: var(--black1);
     font-size: 0.9rem;
     font-stretch: expanded;
     transition: var(--trans);
@@ -1485,7 +1472,7 @@ body {
     height: var(--avb_counter_dim);
     border-radius: 0.7rem;
     justify-self: center;
-    background-color: var(--black3_cons);
+    background-color: var(--black3);
     color: var(--bs-light);
     font-size: 0.7rem;
     scale: 0.7;
@@ -1530,7 +1517,7 @@ body {
     padding-bottom: 3rem;
     overflow-x: hidden;
     scroll-behavior: smooth;
-    background-color: var(--bodi_cons);
+    background-color: var(--bodi);
 }
 
 .schResults .bg-dark {
@@ -1544,7 +1531,7 @@ body {
     padding: 0.5rem;
     margin-bottom: 0.5rem;
     background-color: transparent;
-    color: var(--bs-dark);
+    color: var(--black1);
     font-size: 0.8rem;
 }
 
@@ -1619,12 +1606,12 @@ body {
     mask: linear-gradient(transparent, black 40%, transparent);
 }
 
-.chms-home > q {
+.chms-home > p:first-child {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 60%;
+    height: 50%;
     text-align: center;
     color: var(--bodi_cons);
     background-color: var(--black2_cons);
@@ -1634,7 +1621,7 @@ body {
 }
 
 @media screen and (min-width: 576px) {
-    .chms-home > q {
+    .chms-home > p:first-child {
         -webkit-mask: linear-gradient(transparent, black 20%);
         mask: linear-gradient(transparent, black 20%);
     }

@@ -4,11 +4,11 @@
 	<title>Holy Mass songs</title>
 	
 	<link rel="icon" type="image/x-icon" href="../../Pics/ESG_favicon1.ico">
-	<link rel="stylesheet" type="text/css" href="../../styles/chms.css?v=1.1200">
+	<link rel="stylesheet" type="text/css" href="../../styles/chms.css?v=1.1204">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Hirwa Willy">
-    <meta name="keywords" content="holy mass songs, rwandan holy mass songs, catholich songs, rwandan catholich songs, rwandan catholich music, catholich music, esg, eastern singers group">
+    <meta name="keywords" content="holy mass songs, rwandan holy mass songs, catholic songs, rwandan catholic songs, rwandan catholic music, catholic music, esg, eastern singers group">
 	<meta name="description" content="A library of Rwandan Common Holy Mass Songs written by notes (Solfeggio).">
 	<meta name="robots" content="index, follow">
 	<meta property="og:type" content="website">
@@ -814,13 +814,14 @@
         <div class="position-absolute col-12 col-sm-8 col-lg-6 mx-auto p-2 shadow-sm randomSCH">
             <div class="d-grid auto-flow-col mb-2">
                 <div class="page-searcher" title="Ctrl + / or Backspace">
-                    <div class="position-relative p-1 border-0 target-input search-box">
-                        <span class="fa fa-search grid-center"></span>
-                        <input type="text" placeholder="Find a song" class="border-0 search-box__input" id="chmsSearcher">
-                        <button class="r-middle search-box__clearer">&times;</button>
+                    <div class="position-relative mx-2 mx-md-0 p-1 border-0 target-input search-box">
+                        <span class="fa fa-arrow-left d-md-none align-items-center justify-content-center grid-center text-black2" onclick="go_back()"></span>
+                        <span class="fa fa-search d-none d-md-grid align-items-center justify-content-center grid-center"></span>
+                        <input type="text" placeholder="Find a song" class="border-0 text-black1 search-box__input" id="chmsSearcher">
+                        <button class="fa fa-close r-middle me-2 bg-none border search-box__clearer"></button>
                     </div>
                 </div>
-                <button class="btn-sm justify-self-end w-2rem h-2rem me-1 my-auto ratio-1-1 border-0 clickDown closerX closerX-black1" onclick="go_back()"></button>
+                <button class="d-none d-sm-grid btn-sm justify-self-end w-2rem h-2rem me-1 my-auto ratio-1-1 border-0 clickDown closerX closerX-black1" onclick="go_back()"></button>
             </div>
             <div class="schResults-navigator">
                 <div class="pt-1 pt-md-0" id="RESULT-AVB">
@@ -1462,9 +1463,7 @@
                     </div>
                     <div class="p-sm-2 overf-y-a sCatgHolder-home">
                         <div class="song-stats isolate">
-                            <!-- Design image -->
-                            <!-- <div class="h-20vh mask-top-bottom hero-cover-image"></div> -->
-                            <!-- Heo secrion -->
+                            <!-- Hero secrion -->
                             <section class="p-3 pb-5 container position-relative inx-1 hero">
                                 <img src="../../Pics/Church_icon_image.png" alt="" class="col-6 mx-auto object-fit-cover">
                                 <h2 class="display-5 mb-4 pt-4 fw-bolder text-black2 text-balance">Get the compositions you want</h2>
@@ -1670,12 +1669,18 @@
             <div class="p-2 overf-y-a sCatgHolder-home">
                 <h2 class="text-center display-5 py-3">Holy Mass Celebration</h2>
                 <div class="px-4 h-100vh chms-home">
-                    <q class="p-4 fs-4">
-                        O sing the Lord a new song; for he hath done marvellous things: His right hand and His Holy arm, hath gotten him the victory.<br>
+                    <p class="p-4 px-lg-5 fs-4">
+                        <span class="fa fa-quote-left fs-1 me-3"></span>
+                        O sing the Lord a new song; for he hath done marvellous things: His right hand and His Holy arm, hath gotten him the victory.
+                        <span class="fa fa-quote-right fs-1 ms-3"></span><br>
                         <strong class="ms-3 small"><i>Psalm 98:1</i></strong>
-                    </q>
+                    </p>
                 </div>
                 <div class="song-stats">
+                    <div class="mb-4 mx-auto px-3 px-lg-5 text-black1 fs-3">
+                        Explore a diverse collection of Catholic music notations. Easily find, download, and share the sacred songs that inspire and elevate your worship. <br><br>
+                        <button class="btn btn-lg rounded-pill border fw-bold bg-myBlue text-appColor-cons clickDown" onclick="$('.songsControl-nav_to-songs').trigger('click')">Get started</button>
+                    </div>
                     <section class="position-relative isolate-y d-grid mx-2 mx-md-0 pb-4 mb-4 mask-bottom section_elem" style="clip-path: unset;">
                         <div class="rad-50 item-myBlue data-stats-disk">
                             <div class="position-absolute dim-100 inset-0 m-auto rad-inherit data-stats-ring song-stats-ring"></div>
@@ -2088,8 +2093,8 @@
     <!-- ************************** Page end ************************** -->
     
     <script src="../../MyScripts.js?v=1.1163"></script>
-    <script src="chmSongsArray.js?v=1.1188"></script>
-    <script src="chmsData.js?v=1.1196"></script>
+    <script src="chmSongsArray.js?v=1.1197"></script>
+    <script src="chmsData.js?v=1.1197"></script>
     
     <!-- <script src="../../scripts/uploadToGDrive.js"></script> -->
      <script>
