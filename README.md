@@ -1,7 +1,7 @@
 # ESG (Eastern Singers Group) project
 
 ## Description
-This project marks the beginning of my first personal project! I've gathered all the necessary documentation and made the project public. I'm excited to share it and thus would greatly appreciate any contributions for further development on certain parts/pages of the project. We can make this even better! 🚀. See [Hosted version](https://esgrprwanda.rf.gd).
+This project marks the beginning of my first personal project! I've gathered all the necessary documentation and made the project public. I'm excited to share it and thus would greatly appreciate any contributions for further development on certain parts/pages of the project. We can make this even better! 🚀. See [Hosted version](https://esgrprwanda.com).
 
 _ESG is a Rwandan Catholic singing group devoted to the Christian faith, and we take joy in singing praises to God, enriching the spiritual lives of all humanity. ESG also offers an extensive library of Holy Mass songs and Liturgy documents, providing the best in worship music_
 
