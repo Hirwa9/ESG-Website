@@ -111,8 +111,7 @@ $adminUsersJson = json_encode($adminUsersData);
 
     <!-- Customs -->
 	<link rel="icon" type="image/x-icon" href="../../Pics/ESG_favicon1.ico">
-	<!-- <link rel="stylesheet" type="text/css" href="../../styles/dashboard.css?v=1.1148"> -->
-	<link rel="stylesheet" type="text/css" href="../../styles/dashboard.css?v=1.1152">
+	<link rel="stylesheet" type="text/css" href="../../styles/dashboard.css?v=1.1205">
 
     <!-- offline -->
 

@@ -31,7 +31,7 @@ if (isset($_SESSION['user_role']) && $_SESSION['user_role'] == 'admin') {
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-sanitize.js"></script>
 
     <!-- Customs -->
-    <link rel="stylesheet" type="text/css" href="styles/index.css?v=1.1158">
+    <link rel="stylesheet" type="text/css" href="styles/index.css?v=1.1205">
     
     <!-- offline -->
     

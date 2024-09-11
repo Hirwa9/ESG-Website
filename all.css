@@ -248,17 +248,15 @@ nav#Main_nav a:hover {
 	top: 50%;
 	right: 0;
 	height: 60%;
-	width: 4px;
-	border: 1px solid var(--black2);
-	border-radius: 100vw;
+	border: 1px solid var(--black3);
 	translate: 125% -50%;
 }
 
-#menu > ul li.nav-item > a {
+/* #menu > ul li.nav-item > a {
 	background-color: var(--black4);
 	border-radius: .5rem;
 	padding-block: .3rem;
-}
+} */
 
 #menu .nav-link {
 	transition: .15s;
@@ -624,9 +622,20 @@ html::-webkit-scrollbar-thumb:hover,
 
 .nav-item.Here .nav-link,
 .dropdown-item.Here {
-	background-color: var(--myBlue_cons) !important;
-	color: var(--appColor_cons) !important;
-	clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 54% 100%, 50% calc(100% - 3px), 46% 100%, 0% 100%);
+	position: relative;
+	color: var(--bs-success) !important;
+	font-weight: bold;
+}
+.nav-item.Here .nav-link::after,
+.dropdown-item.Here::after {
+	content: '';
+	position: absolute;
+	bottom: .25rem;
+	left: 0;
+	right: 0;
+	width: 80%;
+	margin: auto;
+	border-bottom: 1px solid var(--bs-success);
 }
 
 /* Margins and paddings */

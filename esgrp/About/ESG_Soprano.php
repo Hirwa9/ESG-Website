@@ -24,7 +24,7 @@ if (mysqli_num_rows($allMembersResults) > 0) {
 	<title>ESG Soprano</title>
     
 	<link rel="icon" type="image/x-icon" href="../../Pics/ESG_favicon1.ico">
-	<link rel="stylesheet" type="text/css" href="../../styles/about.css?v=1.1158">
+	<link rel="stylesheet" type="text/css" href="../../styles/about.css?v=1.1205">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="Hirwa Willy">
