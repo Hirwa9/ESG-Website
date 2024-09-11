@@ -7,13 +7,6 @@ $password = "";
 $database = "esgdb";
 // $port = 3306; // MySQL port provided
 
-// Hosted
-// $servername = "sql101.infinityfree.com"; // Hostname provided
-// $username = "epiz_33224870"; // Username provided
-// $password = "LgxJY1P0PIqfX"; // Password provided
-// $database = "epiz_33224870_esgdb";
-// $port = 3306; // MySQL port provided
-
 try {
     // Create connection with port
     // $conn = new mysqli($servername, $username, $password, $database, $port);
