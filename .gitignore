@@ -1,5 +1,6 @@
 # Ignore media files
 Pics/
+esgrp/__PageComponents/
 esgrp/About/esgSongsFiles/
 esgrp/Services/Songs/
 esgrp/Services/Beat_styles/
