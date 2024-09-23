@@ -34,6 +34,7 @@ if ($_POST && isset($_FILES["song_file"])) {
     $songCategory = $_POST['Song_Category'];
     $otherSongCategory = $_POST['Other_Song_Category'];
     $ownershipChoice = $_POST['Ownership_Choice'];
+    $triggeredTime = $_POST['Triggered_Time'];
 
     // If all checks pass, move the uploaded file to the target directory
     if ($uploadOk == 1 && move_uploaded_file($_FILES["song_file"]["tmp_name"], $target_file)) {
@@ -42,8 +43,8 @@ if ($_POST && isset($_FILES["song_file"])) {
 
         // Update database
         include '../../connect.php';
-        $stmt = $conn->prepare("INSERT INTO songs_to_upload (songName, songCategory, otherSongCategory, uploaderName, uploaderEmail, ownershipChoice) VALUES (?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param('ssssss', $songName, $songCategory, $otherSongCategory, $uploaderName, $uploaderEmail, $ownershipChoice);
+        $stmt = $conn->prepare("INSERT INTO songs_to_upload (songName, songCategory, otherSongCategory, uploaderName, uploaderEmail, ownershipChoice, triggeredTime) VALUES (?, ?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param('sssssss', $songName, $songCategory, $otherSongCategory, $uploaderName, $uploaderEmail, $ownershipChoice, $triggeredTime);
         $stmt->execute();
 
         // Notify the upload
@@ -63,7 +64,7 @@ if ($_POST && isset($_FILES["song_file"])) {
                 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
                 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-sanitize.js"></script>
                 <link rel="icon" type="image/x-icon" href="https://esgrprwanda.rf.gd/Pics/ESG_favicon1.ico">
-                <link rel="stylesheet" type="text/css" href="https://esgrprwanda.rf.gd/styles/dashboard.css?v=1.1205">
+                <link rel="stylesheet" type="text/css" href="https://esgrprwanda.rf.gd/styles/dashboard.css?v=1.1206">
                 <link rel="preconnect" href="https://fonts.googleapis.com">
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
                 <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">

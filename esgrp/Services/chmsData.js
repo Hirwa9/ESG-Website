@@ -878,7 +878,7 @@ $(document).ready(function () {
             songSearchOutput.empty();
             show_custom_alert
                 ('<img src="../../Pics/not_found.svg" class="w-2rem ratio-1-1 rad-50 bg-light mb-2"> \
-                Sorry! The document is not available.<br>Please check for typos or try using the composer\'s name.', 'dark');
+                No results found. Check for typos or try again using different keywords', 'dark');
             playNotifErrorSound();
         }
     }
@@ -900,7 +900,7 @@ $(document).ready(function () {
                     if (songsFoundBySearch.length < 1) {
                         show_custom_alert
                             ('<img src="../../Pics/not_found.svg" class="w-2rem ratio-1-1 rad-50 bg-light mb-2"> \
-                            Sorry! The document is not available.<br>Please check for typos or try using the composer\'s name.', 'dark');
+                            No results found. Check for typos or try again using different keywords', 'dark');
                         playNotifErrorSound();
                     } else {
                         show_search_tool();
@@ -1326,9 +1326,9 @@ $(document).ready(function () {
     }
 
     // New songs upload
-    $('.new-added-songs').html(sum_CHM_songs() - 2226);
+    $('.new-added-songs').html(sum_CHM_songs() - 2271);
     // Date update for new songs upload
-    count_elapsed_time('09/10/2024', $('.Notif_Elem-uploads').find('.upToToday'));
+    count_elapsed_time('09/23/2024', $('.Notif_Elem-uploads').find('.upToToday'));
     // Date update for ESG new video songs
     count_elapsed_time('08/16/2024', $('.Notif_Elem-stream').find('.upToToday'));
 

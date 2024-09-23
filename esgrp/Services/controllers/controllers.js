@@ -213,6 +213,7 @@ chms.controller('generalCTRL', ['$scope', '$http', '$timeout', function ($scope,
             formData.append('Song_Category', $scope.formData.Song_Category);
             formData.append('Other_Song_Category', $scope.formData.Other_Song_Category);
             formData.append('Ownership_Choice', $scope.formData.Ownership_Choice);
+            formData.append('Triggered_Time', new Date().toDateString());
 
             addLoader();
             $http.post('song_upload.php', formData, {

@@ -111,7 +111,7 @@ $adminUsersJson = json_encode($adminUsersData);
 
     <!-- Customs -->
 	<link rel="icon" type="image/x-icon" href="../../Pics/ESG_favicon1.ico">
-	<link rel="stylesheet" type="text/css" href="../../styles/dashboard.css?v=1.1205">
+	<link rel="stylesheet" type="text/css" href="../../styles/dashboard.css?v=1.1206">
 
     <!-- offline -->
 
@@ -1172,7 +1172,7 @@ $adminUsersJson = json_encode($adminUsersData);
                         </thead>
                         <tbody>
                             <tr data-ng-repeat="x in retrievedSongsToUpload">
-                                <td>{{ x.id }}</td>
+                                <td title="Uploaded on {{x.triggeredTime}}">{{ x.id }}</td>
                                 <td style="font-size: 75%; align-content: center;">{{ x.songName }}</td>
                                 <td>{{ x.songCategory }}</td>
                                 <td>{{x .otherSongCategory }}</td>

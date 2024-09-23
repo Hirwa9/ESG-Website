@@ -134,7 +134,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
                 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-sanitize.js"></script>
                 <link rel="icon" type="image/x-icon" href="https://esgrprwanda.rf.gd/Pics/ESG_favicon1.ico">
-                <link rel="stylesheet" type="text/css" href="https://esgrprwanda.rf.gd/styles/dashboard.css?v=1.1205">
+                <link rel="stylesheet" type="text/css" href="https://esgrprwanda.rf.gd/styles/dashboard.css?v=1.1206">
                 <link rel="preconnect" href="https://fonts.googleapis.com">
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
                 <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">

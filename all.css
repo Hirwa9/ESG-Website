@@ -252,12 +252,6 @@ nav#Main_nav a:hover {
 	translate: 125% -50%;
 }
 
-/* #menu > ul li.nav-item > a {
-	background-color: var(--black4);
-	border-radius: .5rem;
-	padding-block: .3rem;
-} */
-
 #menu .nav-link {
 	transition: .15s;
 }
@@ -9761,16 +9755,13 @@ hr.hr-lg {
 	display: block;
 }
 
-.webSettings > h5 {
-	/* font-weight: lighter; */
-	/* color: var(--white2_cons); */
-	color: var(--bs-warning);
+.webSettings .fix-dragger {
 	color: var(--appColor1_cons);
 	/* font-style: italic; */
-	letter-spacing: 2px;
-	transform: scaleY(1.2);
+	/* letter-spacing: 2px; */
+	/* transform: scaleY(1.2); */
 	animation: slideInLeft .5s 1;
-	margin-bottom: 1rem;
+	margin-bottom: 0;
 }
 
 .webSettings > .touch-anim {

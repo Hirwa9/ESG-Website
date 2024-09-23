@@ -4,7 +4,7 @@
 	<title>Holy Mass songs</title>
 	
 	<link rel="icon" type="image/x-icon" href="../../Pics/ESG_favicon1.ico">
-	<link rel="stylesheet" type="text/css" href="../../styles/chms.css?v=1.1205">
+	<link rel="stylesheet" type="text/css" href="../../styles/chms.css?v=1.1207">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Hirwa Willy">
@@ -30,7 +30,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-sanitize.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ng-file-upload/12.2.13/ng-file-upload.min.js"></script> -->
     <script src="chmsModule.js?v=1.1105"></script>
-    <script src="controllers/controllers.js?v=1.1171"></script>
+    <script src="controllers/controllers.js?v=1.1208"></script>
     
     <!-- offline -->
     
@@ -139,9 +139,12 @@
     <div>
         <!-- <div data-ng-include="'../__PageComponents/web_settings.htm'"></div> -->
         <div class="bg-myBlue show-touch-sm isolate-y px-1 fix-draggable webSettings" data-ng-class="{'set': isWebSettingsVisible}">
-            <button class="fa fa-close d-block w-2_5rem ratio-1-1 flex-center border-1 rounded-pill bg-transparent text-appColor-cons ms-auto ms-sm-0 me-sm-auto" data-ng-click="toggleWebSettings()"></button>
+            <div class="d-flex align-items-center mb-3 px-2">
+                <span class="fa fa-cogs me-3 fs-4 text-appColor-cons"></span>
+                <h5 class="h4 text-center fix-dragger">Web settings</h5>
+                <button class="fa fa-close d-block w-2_5rem ratio-1-1 flex-center rounded-pill bg-transparent text-appColor-cons ms-auto" data-ng-click="toggleWebSettings()"></button>
+            </div>
             <div class="touch-anim"></div>
-            <h5 class="text-center fix-dragger fs-3">Web settings</h5>
             <div class="clmn_wrapper dim-100 webSetPG">
                 <div class="webSetPG1">
                     <div class="w-100 h-50 d-grid webSetGrid">
@@ -814,9 +817,9 @@
         <div class="position-absolute col-12 col-sm-8 col-lg-6 mx-auto p-2 shadow-sm randomSCH">
             <div class="d-grid auto-flow-col mb-2">
                 <div class="page-searcher" title="Ctrl + / or Backspace">
-                    <div class="position-relative mx-2 mx-md-0 p-1 border-0 target-input search-box">
+                    <div class="position-relative mx-2 mx-md-0 p-1 target-input search-box">
                         <span class="fa fa-arrow-left d-md-none align-items-center justify-content-center grid-center text-black2" onclick="go_back()"></span>
-                        <span class="fa fa-search d-none d-md-grid align-items-center justify-content-center grid-center"></span>
+                        <span class="fa fa-search d-none d-md-grid align-items-center justify-content-center grid-center text-black3"></span>
                         <input type="text" placeholder="Find a song" class="border-0 text-black1 search-box__input" id="chmsSearcher">
                         <button class="fa fa-close r-middle me-2 bg-none border search-box__clearer"></button>
                     </div>
@@ -2093,8 +2096,8 @@
     <!-- ************************** Page end ************************** -->
     
     <script src="../../MyScripts.js?v=1.1163"></script>
-    <script src="chmSongsArray.js?v=1.1197"></script>
-    <script src="chmsData.js?v=1.1197"></script>
+    <script src="chmSongsArray.js?v=1.1205"></script>
+    <script src="chmsData.js?v=1.1205"></script>
     
     <!-- <script src="../../scripts/uploadToGDrive.js"></script> -->
      <script>

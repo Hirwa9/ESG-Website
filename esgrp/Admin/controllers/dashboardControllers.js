@@ -547,6 +547,7 @@ dashbrd.controller('dashboardCTLR', ['$scope', '$http', '$timeout', function ($s
         $scope.retrievedSongsToUpload = response.data.map(function (song) {
             return song;
         });
+        console.log($scope.retrievedSongsToUpload);
         $scope.totalSongsToUpload = $scope.retrievedSongsToUpload.length;
         ($scope.totalSongsToUpload < 1) && ($scope.noRecordsOfSongsToUpload = true);
     }, function (error) {
