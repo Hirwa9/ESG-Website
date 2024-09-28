@@ -1807,7 +1807,7 @@ function copy_list(aList, listTitle) {
 
     var theList = $listContainer.text();
     navigator.clipboard.writeText(theList).then(() => {
-        show_toast('<span class="fa fa-copy text-warning"></span> List copied successfully');
+        show_toast('<span class="fa fa-copy text-warning"></span> Copied to clipboard');
     }).catch(error => {
         show_custom_alert('❌ Sorry! Something went wrong, please try again', 'warning');
         console.error('Error copying the list: ', error);

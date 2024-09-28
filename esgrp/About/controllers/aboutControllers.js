@@ -36,7 +36,6 @@ about.controller('aboutCTLR', ['$scope', '$http', '$timeout', '$sce', function (
             return formattedDate.replace(day, `${day}<sup>${daySuffix}</sup>`);
         }
 
-        // console.log('sdgdfsfsf');
         $http.get('../Admin/fetch_all_compositions.php')
             .then(function (response) {
                 $scope.retrievedListOfCompositions = response.data;
@@ -150,7 +149,7 @@ about.controller('aboutCTLR', ['$scope', '$http', '$timeout', '$sce', function (
                         item.eventFormattedDate = formatDate(item.eventDate);
 
                     });
-                    // console.log($scope.retrievedListOfEvents);
+                    console.log($scope.retrievedListOfEvents);
 
 
                     // Create data to show

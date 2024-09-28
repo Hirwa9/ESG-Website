@@ -1326,9 +1326,9 @@ $(document).ready(function () {
     }
 
     // New songs upload
-    $('.new-added-songs').html(sum_CHM_songs() - 2271);
+    $('.new-added-songs').html(sum_CHM_songs() - 2275);
     // Date update for new songs upload
-    count_elapsed_time('09/23/2024', $('.Notif_Elem-uploads').find('.upToToday'));
+    count_elapsed_time('09/27/2024', $('.Notif_Elem-uploads').find('.upToToday'));
     // Date update for ESG new video songs
     count_elapsed_time('08/16/2024', $('.Notif_Elem-stream').find('.upToToday'));
 

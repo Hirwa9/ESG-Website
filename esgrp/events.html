@@ -1,54 +1,61 @@
 <!DOCTYPE html>
 <html lang="en" data-ng-app="aboutESG" data-ng-controller="aboutCTLR">
+
 <head>
 	<title>ESG events</title>
-	
+
 	<link rel="icon" type="image/x-icon" href="../Pics/ESG_favicon1.ico">
-	<link rel="stylesheet" type="text/css" href="../styles/events.css?v=1.1206">
+	<link rel="stylesheet" type="text/css" href="../styles/events.css?v=1.1209">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width= device-width, initial-scale=1.0">
 	<meta name="author" content="Hirwa Willy">
 	<meta name="keywords" content="HTML, CSS">
-    
-    <!-- online -->
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-sanitize.js"></script>
-    <script src="About/aboutModule.js?v=1.1153"></script>
-    <script src="About/controllers/aboutControllers.js?v=1.1153"></script>
-    
-    <!-- offline -->
 
-    <!-- <link rel="stylesheet" href="../bootstrap5/css/bootstrap.min.css">
+	<!-- online -->
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-sanitize.js"></script>
+	<script src="About/aboutModule.js?v=1.1210"></script>
+	<script src="controllers/controllers.js?v=1.1210"></script>
+
+
+	<!-- offline -->
+
+	<!-- <link rel="stylesheet" href="../bootstrap5/css/bootstrap.min.css">
     <link rel="stylesheet" href="../fontawesome6-2-0/css/all.css">
     <script src="../bootstrap5/js/bootstrap.min.js"></script> -->
-    <!-- <script src="../bootstrap5/js/bootstrap.bundle.min.js"></script>
+	<!-- <script src="../bootstrap5/js/bootstrap.bundle.min.js"></script>
     <script src="../bootstrap5/js/bootstrap.bundle.min.js.map"></script> -->
-    <!-- <script src="../jq/jquery-3.7.1.js"></script> -->
-     
-    <!-- fonts -->
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<!-- <script src="../jq/jquery-3.7.1.js"></script> -->
+
+	<!-- fonts -->
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
 </head>
+
 <body class="bg-bodi" data-bs-spy="scroll" data-bs-target="#scrollSpy" data-bs-offset="200" tabindex="0">
-    <!-- sm navbar -->
+	<!-- sm navbar -->
 	<div class="d-sm-none fix-holder inx-25 p-2">
 		<div class="nav container-xs Sbar-none bordered-end-end" id="mySidenav">
 			<div class="position-absolute inx--1"></div>
 			<div>
-				<li class="nav-item"><a href="../index" class="nav-link"><span class="fa fa-home text-white" style="font-size: 45px"></span></a></li>
+				<li class="nav-item"><a href="../index" class="nav-link"><span class="fa fa-home text-white"
+							style="font-size: 45px"></span></a></li>
 				<li class="nav-item"><a href="about" class="nav-link">About</a></li>
 				<li class="nav-item"><a href="About/ESG_Songs" class="nav-link">Songs</a></li>
 				<li class="nav-item"><a href="services" class="nav-link">Services</a></li>
 				<li class="nav-item"><a href="About/ESG_FAQs" class="nav-link">FAQs</a></li>
-				<li class="nav-item" data-bs-toggle="collapse"	data-bs-target=".MRNV"><a href="#" class="nav-link MoreMenu">More</a></li>
+				<li class="nav-item" data-bs-toggle="collapse" data-bs-target=".MRNV"><a href="#"
+						class="nav-link MoreMenu">More</a></li>
 			</div>
 			<div class="ps-3 mt-3 collapse MRNV">
 				<li class="nav-item"><a href="About/ESG_Calendar" class="nav-link"> Calendar</a></li>
@@ -57,21 +64,22 @@
 				<li class="nav-item"><a href="Services/CHM_Songs" class="nav-link">Holy Mass Songs</a></li>
 				<li class="nav-item"><a href="solfeggio" class="nav-link">Learn Solfeggio</a></li>
 				<hr>
-				<li class="nav-item" id="settingsMenu"><a href="#" class="nav-link">Settings <span class="fa fa-gear"></span></a></li>
+				<li class="nav-item" id="settingsMenu"><a href="#" class="nav-link">Settings <span
+							class="fa fa-gear"></span></a></li>
 			</div>
-            <div class="position-absolute r-middle-m theme-changer">
-                <div class="position-absolute t-middle p-1 auto_theme choice">Auto</div>
-                <div class="position-absolute b-middle-m rad-30 themerICN">
-                    <span class="fa fa-moon position-absolute b-middle w-100 ratio-1-1 flex-center rad-50"></span>
-                </div>
-            </div>
+			<div class="position-absolute r-middle-m theme-changer">
+				<div class="position-absolute t-middle p-1 auto_theme choice">Auto</div>
+				<div class="position-absolute b-middle-m rad-30 themerICN">
+					<span class="fa fa-moon position-absolute b-middle w-100 ratio-1-1 flex-center rad-50"></span>
+				</div>
+			</div>
 		</div>
 	</div>
-    <!-- lg navbar -->
-    <nav class="navbar navbar-expand-sm fixed-top" id="Main_nav" role="navigation">
-        <a href="../index" class="navbar-brand me-auto ms-0">
-            <img id="brandImage" src="../Pics/ESG_favicon1.png">
-        </a>
+	<!-- lg navbar -->
+	<nav class="navbar navbar-expand-sm fixed-top" id="Main_nav" role="navigation">
+		<a href="../index" class="navbar-brand me-auto ms-0">
+			<img id="brandImage" src="../Pics/ESG_favicon1.png">
+		</a>
 		<div class="navbar-header navbar-toggle d-flex d-sm-none justify-content-between me-0">
 			<div class="navIcon border-0" id="menuToggler">
 				<div class="menu-bar"></div>
@@ -79,33 +87,35 @@
 				<div class="menu-bar"></div>
 			</div>
 		</div>
-        <div class="collapse navbar-collapse" id="menu">
-            <ul class="nav navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="about">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="About/ESG_Songs">Songs</a></li>
-                <li class="nav-item"><a class="nav-link" href="services">Services</a></li>
-                <li class="nav-item"><a class="nav-link" href="About/ESG_Calendar">Calendar</a></li>
-                <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">More</a>
-                    <div class="dropdown-menu">
-                        <a href="#" class="dropdown-item Here">ESG events</a>
-                        <a href="Events/ESG_Gallery" class="dropdown-item">ESG gallery</a>
-                        <a href="solfeggio" class="dropdown-item">Learn Solfeggio</a>
-                    </div>
-                </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-end ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" id="settings"><span class="fa fa-gear"></span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="About/ESG_FAQs">FAQs</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+		<div class="collapse navbar-collapse" id="menu">
+			<ul class="nav navbar-nav">
+				<li class="nav-item"><a class="nav-link" href="about">About</a></li>
+				<li class="nav-item"><a class="nav-link" href="About/ESG_Songs">Songs</a></li>
+				<li class="nav-item"><a class="nav-link" href="services">Services</a></li>
+				<li class="nav-item"><a class="nav-link" href="About/ESG_Calendar">Calendar</a></li>
+				<li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle"
+						data-bs-toggle="dropdown">More</a>
+					<div class="dropdown-menu">
+						<a href="#" class="dropdown-item Here">ESG events</a>
+						<a href="Events/ESG_Gallery" class="dropdown-item">ESG gallery</a>
+						<a href="solfeggio" class="dropdown-item">Learn Solfeggio</a>
+					</div>
+				</li>
+			</ul>
+			<ul class="nav navbar-nav navbar-end ms-auto">
+				<li class="nav-item">
+					<a class="nav-link" id="settings"><span class="fa fa-gear"></span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="About/ESG_FAQs">FAQs</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
 
 	<!-- Contact us-->
-	<div class="position-fixed inx-15 collapse win-hide col-sm-7 col-md-6 col-lg-4 blur-bg-5px shadow item-myBlue contact-us">
+	<div
+		class="position-fixed inx-15 collapse win-hide col-sm-7 col-md-6 col-lg-4 blur-bg-5px shadow item-myBlue contact-us">
 		<button class="fa fa-close contact-us_closer" data-bs-toggle="collapse" data-bs-target=".contact-us"></button>
 		<div class="d-flex w-100 mb-2 navigator-tabs">
 			<button class="fa fa-phone flex-center w-50 active clickDown"></button>
@@ -114,7 +124,8 @@
 		<div class="clmn_wrapper navigator-space">
 			<div class="p-3">
 				<p class="fw-bold">
-					Questions? Need assistance? Just want to chat? Reach us easily via phone. Choose from our dedicated lines.
+					Questions? Need assistance? Just want to chat? Reach us easily via phone. Choose from our dedicated
+					lines.
 				</p>
 				<div class="mb-2 contact-item">
 					<div class="w-50 h4 m-0 ps-2 contact-item_owner">President</div>
@@ -152,14 +163,16 @@
 			</div>
 		</div>
 	</div>
-    
+
 	<!-- Web settings -->
-    <div class="bg-myBlue show-touch-sm isolate-y px-1 fix-draggable webSettings">
+	<div class="bg-myBlue show-touch-sm isolate-y px-1 fix-draggable webSettings">
 		<div class="d-flex align-items-center mb-3 px-2">
-            <span class="fa fa-cogs me-3 fs-4 text-appColor-cons"></span>
-            <h5 class="h4 text-center fix-dragger">Web settings</h5>
-            <button class="fa fa-close d-block w-2_5rem ratio-1-1 flex-center rounded-pill bg-transparent text-appColor-cons ms-auto" onclick="hide_web_settings()"></button>
-        </div>
+			<span class="fa fa-cogs me-3 fs-4 text-appColor-cons"></span>
+			<h5 class="h4 text-center fix-dragger">Web settings</h5>
+			<button
+				class="fa fa-close d-block w-2_5rem ratio-1-1 flex-center rounded-pill bg-transparent text-appColor-cons ms-auto"
+				onclick="hide_web_settings()"></button>
+		</div>
 		<div class="clmn_wrapper dim-100 webSetPG">
 			<div class="webSetPG1">
 				<div class="w-100 h-50 d-grid webSetGrid">
@@ -168,15 +181,18 @@
 						<div class="position-relative flex-grow-1 mb-1 overflow-visible web-contactor contactor">
 							<span class="fa fa-phone rad-50 w-40 ratio-1-1 flex-center top-left"></span>
 							<span class="fa fa-envelope rad-50 w-20 ratio-1-1 flex-center b-middle-m"></span>
-							<span class="fab fa-whatsapp rad-50 w-50 ratio-1-1 display-4 flex-center bottom-right"></span>
+							<span
+								class="fab fa-whatsapp rad-50 w-50 ratio-1-1 display-4 flex-center bottom-right"></span>
 						</div>
 					</div>
 					<div class="d-flex flex-column">
 						<div class="p-1 text-center theme-name">Light</div>
 						<div class="position-relative mb-1 ms-auto me-auto h-80 theme-changer LG-Def">
-							<div class="position-absolute t-middle p-1 h-20 w-100 flex-center auto_theme LG-Def choice" tabindex="0">Auto</div>
+							<div class="position-absolute t-middle p-1 h-20 w-100 flex-center auto_theme LG-Def choice"
+								tabindex="0">Auto</div>
 							<div class="position-absolute b-middle-m rad-30 h-75 w-100 themerICN LG-Def">
-								<span class="fa fa-moon position-absolute b-middle w-100 ratio-1-1 flex-center rad-50" tabindex="0"></span>
+								<span class="fa fa-moon position-absolute b-middle w-100 ratio-1-1 flex-center rad-50"
+									tabindex="0"></span>
 							</div>
 						</div>
 					</div>
@@ -192,7 +208,8 @@
 					<div class="d-flex flex-column">
 						<div class="p-1 text-center fs-6">Terms and privacy</div>
 						<div class="position-relative my-auto pb-2">
-							<span class="fa fa-shield-alt w-100 h-100 grid-center display-5 ptr" onclick="show_terms()"></span>
+							<span class="fa fa-shield-alt w-100 h-100 grid-center display-5 ptr"
+								onclick="show_terms()"></span>
 						</div>
 					</div>
 					<div class="d-flex flex-column">
@@ -248,159 +265,169 @@
 				</div>
 			</div>
 			<div class="rad-5 webSetPG2">
-				<button class="fa fa-arrow-left l-middle-m ratio-1-1 bordered text-white-var rad-50 grid-center inx-high partGuideCloser"></button>
+				<button
+					class="fa fa-arrow-left l-middle-m ratio-1-1 bordered text-white-var rad-50 grid-center inx-high partGuideCloser"></button>
 			</div>
 		</div>
-    </div>
-    
-    <div class="fix-holder fix-holder-blue fade-to-back blur-bg-5px">
-        <div class="col-sm-8 col-md-6 col-lg-5 col-xl-4 mx-auto h-100 my-item item-warning mySbar-sm webTerms">
-            <div class="my-item-header">
-                <h4 class="my-item-header__title">Terms and privacy</h4>
-                <div class="rad-3 my-item-header__icons">
-                    <button class="fa fa-close hide-par-fix item-closer"></button>
-                </div>
-            </div>
-            <div class="my-item-body">
-                <p class="my-3">
-                    This is <b>Eastern Singers Group website</b>, dedicated to help users in different ways of praying, with music being the priority. You can <a href="about" class="text-goldR">learn more</a> about ESG.
-                </p>
-                <p class="p-1">
-                    Our platform has its foundation on the following terms:
-                    <ul class="list-style-square">
-                        <li>This is a non-profit religious platform <i>(website).</i></li>
-                        <li>No personal data are collected alongway using this website, unless they are asked for.</li>
-                        <li>
-                            We provide services which do not in anyway violate personal privacy or security of individuals/users.
-                        </li>
-                        <li>All rights are reserved.</li>
-                    </ul>
-                </p>
-                <p class="p-1">
-                    This platform provides downloadable documents that are related to music and prayers, and also has a space for users to upload their documents or share out those available on the website.<br>
-                    However, activities that are against the purpose of use for those actions are prohibited;
-                    <ul class="list-style-square">
-                        <li>Do not share our documents or someone's document(s) for business purpose unless permitted.</li>
-                        <li>It is prohibited to upload or share out a copy of someone's document calling it yours.</li>
-                        <li>
-                            It is prohibited to upload violence documents where possible on this platform, inluding contents about sexual matter, racial abuse, hatred content or any other type of violence.
-                        </li>
-                    </ul>
-                </p>
-            </div>
-        </div>
-    </div>
+	</div>
 
-    <div class="fix-holder fade-to-scaleY g-items-holder webGuide-fix">
-        <div class="webGuide g-items Sbar-none">
-            <div class="p-3 text-light grid-item mySbar-sm home view">
-                <h6 class="display-4">Guide</h6>
-                <p class="p-2">
-                    <span class="display-7 text-goldR">
-                        This guide is provided to help users enjoy smooth browsing experience on this platform
-                    </span><br><br>
-                    <b>Check about:</b>
-                    <ul class="mt-5">
-                        <li>Theme</li>
-                        <li>Animations</li>
-                        <li>Keybord shortcuts <kbd>alt</kbd> <kbd>s</kbd>.</li>
-                    </ul>
-                </p>
-            </div>
-            <div class="p-3 text-light grid-item mySbar-sm">
-                <h6 class="display-5">Theme</h6>
-                <p class="p-2">
-                    <span class="display-7 text-goldR">
-                        You can easily change how the website looks by switching to dark or light theme
-                    </span>
-                    <ul class="mt-5">
-                        <li>Go through web settings <span class="fa fa-gear"></span> and switch the themes, or</li>
-                        <li>Presh keybord shortcut <kbd>alt</kbd> <kbd>t</kbd>.</li>
-                    </ul>
-                </p>
-                <p class="p-2 mt-5">
-                    When <b><u>auto</u></b> setting is chosen, the default website schedule will be activated. i.e Dark theme will activate from 19:00 until morning 06:00.<br>
-                    However, any theme can be prefered by manual switch as mentioned above.
-                </p>
-            </div>
-            <div class="p-3 text-light grid-item mySbar-sm">
-                <h6 class="display-5" style="animation: slideInRight 7s infinite">Animations</h6>
-                <p class="p-2">
-                    <span class="display-7 text-goldR">
-                        If you dont feel confortable with web animations, you can switch them off
-                    </span>
-                    <ul class="mt-5">
-                        <li>
-                            Go through web settings <span class="fa fa-gear"></span> and switch off the animation enabler.
-                        </li>
-                    </ul>
-                </p>
-                <p class="p-2 mt-5">
-                    The default website behavior is set to animating. Turning off animations will reduce both item animations and transitions.<br>
-                    📌 <span style="color: cyan;">Some items may suddlenly appear or others may transition really fast.</span>
-                </p>
-            </div>
-            <div class="p-3 text-light grid-item mySbar-sm">
-                <h6 class="display-5">Tips</h6>
-                <p class="p-2 display-7 text-goldR">
-                        Navigate quickly through the pages and web items
-                </p>
-                <section class="p-2">
-                    <table class="w-100 px-3 mb-3">
-                        <caption class="display-7">Keyboard shortcuts</caption>
-                        <tr>
-                            <th>Keys</th>
-                            <th>Action</th>
-                        </tr>
-                        <tr>
-                            <td><kbd>alt</kbd> <kbd>s</kbd></td>
-                            <td>Show web settings</td>
-                        </tr>
-                        <tr>
-                            <td><kbd>alt</kbd> <kbd>t</kbd></td>
-                            <td>Change theme</td>
-                        </tr>
-                        <tr>
-                            <td><kbd>alt</kbd> <kbd>t</kbd> <kbd>a</kbd></td>
-                            <td>Set auto-theme</td>
-                        </tr>
-                        <tr>
-                            <td><kbd>alt</kbd> <kbd>g</kbd></td>
-                            <td>Show this guide</td>
-                        </tr>
-                    </table>
-                    <p class="p-2">
-                        All shortcuts provided above works everywhere across this website and <mark>different pages may also have additional shortcuts</mark>.
-                        Check it where necessary to add more speed and experience.<br>
-                        📌 <span style="color: cyan;">If any of the shortcuts fail, check your keyboard setting.</span>
-                    </p>
-                    <span class="p-2">More Tips</span>
-                    <ul>
-                        <li>
-                            <u>Refresh pages for updates</u>. There's always new things to ease browsing.
-                        </li>
-                        <li>
-                            Visit different pages and find out what can be more interesting.
-                        </li>
-                        <li>
-                            Avoid forcing processes, by allowing them to finish smoothly. <i>(Especially when finding documents to download)</i>.
-                        </li>
-                    </ul>   
-                </section>
-            </div>
-            <div class="item-swichers">
-                <button class="fa fa-close top-right w-3rem ratio-1-1 g-itemsCloser"></button>
-                <button class="fa fa-arrow-left item-swicher left"></button>
-                <button class="fa fa-arrow-right item-swicher right"></button>
-                <div class="b-middle-m w-25 h-30px d-flex align-items-center justify-content-around item-pager">
-                    <button class="rad-50 view"></button>
-                    <button class="rad-50"></button>
-                    <button class="rad-50"></button>
-                    <button class="rad-50"></button>
-                </div>
-            </div>
-        </div>
-    </div>
+	<div class="fix-holder fix-holder-blue fade-to-back blur-bg-5px">
+		<div class="col-sm-8 col-md-6 col-lg-5 col-xl-4 mx-auto h-100 my-item item-warning mySbar-sm webTerms">
+			<div class="my-item-header">
+				<h4 class="my-item-header__title">Terms and privacy</h4>
+				<div class="rad-3 my-item-header__icons">
+					<button class="fa fa-close hide-par-fix item-closer"></button>
+				</div>
+			</div>
+			<div class="my-item-body">
+				<p class="my-3">
+					This is <b>Eastern Singers Group website</b>, dedicated to help users in different ways of praying,
+					with music being the priority. You can <a href="about" class="text-goldR">learn more</a> about ESG.
+				</p>
+				<p class="p-1">
+					Our platform has its foundation on the following terms:
+				<ul class="list-style-square">
+					<li>This is a non-profit religious platform <i>(website).</i></li>
+					<li>No personal data are collected alongway using this website, unless they are asked for.</li>
+					<li>
+						We provide services which do not in anyway violate personal privacy or security of
+						individuals/users.
+					</li>
+					<li>All rights are reserved.</li>
+				</ul>
+				</p>
+				<p class="p-1">
+					This platform provides downloadable documents that are related to music and prayers, and also has a
+					space for users to upload their documents or share out those available on the website.<br>
+					However, activities that are against the purpose of use for those actions are prohibited;
+				<ul class="list-style-square">
+					<li>Do not share our documents or someone's document(s) for business purpose unless permitted.</li>
+					<li>It is prohibited to upload or share out a copy of someone's document calling it yours.</li>
+					<li>
+						It is prohibited to upload violence documents where possible on this platform, inluding contents
+						about sexual matter, racial abuse, hatred content or any other type of violence.
+					</li>
+				</ul>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="fix-holder fade-to-scaleY g-items-holder webGuide-fix">
+		<div class="webGuide g-items Sbar-none">
+			<div class="p-3 text-light grid-item mySbar-sm home view">
+				<h6 class="display-4">Guide</h6>
+				<p class="p-2">
+					<span class="display-7 text-goldR">
+						This guide is provided to help users enjoy smooth browsing experience on this platform
+					</span><br><br>
+					<b>Check about:</b>
+				<ul class="mt-5">
+					<li>Theme</li>
+					<li>Animations</li>
+					<li>Keybord shortcuts <kbd>alt</kbd> <kbd>s</kbd>.</li>
+				</ul>
+				</p>
+			</div>
+			<div class="p-3 text-light grid-item mySbar-sm">
+				<h6 class="display-5">Theme</h6>
+				<p class="p-2">
+					<span class="display-7 text-goldR">
+						You can easily change how the website looks by switching to dark or light theme
+					</span>
+				<ul class="mt-5">
+					<li>Go through web settings <span class="fa fa-gear"></span> and switch the themes, or</li>
+					<li>Presh keybord shortcut <kbd>alt</kbd> <kbd>t</kbd>.</li>
+				</ul>
+				</p>
+				<p class="p-2 mt-5">
+					When <b><u>auto</u></b> setting is chosen, the default website schedule will be activated. i.e Dark
+					theme will activate from 19:00 until morning 06:00.<br>
+					However, any theme can be prefered by manual switch as mentioned above.
+				</p>
+			</div>
+			<div class="p-3 text-light grid-item mySbar-sm">
+				<h6 class="display-5" style="animation: slideInRight 7s infinite">Animations</h6>
+				<p class="p-2">
+					<span class="display-7 text-goldR">
+						If you dont feel confortable with web animations, you can switch them off
+					</span>
+				<ul class="mt-5">
+					<li>
+						Go through web settings <span class="fa fa-gear"></span> and switch off the animation enabler.
+					</li>
+				</ul>
+				</p>
+				<p class="p-2 mt-5">
+					The default website behavior is set to animating. Turning off animations will reduce both item
+					animations and transitions.<br>
+					📌 <span style="color: cyan;">Some items may suddlenly appear or others may transition really
+						fast.</span>
+				</p>
+			</div>
+			<div class="p-3 text-light grid-item mySbar-sm">
+				<h6 class="display-5">Tips</h6>
+				<p class="p-2 display-7 text-goldR">
+					Navigate quickly through the pages and web items
+				</p>
+				<section class="p-2">
+					<table class="w-100 px-3 mb-3">
+						<caption class="display-7">Keyboard shortcuts</caption>
+						<tr>
+							<th>Keys</th>
+							<th>Action</th>
+						</tr>
+						<tr>
+							<td><kbd>alt</kbd> <kbd>s</kbd></td>
+							<td>Show web settings</td>
+						</tr>
+						<tr>
+							<td><kbd>alt</kbd> <kbd>t</kbd></td>
+							<td>Change theme</td>
+						</tr>
+						<tr>
+							<td><kbd>alt</kbd> <kbd>t</kbd> <kbd>a</kbd></td>
+							<td>Set auto-theme</td>
+						</tr>
+						<tr>
+							<td><kbd>alt</kbd> <kbd>g</kbd></td>
+							<td>Show this guide</td>
+						</tr>
+					</table>
+					<p class="p-2">
+						All shortcuts provided above works everywhere across this website and <mark>different pages may
+							also have additional shortcuts</mark>.
+						Check it where necessary to add more speed and experience.<br>
+						📌 <span style="color: cyan;">If any of the shortcuts fail, check your keyboard setting.</span>
+					</p>
+					<span class="p-2">More Tips</span>
+					<ul>
+						<li>
+							<u>Refresh pages for updates</u>. There's always new things to ease browsing.
+						</li>
+						<li>
+							Visit different pages and find out what can be more interesting.
+						</li>
+						<li>
+							Avoid forcing processes, by allowing them to finish smoothly. <i>(Especially when finding
+								documents to download)</i>.
+						</li>
+					</ul>
+				</section>
+			</div>
+			<div class="item-swichers">
+				<button class="fa fa-close top-right w-3rem ratio-1-1 g-itemsCloser"></button>
+				<button class="fa fa-arrow-left item-swicher left"></button>
+				<button class="fa fa-arrow-right item-swicher right"></button>
+				<div class="b-middle-m w-25 h-30px d-flex align-items-center justify-content-around item-pager">
+					<button class="rad-50 view"></button>
+					<button class="rad-50"></button>
+					<button class="rad-50"></button>
+					<button class="rad-50"></button>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<div class="modal fade" rol="dialod" id="qui_bene">
 		<div class="modal-dialog modal-lg bg-navi2">
@@ -409,215 +436,153 @@
 			</div>
 			<div class="modal-content">
 				<p>
-					Latin: <strong>Bis orat qui cantat</strong> has been traditionally attributed to <span style="color: darkgoldenrod;">St. Augustine (d. 430 CE)</span>. The version with the included “bene” is from the <span style="color: blue; font-weight: bold;">General Instruction of the Roman Missal</span> and can be translated as “Whoever sings well prays twice over”. Hence singing, as a primary form of prayer, is a very ancient tradition in Christianity indeed!<br><br>
+					Latin: <strong>Bis orat qui cantat</strong> has been traditionally attributed to <span
+						style="color: darkgoldenrod;">St. Augustine (d. 430 CE)</span>. The version with the included
+					“bene” is from the <span style="color: blue; font-weight: bold;">General Instruction of the Roman
+						Missal</span> and can be translated as “Whoever sings well prays twice over”. Hence singing, as
+					a primary form of prayer, is a very ancient tradition in Christianity indeed!<br><br>
 
-					By the way, anyone can have problems with that “bene”! <u>How could we be required to be great singers in order to pray twice</u>? I had the question too, but soon I got it. It was my own perfectionism putting a slant on everything I hear and see. We are not asked to be professional operatic singers, but to sing well, with enthusiasm, and conviction, and joy. That is praying twice as well.
+					By the way, anyone can have problems with that “bene”! <u>How could we be required to be great
+						singers in order to pray twice</u>? I had the question too, but soon I got it. It was my own
+					perfectionism putting a slant on everything I hear and see. We are not asked to be professional
+					operatic singers, but to sing well, with enthusiasm, and conviction, and joy. That is praying twice
+					as well.
 				</p>
 			</div>
 			<div class="modal-footer">
-				<p class="small" data-bs-dismiss="modal" data-bs-target="#qui_bene" style="color: whitesmoke; cursor: pointer;">Dusenge kabiri</p><button data-bs-dismiss="modal" data-bs-target="#qui_bene" style="color: var(--myBlue); cursor: pointer;"><span class="fa fa-check" onclick="$('#qui_bene').fadeOut();"></span></button>
+				<p class="small" data-bs-dismiss="modal" data-bs-target="#qui_bene"
+					style="color: whitesmoke; cursor: pointer;">Dusenge kabiri</p><button data-bs-dismiss="modal"
+					data-bs-target="#qui_bene" style="color: var(--myBlue); cursor: pointer;"><span class="fa fa-check"
+						onclick="$('#qui_bene').fadeOut();"></span></button>
 			</div>
 		</div>
 	</div>
-	
+
 	<!-- ************************** End of fixed Elements ************************** -->
-	
-	<main class="grids-main">
 
-		<!-- ************************** 1 Page header ************************** -->
+	<main>
+		<div class="position-relative mb-5 page-hero">
+			<img src="../Pics/events/IMG_20231001_171206.jpg" class="object-fit-cover dim-100">
+			<div class="position-absolute inset-0 d-flex flex-column p-4 page-hero-content">
+				<h1 class="display-1 w-fit ms-auto mt-auto fw-bold">Events</h1>
+				<p class="text-end">
+					Beyond singing, our lives are brimming with joy and delightful moments!
+				</p>
+			</div>
+		</div>
+		<div class="container-fluid events">
+			<h1 class="w-fit mx-auto mb-4 text-center text-myBlue-var small-title item-myBlue">Events Gallery</h1>
+			<p class="p-3 py-4 text-justify text-black2 fw-bold small col-md-10 mx-auto">
+				The moments we experience are closely connected to our happiness. As we reflect on these special times,
+				we see how God's love and the support of people have guided us to become an outstanding singing group.
+				We keep both our audience and choir members updated on various events, including past ones, where we
+				treasure wonderful memories, as well as current activities
+			</p>
 
-		<div id="pageHeader">
-			<h1 class="page-heading">ESG Events</h1>
-			<div class="carousel slide carousel-fade offset-sm-1 col-sm-10 my-3 my-md-4" data-bs-ride="carousel" data-bs-pause="false" id="MomCar">
-				<div class="carousel-inner">
-					<div class="carousel-item active">
-						<img src="../Pics/Es47.jpg" alt="" class="img-fluid rounded">
-						<div class="p-2 offset-3 col-6 text-center MomCar-Caption">
-							<h4 class="p-2 text-white">ESG moments</h4>
+			<!-- Events listing -->
+			<!-- Loading content placeholder -->
+			<div data-ng-if="retrievedListOfEvents == undefined" class="row m-0 ptr-none"
+				style="animation: BLINK 2s infinite;">
+				<div class="col-sm-6 col-xl-4 mb-5 p-sm-1 ptr-none">
+					<div class="position-relative h-100 box">
+						<div class="h-40vh bg-black4"></div>
+						<div class="position-absolute flex-space-between w-100 left-0 bottom-0">
+							<div class="text-light small px-3 py-1 event-date">
+								<span class="text-nowrap">
+									<span class="fa fa-circle text-black3 me-1"></span>
+									<span class="px-5 bg-black4 rounded-pill"></span>
+								</span>
+								<br>
+								<span class="text-nowrap">
+									<span class="fa fa-circle text-black3 me-1"></span>
+									<span class="px-5 bg-black4 rounded-pill"></span>
+								</span>
+							</div>
+							<div class="text-light p-1 ps-4 pe-3">
+								<span class="px-5 bg-black4 rounded-pill"></span>
+							</div>
 						</div>
 					</div>
-					<div class="carousel-item">
-						<img src="../Pics/events/IMG_20220922_094824.jpg" alt="" class="img-fluid rounded">
-						<div class="p-2 offset-3 col-6 text-center MomCar-Caption">
-							<h4 class="p-2 text-white">ESG moments</h4>
+				</div>
+				<div class="col-sm-6 col-xl-4 mb-5 p-sm-1 ptr-none">
+					<div class="position-relative h-100 box">
+						<div class="h-40vh bg-black4"></div>
+						<div class="position-absolute flex-space-between w-100 left-0 bottom-0">
+							<div class="text-light small px-3 py-1 event-date">
+								<span class="text-nowrap">
+									<span class="fa fa-circle text-black3 me-1"></span>
+									<span class="px-5 bg-black4 rounded-pill"></span>
+								</span>
+								<br>
+								<span class="text-nowrap">
+									<span class="fa fa-circle text-black3 me-1"></span>
+									<span class="px-5 bg-black4 rounded-pill"></span>
+								</span>
+							</div>
+							<div class="text-light p-1 ps-4 pe-3">
+								<span class="px-5 bg-black4 rounded-pill"></span>
+							</div>
 						</div>
 					</div>
-					<div class="carousel-item">
-						<img src="../Pics/Es39.jpg" alt="" class="img-fluid rounded">
-						<div class="p-2 offset-3 col-6 text-center MomCar-Caption">
-							<h4 class="p-2 text-white">ESG moments</h4>
+				</div>
+				<div class="col-sm-6 col-xl-4 mb-5 p-sm-1 ptr-none">
+					<div class="position-relative h-100 box">
+						<div class="h-40vh bg-black4"></div>
+						<div class="position-absolute flex-space-between w-100 left-0 bottom-0">
+							<div class="text-light small px-3 py-1 event-date">
+								<span class="text-nowrap">
+									<span class="fa fa-circle text-black3 me-1"></span>
+									<span class="px-5 bg-black4 rounded-pill"></span>
+								</span>
+								<br>
+								<span class="text-nowrap">
+									<span class="fa fa-circle text-black3 me-1"></span>
+									<span class="px-5 bg-black4 rounded-pill"></span>
+								</span>
+							</div>
+							<div class="text-light p-1 ps-4 pe-3">
+								<span class="px-5 bg-black4 rounded-pill"></span>
+							</div>
 						</div>
 					</div>
-					<div class="carousel-item">
-						<img src="../Pics/Es65.jpg" alt="" class="img-fluid rounded">
-						<div class="p-2 offset-3 col-6 text-center MomCar-Caption">
-							<h4 class="p-2 text-white">ESG moments</h4>
-						</div>
-					</div>
-					<div class="carousel-item">
-						<img src="../Pics/Es85.jpg" alt="" class="img-fluid rounded">
-						<div class="p-2 offset-3 col-6 text-center MomCar-Caption">
-							<h4 class="p-2 text-white">ESG moments</h4>
-						</div>
-					</div>
-					<div class="carousel-item">
-						<img src="../Pics/Es45.jpg" alt="" class="img-fluid rounded">
-						<div class="p-2 offset-3 col-6 text-center MomCar-Caption">
-							<h4 class="p-2 text-white">ESG moments</h4>
-						</div>
-					</div>
-					<div class="carousel-item">
-						<img src="../Pics/Es54.jpg" alt="" class="img-fluid rounded">
-						<div class="p-2 offset-3 col-6 text-center MomCar-Caption">
-							<h4 class="p-2 text-white">ESG moments</h4>
-						</div>
-					</div>
-					<div class="carousel-item">
-						<img src="../Pics/events/IMG_20230603_161645.jpg" alt="" class="img-fluid rounded">
-						<div class="p-2 offset-3 col-6 text-center MomCar-Caption">
-							<h4 class="p-2 text-white">ESG moments</h4>
-						</div>
-					</div>
-					<div class="carousel-item">
-						<img src="../Pics/Es48.jpg" alt="" class="img-fluid rounded">
-						<div class="p-2 offset-3 col-6 text-center MomCar-Caption">
-							<h4 class="p-2 text-white">ESG moments</h4>
-						</div>
-					</div>
-					<div class="carousel-item">
-						<img src="../Pics/Es36.jpg" alt="" class="img-fluid rounded">
-						<div class="p-2 offset-3 col-6 text-center MomCar-Caption">
-							<h4 class="p-2 text-white">ESG moments</h4>
-						</div>
-					</div>
-					<div class="carousel-item">
-						<img src="../Pics/events/IMG_20220922_094429.jpg" alt="" class="img-fluid rounded">
-						<div class="p-2 offset-3 col-6 text-center MomCar-Caption">
-							<h4 class="p-2 text-white">ESG moments</h4>
-						</div>
-					</div>
-					<a href="#MomCar" class="carousel-control-prev" data-bs-slide="prev" for="navigation">
-						<span class="fa fa-chevron-left text-white"></span>
-						<span class="sr-only">Previous</span>
-					</a>
-					<a href="#MomCar" class="carousel-control-next" data-bs-slide="next" for="navigation">
-						<span class="fa fa-chevron-right text-white"></span>
-						<span class="sr-only">Next</span>
-					</a>
 				</div>
 			</div>
-	
-			<p class="p-5 text-justify">
-				The moments we experience are intertwined with our happiness. Beyond singing, our lives are brimming with joy and delightful moments! ESG, a group comprised of the most passionate singers, exemplifies this.<br>
-				Speaking of memorable experiences, traveling to different places holds a special place. It consistently tops the list for good reasons, often guided by divine providence. As we explore these remarkable moments, we recognize how the love of God and people has propelled us toward becoming an exceptional singing group. Whenever we gather for various activities, everyone feels a sense of belonging—a true homecoming.
-			</p>
-		</div>
-
-		<!-- ************************** 2 Page navigator ************************** -->
-
-		<nav class="container px-lg-0" id="pageSidenav" style="perspective: 12rem; perspective-origin: center 30%">
-			<!-- <div class="p-3 my-3 flex-center text-wheat display-5 d-none d-xl-flex clock" style="transform: rotateY(20deg); transform-origin: 0 center;">
-				<div class="rad-10 blur-bg-20px clock_sticks" style="pointer-events: none; opacity: .6;">
-					<div class="position-absolute center rad-50 bg-danger clock-around-nums">
-						<div class="twelve">12</div>
-						<div class="one">1</div>
-						<div class="two">2</div>
-						<div class="three">3</div>
-						<div class="four">4</div>
-						<div class="five">5</div>
-						<div class="six">6</div>
-						<div class="seven">7</div>
-						<div class="eight">8</div>
-						<div class="nine">9</div>
-						<div class="ten">10</div>
-						<div class="eleven">11</div>
-					</div>
-					<div class="bg-goldR hrs_stick"></div>
-					<div class="min_stick"></div>
-					<div class="bg-white sec_stick">
-						<div class="position-absolute b-middle rad-50 ratio-1-1 rad-50 bg-black"></div>
-					</div>
-				</div>
-			</div> -->
-			<ul class="blur-bg-5px list-group list-unstyled" id="scrollSpy">
-				
-				<!-- <tr data-ng-repeat="x in retrievedListOfEvents | limitTo: eventsLimitNumber">
-					<td data-ng-bind-html="x.eventFormattedDate"></td>
-					<td data-ng-bind-html="x.eventType | capitalize"></td>
-					<td data-ng-bind-html="x.eventLocation"></td>
-				</tr> -->
-				<li data-ng-repeat="x in retrievedListOfEvents | limitTo: 5">
-					<a class="list-group-item list-group-item-action" href="#">
-						<span data-ng-bind-html="x.eventType | capitalize"></span> - <span data-ng-bind-html="x.eventLocation"></span>
-					</a>
-				</li>
-				<!-- <li><a class="list-group-item list-group-item-action" href="#title1">Home visits</a></li>
-				<li><a class="list-group-item list-group-item-action" href="#title2">Marriages</a></li>
-				<li><a class="list-group-item list-group-item-action" href="#title3">Reheasals</a></li>
-				<li><a class="list-group-item list-group-item-action" href="#title4">Studio times</a></li> -->
-			</ul>
-		</nav>
-
-		<!-- ************************** 3 Main content ************************** -->
-
-		<div id="pageMainContent">
-			<div class="position-relative mb-5">
-				<div class="card EventCard">
-					<div class="panel-heading pNl-4 ps-1">
-						<h2 class="display-5 fw-bold text-myBlue-cons p-3 text-decoration-underline" id="title1" style="text-underline-offset: 5px; text-decoration-thickness: 8px !important;">Home visits</h2>
-					</div>
-					<div class="panel-body px-2 py-4 mt-2 EventBody" id="HomeVM">
-						<div class="px-2 px-md-4">
-							<div class="col-12 col-sm-7 p-2 ms-2" style="background-image: url(../Pics/Es85.jpg)"></div>
-							We cherish the bonds within our group like a close-knit, loving family. Our visits are frequent and heartfelt, prompted by various occasions such as birthdays, weddings, and other celebratory events. Additionally, when someone falls ill, we rally together to offer support and care. <br><br>
-							Another cherished tradition is our pre-song-release visits. As we move from one member to another, excitement fills the air. Each encounter is a joyful celebration, and our collective enthusiasm is palpable.
+			<!-- Loaded content -->
+			<div class="row my-5 all-events">
+				<div data-ng-repeat="x in retrievedListOfEvents" data-ng-if="x.visible == 1" class="col-sm-6 col-xl-4 mb-5 p-sm-1 notranslate">
+					<div class="position-relative h-100 box">
+						<img data-ng-src="{{x.mainImage}}" class="position-absolute inset-0 dim-100 object-fit-cover">
+						<div class="position-absolute flex-space-between w-100 left-0 bottom-0 event-summary">
+							<div class="text-light small px-3 py-1 event-date">
+								<span class="text-nowrap">
+									<span class="fa fa-location-dot me-1 small opacity-50"></span> <span
+										data-ng-bind-html="x.eventLocation"></span>
+								</span>
+								<br>
+								<span class="text-nowrap">
+									<span class="fa fa-calendar-alt me-1 small opacity-50"></span> <span
+										data-ng-bind-html="x.eventDate"></span>
+								</span>
+							</div>
+							<div class="bg-myBlue text-light p-1 ps-4 pe-3 event-type small">
+								<span data-ng-bind-html="x.eventType | capitalize"></span>
+							</div>
 						</div>
-					</div>
-				</div>
-				<div class="card EventCard">
-					<div class="panel-heading pNl-4 ps-1">
-						<h2 class="display-5 fw-bold text-myBlue-cons p-3 text-decoration-underline" id="title2" style="text-underline-offset: 5px; text-decoration-thickness: 8px !important;">Marriages</h2>
-					</div>
-					<div class="panel-body px-2 py-4 mt-2 EventBody" id="MarrM">
-						<div class="px-2 px-md-4">
-							<div class="col-12 col-sm-7 p-2 ms-2" style="background-image: url(../Pics/Wedding1.jpg);"></div>
-							Among the best moments for singers, performing at a Wedding Mass stands out as the pinnacle! During this sacred occasion, we not only join in communal prayer but also forge connections with new friends and music enthusiasts who appreciate our compositions, sharing in the joy of the celebration.<br><br>
-
-							Our musical talents extend beyond the Holy Mass. We lend our artistry to embellish not only the wedding ceremony itself but also the subsequent festivities—the lively receptions, the dance-filled soirées, and every delightful moment until the wedding's grand finale. It's a remarkable experience that should not be missed.
-						</div>
-					</div>
-				</div>
-				<div class="card EventCard">
-					<div class="panel-heading pNl-4 ps-1">
-						<h2 class="display-5 fw-bold text-myBlue-cons p-3 text-decoration-underline" id="title3" style="text-underline-offset: 5px; text-decoration-thickness: 8px !important;">Reheasals</h2>
-					</div>
-					<div class="panel-body px-2 py-4 mt-2 EventBody" id="RehM">
-						<div class="px-2 px-md-4">
-							<div class="col-12 col-sm-7 p-2 ms-2" style="background-image: url(../Pics/Es60.jpg);"></div>
-							Unlocking the key to an exceptional singing style lies in incorporating effective vocal exercises. At ESG, we emphasize this to such an extent that not a day passes without each of us dedicating time to vocal checks. When we engage in this together, it transforms into enjoyable moments, often leading to lighthearted and amusing experiences. You might already be familiar with that feeling!<br><br>
-							Furthermore, during rehearsals, we assess everyone's singing proficiency to gauge improvement and provide tailored advice. It's a valuable practice that enhances our collective musical journey!
-						</div>
-					</div>
-				</div>
-				<div class="card EventCard">
-					<div class="panel-heading pNl-4 ps-1">
-						<h2 class="display-5 fw-bold text-myBlue-cons p-3 text-decoration-underline" id="title4" style="text-underline-offset: 5px; text-decoration-thickness: 8px !important;">Studio times</h2>
-					</div>
-					<div class="panel-body px-2 py-4 mt-2 EventBody" id="StuM">
-						<div class="px-2 px-md-4">
-							<div class="col-12 col-sm-7 p-2 ms-2" style="background-image: url(../Pics/ES88.jpg);"></div>
-							Indeed, our purpose is to sing for the Lord our God, and this heartfelt commitment motivates us to share our songs with His beloved people through every available means. As a result, there are occasions when we embark on collective journeys for song recordings—a truly fantastic experience! Some of us affectionately refer to it as 'ESG Week' because it's an eagerly anticipated event where everyone looks forward to reuniting and savoring the moments. It extends over a significant duration, providing ample time for us to relish and cherish the shared experiences.<br><br>
-							<span class="text-myBlue-cons" style="font-size: 1rem;">The journey is filled with both joyous moments and hard work along the way!
-								<!-- We thank our irreplacable friends from Universal Records; Sir Producer <a href="https://instagram.com/emmy_pro_manidukunda_media?igshid=YmMyMTA2M2Y=" target="_blank"><b>Emmy Pro</b></a> and the video shooting team; <a href="https://instagram.com/aime_pride?igshid=YmMyMTA2M2Y=" target="_blank"><b>Sir Aime Pride with his colleague directors</b></a></span> for their incredible work !! -->
+						<div class="d-flex flex-column dim-100 text-light p-3 pt-5 py-md-4 small event-description">
+							<p class="border-start ps-3">
+								{{x.eventAbout}}
+							</p>
+							<a href="./Events/ESG_Gallery"
+								class="btn btn-sm mt-auto w-fit px-4 py-2 rounded-pill text-light">Explore more</a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</main>
-	
+
 	<!-- ************************** Page Ending ************************** -->
-	
+
 	<footer class="py-3 Info">
 		<li class="small">
 			Check out <u><a href="Events/ESG_Gallery">ESG gallery</a></u>
@@ -627,7 +592,8 @@
 				<h4>Quick links</h4>
 				<ul class="list-unstyled p-2">
 					<li class="p-2">
-						<span class="fa fa-place-of-worship grid-center me-3"></span><a href="Services/CHM_Songs">Mass songs</a>
+						<span class="fa fa-place-of-worship grid-center me-3"></span><a href="Services/CHM_Songs">Mass
+							songs</a>
 					</li>
 					<li class="p-2">
 						<span class="fa fa-handshake grid-center me-3"></span><a href="services">Services</a>
@@ -641,13 +607,16 @@
 				<h4>Follow us</h4>
 				<ul class="list-unstyled p-2">
 					<li class="p-2">
-						<span class="fab fa-instagram grid-center me-3"></span><a href="https://www.instagram.com/easternsingers/" target="_blank">Instagram</a>
+						<span class="fab fa-instagram grid-center me-3"></span><a
+							href="https://www.instagram.com/easternsingers/" target="_blank">Instagram</a>
 					</li>
 					<li class="p-2">
-						<span class="fab fa-facebook-f grid-center me-3"></span><a href="https://web.facebook.com/groups/221686289873729/" target="_blank">Facebook</a>
+						<span class="fab fa-facebook-f grid-center me-3"></span><a
+							href="https://web.facebook.com/groups/221686289873729/" target="_blank">Facebook</a>
 					</li>
 					<li class="p-2">
-						<span class="fab fa-youtube grid-center me-3"></span><a href="https://www.youtube.com/channel/UC88VxWbKsZMbEjaL0kzLZIQ/" target="_blank">YouTube</a>
+						<span class="fab fa-youtube grid-center me-3"></span><a
+							href="https://www.youtube.com/channel/UC88VxWbKsZMbEjaL0kzLZIQ/" target="_blank">YouTube</a>
 					</li>
 				</ul>
 			</div>
@@ -655,10 +624,12 @@
 				<h4>Contact</h4>
 				<ul class="list-unstyled p-2">
 					<li class="p-2">
-						<span class="fa fa-phone grid-center me-3"></span><a class="small" href="tel:+250783967092">(+250) 783967092</a>
+						<span class="fa fa-phone grid-center me-3"></span><a class="small"
+							href="tel:+250783967092">(+250) 783967092</a>
 					</li>
 					<li class="p-2">
-						<span class="fa fa-phone grid-center me-3"></span><a class="small" href="tel:+250785459848">(+250) 785459848</a>
+						<span class="fa fa-phone grid-center me-3"></span><a class="small"
+							href="tel:+250785459848">(+250) 785459848</a>
 					</li>
 					<li class="p-2">
 						<span class="fa fa-envelope grid-center me-3"></span><a href="contact">E-mail</a>
@@ -670,25 +641,32 @@
 		<div class="text-center text-bold">
 			<small>
 				<small>
-					<strong>Copyright <span class="fa fa-copyright"></span> <span class="copyright-year">2022</span> Eastern Singers Group. All Rights Reserved.</strong><br>
-					<span class="fa fa-code me-1"></span> Powered by <a href="https://hirwa9.github.io" target="_blank" class=" text-muted"><strong>Hirwa</strong></a>
+					<strong>Copyright <span class="fa fa-copyright"></span> <span class="copyright-year">2022</span>
+						Eastern Singers Group. All Rights Reserved.</strong><br>
+					<span class="fa fa-code me-1"></span> Powered by <a href="https://hirwa9.github.io" target="_blank"
+						class=" text-muted"><strong>Hirwa</strong></a>
 				</small>
 			</small>
-			<div class="position-fixed fixed-bottom inx-high offset-sm-2 col-sm-8 offset-md-3 col-md-6 p-2 blur-bg-5px collapse win-hide designer">
+			<div
+				class="position-fixed fixed-bottom inx-high offset-sm-2 col-sm-8 offset-md-3 col-md-6 p-2 blur-bg-5px collapse win-hide designer">
 				<div class="ps-3 d-flex align-items-center justify-content-between">
 					<span>Developer <span class="fa fa-paint-brush ms-2"></span></span>
-					<button class="w-2rem bounceClick closerX" data-bs-toggle="collapse" data-bs-target=".designer"></button>
+					<button class="w-2rem bounceClick closerX" data-bs-toggle="collapse"
+						data-bs-target=".designer"></button>
 				</div>
 				<hr>
 				<ul class="list-style-square small">
 					<li class="text-start">
-						E-mail: <a href="mailto:hirwawilly9@gmail.com">hirwawilly9@gmail.com <span class="fa fa-envelope ms-2"></span></a>
+						E-mail: <a href="mailto:hirwawilly9@gmail.com">hirwawilly9@gmail.com <span
+								class="fa fa-envelope ms-2"></span></a>
 					</li>
 					<li class="text-start">
-						Phone: <a href="tel:+250785459848" class="me-2">+250 785 459 848 <span class="fa fa-phone ms-2"></span></a>
+						Phone: <a href="tel:+250785459848" class="me-2">+250 785 459 848 <span
+								class="fa fa-phone ms-2"></span></a>
 					</li>
 					<li class="text-start">
-						<a href="https://www.linkedin.com/in/hirwa-cyuzuzo-willy-94159427b" class="w-30px ratio-1-1 rad-50 grid-center border bounceClick" target="_blank">
+						<a href="https://www.linkedin.com/in/hirwa-cyuzuzo-willy-94159427b"
+							class="w-30px ratio-1-1 rad-50 grid-center border bounceClick" target="_blank">
 							<span class="fab fa-linkedin"></span>
 						</a>
 					</li>
@@ -697,6 +675,7 @@
 		</div>
 	</footer>
 
-    <script src="../MyScripts.js?v=1.1105"></script>
+	<script src="../MyScripts.js?v=1.1105"></script>
 </body>
+
 </html>
